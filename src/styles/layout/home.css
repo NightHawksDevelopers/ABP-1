@@ -1,0 +1,364 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+  padding: 1rem;
+}
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.ho-carrosel{
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+
+.ho-slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+
+.ho-slides input{
+    display: none;
+}
+
+.ho-carrosel-img1{
+   background-image: url("../../assets/image/pc_home_carrosel1.webp");
+   background-size: cover;
+   background-repeat: no-repeat;
+   width: 800px;
+   position: relative;
+}
+
+.ho-carrosel-img2{
+   background-image: url("../../assets/image/pc_home_carrosel2.webp");
+   background-size: cover;
+   background-repeat: no-repeat;
+   width: 800px;
+   position: relative;
+}
+
+.ho-carrosel-img3{
+   background-image: url("../../assets/image/pc_home_carrosel3.webp");
+   background-size: cover;
+   background-repeat: no-repeat;
+  width: 800px;
+   position: relative;
+}
+
+.ho-carrosel-img4{
+   background-image: url("../../assets/image/pc_home_carrosel4.webp");
+   background-size: cover;
+   background-repeat: no-repeat;
+  width: 800px;
+   position: relative;
+}
+
+.ho-manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.ho-manual-btn{
+    border: 3px solid #fff;
+    margin: 2px;
+    padding: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.ho-manual-btn:hover{
+    background-color: #fff;
+}
+
+
+#radio1:checked ~ .ho-carrosel-img1{
+    margin-left: 0;
+   
+
+}
+
+#radio2:checked ~ .ho-carrosel-img1{
+    margin-left: -25%;
+   
+
+}
+
+#radio3:checked ~ .ho-carrosel-img1{
+    margin-left: -50%;
+    
+
+}
+
+#radio4:checked ~ .ho-carrosel-img1{
+    margin-left: -75%;
+    
+
+}
+
+
+.ho-navigation-auto div{
+    border: 3px solid #2F4F4F;
+    padding: 3px;
+    margin: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    
+}
+
+.ho-navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+#radio1:checked ~.ho-navigation-auto .auto-btn1 {
+    background-color: #fff;
+}
+
+#radio2:checked ~.ho-navigation-auto .auto-btn2 {
+    background-color: #fff;
+}
+
+#radio3:checked ~.ho-navigation-auto .auto-btn3 {
+    background-color: #fff;
+}
+
+#radio4:checked ~.ho-navigation-auto .auto-btn4 {
+    background-color: #fff;
+}
+
+
+
+
+
+
+h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+h4{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ho-materia{
+    display: flex;
+}
+
+.ho-txtomateria{
+    flex: 1;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+.ho-imgmateria{
+   flex: 1; 
+   background-image: url("../../assets/image/pc_home_gado.webp");
+   background-size: contain;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+
+.ho-cards{
+    display: flex;
+    justify-content: center;
+  }
+
+
+
+.ho-cxazul{
+  width: 170px;
+    height: 200px;
+    margin: 5px;
+    background-color: #0574BB;
+    border-radius: 10% ;
+
+
+}
+
+.ho-txt-cxazul{
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    padding: 5px;
+    text-align: center;
+}
+
+
+
+.ho-img-membros{
+    flex: 1; 
+   background-image: url("../../assets/image/pc_home_equipe.webp");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   width: 170px;
+   height: 120px;
+   border-radius: 10% 10% 0% 0%;
+  
+}
+
+.ho-img-projetos{
+    flex: 1; 
+   background-image: url("../../assets/image/pc_home_projeto.webp");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   width: 170px;
+   height: 120px;
+    border-radius: 10% 10% 0% 0%;
+
+}
+
+.ho-img-sobre{
+    flex: 1; 
+   background-image: url("../../assets/image/pc_home_sobre.webp");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   width: 170px;
+   height: 120px;
+    border-radius: 10% 10% 0% 0%;
+}
+
+.ho-img-publicacoes{
+    flex: 1; 
+   background-image: url("../../assets/image/pc_home_publicacoes.webp");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   width: 170px;
+   height: 120px;
+    border-radius: 10% 10% 0% 0%;
+
+}
+
+#ho-titulo-cards{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0574BB;
+    padding-left: 10px;
+    
+}
+
+
+
+
+#faixaazul{
+    color: white;
+   background-color: #0574BB;
+   padding: 10px 10px;
+   font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.ho-faixaazul{
+    background-color: #0574BB;
+    display: flex;
+
+    
+}
+
+
+.ho-patrocinador{
+    display: 1;
+    padding:  10px 10px 30px;
+    
+}
+
+.ho-img-p1{
+   
+    background-image: url("../../assets/image/pc_home_CNPQ.webp");
+    height: 100px;
+    width: 100px;
+      background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   border-radius: 50%;
+
+
+}
+.ho-img-p2{
+  
+    background-image: url("../../assets/image/pc_home_BRAZILDATACUBE.webp");
+     height: 100px;
+    width: 100px;
+      background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   border-radius: 50%;
+
+}
+.ho-img-p3{
+    
+    background-image: url("../../assets/image/pc_home_FAFESP.webp");
+     height: 100px;
+    width: 100px;
+      background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   border-radius: 50%;
+    
+
+}
+.ho-img-p4{
+  
+    background-image: url("../../assets/image/pc_home_CONAB.webp");
+    height: 100px;
+    width: 100px;
+      background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   border-radius: 50%;
+
+}
+.ho-img-p5{
+   
+    background-image: url("../../assets/image/pc_home_CAPES.webp");
+     height: 100px;
+    width: 100px;
+      background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   border-radius: 50%;
+
+}
+.ho-img-p6{
+   
+    background-image: url("../../assets/image/pc_home_INPE.webp");
+    height: 100px;
+    width: 100px;
+      background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   border-radius: 50%;
+
+}

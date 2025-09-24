@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+     <link rel="stylesheet" type="text/css" href="../src/styles/layout/home.css">
+    
 </head>
 <body>
     <!--colar o header padrão-->
@@ -12,80 +14,141 @@
     <!--colar o código da página-->
     <main>
 
-        <DIV>
-            Carrosel de imagens
-        </DIV>
+        <div class="ho-carrosel">
+            <div class="ho-slides">
+                <!--Botoes do carrosel-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <!--Fim Botoes do carrosel-->
 
+                <!--Imagens-->
+                <div class="ho-carrosel-img1"></div>
+                <div class="ho-carrosel-img2"></div>
+                <div class="ho-carrosel-img3"></div>
+                <div class="ho-carrosel-img4"></div>
+                <!-- Fim Imagens-->
+                 <!-- Navegation auto-->
+                  <div class="ho-navigation-auto">
+                        <div class="ho-autobtn1"></div>
+                        <div class="ho-autobtn2"></div>
+                        <div class="ho-autobtn3"></div>
+                        <div class="ho-autobtn4"></div>
+
+                  </div>
+            </div>
+                <div class="ho-manual-navigation">
+                        <label for="radio1" class="ho-manual-btn"></label>
+                        <label for="radio2" class="ho-manual-btn"></label>
+                        <label for="radio3" class="ho-manual-btn"></label>
+                        <label for="radio4" class="ho-manual-btn"></label>
+
+                </div>
+                
+
+
+
+        </div>
+            <!--texto inicial-->
         <h1>Bem vindo ao AgriRSLab</h1>
         <p><h4>Agricultural Remote Sensing Laboratoy - INPE</h4></p>
+        <div class="ho-materia">
+        <div class="ho-txtomateria">No AgriRS Lab, desenvolvemos pesquisas voltadas para a produção de ciência e tecnologia baseada em sensoriamento remoto e geoinformática, visando gerar conhecimentos básicos e aplicados para o setor agropecuário. O objetivo do AgriRS é desenvolver e aprimorar metodologias que efetivamente promovam o avanço sustentável da atividade agropecuária brasileira, contribuindo para o aumento da produtividade e da competitividade. Além disso, atuamos na formação de Mestres e de Doutores altamente qualificados, dentro do Programa de Pós-Graduação em Sensoriamento Remoto do INPE (PGSER). Caso queiram saber mais sobre o nosso laboratório e nossas pesquisas, por favor nos acompanhem pelas redes sociais.</div>
+        <div class="ho-imgmateria"> </div>
+        </div>   
+        
+         <!--fim do  texto inicial-->
 
-        <div id="txtomateria">No AgriRS Lab, desenvolvemos pesquisas voltadas para a produção de ciência e tecnologia baseada em sensoriamento remoto e geoinformática, visando gerar conhecimentos básicos e aplicados para o setor agropecuário. O objetivo do AgriRS é desenvolver e aprimorar metodologias que efetivamente promovam o avanço sustentável da atividade agropecuária brasileira, contribuindo para o aumento da produtividade e da competitividade. Além disso, atuamos na formação de Mestres e de Doutores altamente qualificados, dentro do Programa de Pós-Graduação em Sensoriamento Remoto do INPE (PGSER). Caso queiram saber mais sobre o nosso laboratório e nossas pesquisas, por favor nos acompanhem pelas redes sociais.</div>
-        <div class="imgmateria"><img src="../src/assets/image/pc_home_gado.webp" alt="imagem de fazenda com bois" height="200px" width="200px"></a> </div>
 
-        <div class="caixaazul">
-            <h2>MEMBROS</h2>
-            <div class="cxazulforma">
-                <img src="#" alt=""><a href="#"></a>
-                <div class="cxazultxt"><p>
-                    Aqui, você encontrará um espaço inovador e colaborativo, onde cada membro desempenha um papel essencial em nosso sucesso coletivo.
-                </p></div>
+<!--cards de acesso-->
+<div class="ho-caixaazul">
+
+<div class="ho-cards">
+
+        <div class="ho-imgtitulo">
+            <h3 id="ho-titulo-cards">MEMBROS</h3>  
+                <div class="ho-cxazul">
+                    <a href="#"><div class="ho-img-membros"></a></div>
+                <p class="ho-txt-cxazul">Aqui, você encontrará um espaço inovador e colaborativo, onde cada membro desempenha um papel essencial em nosso sucesso coletivo.
+                </p>
+            </div>
+        </div>
+
+        <div class="ho-imgtitulo">
+            <h3 id="ho-titulo-cards">PROJETOS</h3>
+            <div class="ho-cxazul">
+                <a href="#"><div class="ho-img-projetos"></a>
+                   </div>
+                    <p class="ho-txt-cxazul">Aqui você pode conhecer nossos projetos em andamento, explorar inovações e soluções que estamos criando.
+                </p>
                 
             </div>
         </div>
 
-        <div class="caixaazul">
-            <h2>PROJETOS</h2>
-            <div class="cxazulforma">
-                <img src="#" alt=""><a href="#"></a>
-                <div class="cxazultxt"><p>
-                    Aqui você pode conhecer nossos projetos em andamento, explorar inovações e soluções que estamos criando.
-                </p></div>
+        <div class="ho-imgtitulo">
+            <h3 id="ho-titulo-cards">SOBRE</h3>
+            <div class="ho-cxazul">
+                 <a href="#"><div class="ho-img-sobre"></a>
+                   </div>
+                    <p class="ho-txt-cxazul"> Aqui você pode conhecer nossos projetos em andamento, explorar inovações e soluções que estamos criando.
+                </p>
                 
             </div>
         </div>
 
-        <div class="caixaazul">
-            <h2>SOBRE</h2>
-            <div class="cxazulforma">
-                <img src="#" alt=""><a href="#"></a>
-                <div class="cxazultxt"><p>
-                    Aqui você pode conhecer nossos projetos em andamento, explorar inovações e soluções que estamos criando.
-                </p></div>
-                
+          <div class="ho-imgtitulo">
+            <h3 id="ho-titulo-cards">PUBLICAÇÕES</h3>
+            <div class="ho-cxazul">
+                <a href="#"><div class="ho-img-publicacoes"></a>
+                    </div>
+                <p class="ho-txt-cxazul">Fique por dentro! A última notícia que você precisa saber está aqui.
+                </p>
             </div>
         </div>
 
+</div>
 
-        <div class="faixaazul">
+<!--fim dos cards de acesso-->
 
-            <div class="patrocinador">
-                <a href="https://www.gov.br/cnpq/pt-br">CNPQ <img src="#" alt=""></a>
-            </div>
-            <div class="patrocinador">
-                <a href="https://data.inpe.br/bdc/">INPE <img src="#" alt=""></a>
-            </div>
-            <div class="patrocinador">
-               <a href="https://fapesp.br/">FAPESP  <img src="#" alt=""></a>
-            </div>
 
-            <div class="patrocinador">
-                 <a href="https://portaldeinformacoes.conab.gov.br/produtos-360.html">CONAB <img src="#" alt=""></a>
-            </div>
+<!--parte  dos patrocinadores-->
 
-            <div class="patrocinador">
-                 <a href="https://www.gov.br/capes/pt-br">CAPES <img src="#" alt=""></a>
+<h3 id="faixaazul">Colaboradores e Patrocinadores</h3>
+        <div class="ho-faixaazul">
+                
+            <div class="ho-patrocinador">
+                <a href="https://www.gov.br/cnpq/pt-br"><div class="ho-img-p1"></div></a>
+            </div>
+            <div class="ho-patrocinador">
+                <a href="https://data.inpe.br/bdc/"><div class="ho-img-p2"></div></a>
+            </div>
+            <div class="ho-patrocinador">
+               <a href="https://fapesp.br/"><div class="ho-img-p3"></div></a>
             </div>
 
-            <div class="patrocinador">
-                <a href="https://www.gov.br/inpe/pt-br">INPE <img src="#" alt=""></a>
+            <div class="ho-patrocinador">
+                 <a href="https://portaldeinformacoes.conab.gov.br/produtos-360.html"><div class="ho-img-p4"></div></a>
+            </div>
+
+            <div class="ho-patrocinador">
+                 <a href="https://www.gov.br/capes/pt-br"><div class="ho-img-p5"></div></a>
+            </div>
+
+            <div class="ho-patrocinador">
+                <a href="https://www.gov.br/inpe/pt-br"><div class="ho-img-p6"></div></a>
             </div>
         
 
 
         </div>
+<!--fim  da parte dos patrocinadores-->
 
 
 
+ <!--script do carrosel-->
+        <script src="../src/scripts/home.js"></script>
+        <!--fim script do carrosel-->
     </main>
 
     <!--colar o footer padrão-->
