@@ -123,22 +123,22 @@ a{
   text-decoration: none;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 768px) {
     .no-content {
-        flex-direction: column;
+        flex-direction:row-reverse;
         width: 90%;
         margin-left: 5%;
+        height: 200px;
     }
-    .no-img1, .no-img2, .no-img3, .no-img4, .no-img5 {
-        width: 80;
-        height: auto;
-        margin-bottom: 5px;
-    }
+ 
+    
+  }
+    
+    
     .no-text {
-        text-align: center;
+        text-align:left;
     }
     .no-lf {
         width: 90%;
         margin-left: 5%;
     }
-}

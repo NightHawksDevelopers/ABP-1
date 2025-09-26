@@ -8,6 +8,7 @@
 .cr-main {
     display: flex;
      justify-content: center;
+    
 }
 
 .cr-title hr {
@@ -43,23 +44,26 @@ input[type="file"] {
 
 #bt {
    
-   padding: 5px;
+   padding: 8px;
    color: white;
    margin-top: 15px;
    background-color: #2F4F4F;
    border-radius:10px;
 border-color: #2F4F4F;
 margin-right: 40%;
+font-size: 14px;
+text-align:center;
 }
   
     
 .cr-formdown{
     justify-content: center;
-    width: 80%;
+    width: 70%;
     align-items:baseline;
     display:flex;
     flex-direction: column;
     margin-left:10%;
+    
 }
 
 #titulo,#autor,#lead,#dat{
@@ -75,4 +79,10 @@ border-color: #2F4F4F;
 #btp{
   background-color: #2F4F4F;
   color: white;
+  margin-top: 10px;
 }
+
+#conteudo{
+  padding: auto;
+}
+
