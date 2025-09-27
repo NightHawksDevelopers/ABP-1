@@ -13,7 +13,7 @@ flex: 4;
 
 }
 .no-lf{
-   border-color:#000000;
+  border-color:#000000;
   box-sizing:border-box;
   width: 70%;  
   opacity: 50%;
@@ -34,11 +34,13 @@ flex: 4;
   border-color:#000000;
   box-sizing:border-box;
   width:100%;
+  margin-bottom: 5px;
 
 }
 .no-main {
     display: flex;
      justify-content: center;
+     
 }
 .no-img1{
     background-image: url(../../assets/image/pc_home_carrosel2.webp);
@@ -52,7 +54,7 @@ flex: 4;
    .no-img2{
     background-image: url(../../assets/image/pc_home_carrosel4.webp);
    width: 100px;
-   height: 100px ;
+   height: 110px ;
    background-size: contain;
    background-position: center;
    background-repeat: no-repeat;
@@ -100,8 +102,7 @@ flex: 4;
   outline: none;
   padding: 5px 15px;
   float:right;
-  
-  
+
   cursor: pointer;
   
   transition: all 0.3s ease-in-out;
@@ -115,7 +116,10 @@ flex: 4;
 }
 
 .no-buttons{
+  margin-top: 10px;
     width: 85%;
+    margin-bottom: 55px;
+
     
 }
 
@@ -123,22 +127,20 @@ a{
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
     .no-content {
         flex-direction:row-reverse;
         width: 90%;
         margin-left: 5%;
         height: 200px;
+        font-size: 12px;
     }
- 
-    
-  }
-    
-    
+
     .no-text {
         text-align:left;
     }
     .no-lf {
         width: 90%;
-        margin-left: 5%;
+        margin-left:5%;
     }
+  }

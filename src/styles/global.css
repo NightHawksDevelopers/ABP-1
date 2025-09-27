@@ -7,6 +7,8 @@
     --color-1: #2F4F4F;
     --color-2: #ffffff;
     --color-3: #000000;
+    --color-4: #efecec;
+    --color-5: #245C4D;
 }
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -33,6 +35,7 @@
     -webkit-font-smoothing: antialiased;
 
     font-family: var(--font);
+    min-height: 100vh;
   }
   
   /* 6. Improve media defaults */
@@ -144,4 +147,272 @@
     height: 2px;
   }
 
+  .footer{
+    background-color: var(--color-1);
+    position: relative;
+    bottom:0%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* Footer básico */
+footer {
+  background-color: var(--color-4);
+  padding: 0px;
+  text-align: center;
+  color: var(--color-2);
+
+}
+
+.dev-team{
+  text-align: left;
+}
+
+.infos{
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+.social-midia{
+  display: flex;
+  justify-content: space-between;
+  width: 5%;
+}
+.footer hr{
+  width: 80%;
+}
+.footer-options a{
+  text-decoration: none;
+  color: var(--color-2);
+}
+.footer-options{
+  display: flex;
+justify-content: space-between;
+width: 30%;
+margin-bottom: 8px;
+margin-top: 5px;
+}
+.footer-title{
+  font-size: 20px;
+  margin-top: 15px;
+}
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: var(--color-4);
+  width: 220px;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.box:hover .dropdown-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+}
+.dropdown-content a{
+  background-color: var(--color-4);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.box a:hover{
+  background-color: var(--color-5);
+  color: var(--color-2);
+}
+.dropdown-content a:hover{
+  background-color: var(--color-4);
+  color: var(--color-3);
+}
+
+.responsive-menu{
+  display: none;
+}
+
+@media (max-width: 900px) {
+  header{
+    display: none;
+  }
+  footer{
+    display: none;
+  }
+
+  .responsive-menu{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .menu-icon {
+    transition: transform 0.3s ease;
+    flex: 1;
+    max-width: 30px;
+    height: 25px;
+    position: relative;
+    margin: 20px 20px 0 0 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+  }
+
+  .menu-icon span {
+    transition: transform 0.3s ease;
+    height: 4px;
+    background-color: var(--color-3);
+    border-radius: 2px;
+  }
+
+  .menu {
+    position: absolute;
+    width: 100%;
+    background-color: var(--color-5);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  #menu-toggle:checked ~ .menu {
+    max-height: 450px; 
+  }
+
+  #menu-toggle:checked ~ .menu-icon span {
+    background-color: var(--color-2);
+    opacity: 0;
+  }
+
+  #menu-toggle:checked ~ .menu-icon{
+    transition: transform 0.3s ease;
+    background-image: url(../assets/svg/xmark-solid-full.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+
+
+  .mbl-dropdown-content {
+    display: none; 
+    flex-direction: column; 
+  }
   
+  #AgriRSLab-menu:checked ~ .mbl-dropdown-content {
+    display: flex; 
+  }
+
+  .menu-AgriRSLab .icon-arrow {
+    transition: transform 0.3s ease;
+    display: inline-block; 
+  }
+
+  #AgriRSLab-menu:checked + label .icon-arrow {
+    transform: rotate(180deg);
+  }
+
+  #Publicacoes-menu:checked + label .icon-arrow {
+    transform: rotate(180deg);
+  }
+  
+  
+
+
+  #AgriRSLab-menu{
+    display: none;
+  }
+
+  #Publicacoes-menu:checked ~ .mbl-dropdown-content {
+    display: flex; 
+  }
+
+
+  #Publicacoes-menu{
+    display: none;
+  }
+
+  .menu-AgriRSLab{
+    color: var(--color-2);
+    font-size: 20px;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+  }
+
+  .menu ul {
+    margin-left: 10%;
+    width: 80%;
+    padding-top: 70px;
+    list-style: none;
+    text-align: left;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+  }
+
+  .menu ul li {
+    margin: 15px 0 0 10%;
+  }
+
+  .menu ul li a {
+    color: var(--color-2);
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+  }
+
+  .menu hr{
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .mbl-dropdown-content{
+    display: none;
+    background-color: var(--color-5);
+    width: 220px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+
+  .space{
+    flex: 10;
+  }
+  .logo{
+    flex: 3;
+    width: 70px;
+    height: 70px;
+    background-image: url(../assets/image/Logo.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 2;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  .icon-arrow{
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .icon-arrow {
+    transition: transform 0.3s ease;
+  }
+  
+
+}

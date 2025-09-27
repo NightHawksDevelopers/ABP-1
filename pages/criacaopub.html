@@ -26,21 +26,36 @@
                     <div class="center">
                         <hr>
                     </div>
+                    <div class="dropdown-content">
+                        <a href="">Sobre</a>
+
+                        <a href="">Membros</a>
+
+                        <a href="">Projetos</a>
+
+                        <a href="">Área de atuação</a>
+                    </div>
                 </div>
                 <hr>
                 <div class="box">
                     <a href=""><b>Vagas</b></a>
                     <div class="center">
-                        <hr>
+
                     </div>
                 </div>
                 <hr>
                 <div class="box">
                     <a href=""><b>Publicações</b></a>
                     <div class="center">
-                        <hr>
+
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="">Feed</a>
+
+                        <a href="">Notícias</a>
                     </div>
                 </div>
+
                 <hr>
                 <div class="box">
                     <a href=""><b>Contato</b></a>
@@ -51,6 +66,56 @@
             </div>
         </div>
     </header>
+
+    <div class="responsive-menu">
+        <div class="logo"></div>
+        <div class="space"></div>
+        <!-- Checkbox invisível para controlar o menu -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- Ícone hambúrguer -->
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- Menu Dropdown -->
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <hr>
+
+                <li class="dropdown">
+                    <input type="checkbox" id="AgriRSLab-menu" class="dropdown-toggle">
+                    <label for="AgriRSLab-menu" class="menu-AgriRSLab">AgriRSLab <div class="icon-arrow"><img src="../src/assets/svg/caret-down-solid-full.svg" alt=""></div></label>
+
+                    <div class="mbl-dropdown-content">
+                        <a href="#">Sobre</a>
+                        <a href="#">Membros</a>
+                        <a href="#">Projetos</a>
+                        <a href="#">Área de atuação</a>
+                    </div>
+                </li>
+
+                <hr>
+                <li><a href="#">Vagas</a></li>
+                <hr>
+                <li class="dropdown">
+                    <input type="checkbox" id="Publicacoes-menu" class="dropdown-toggle">
+                    <label for="Publicacoes-menu" class="menu-AgriRSLab">Publicações <div class="icon-arrow"><img src="../src/assets/svg/caret-down-solid-full.svg" alt=""></div></label>
+
+                    <div class="mbl-dropdown-content">
+                        <a href="#">Feed</a>
+                        <a href="#">Notícias</a>
+                    </div>
+                </li>
+                <hr>
+                <li><a href="#">Contato</a></li>
+
+            </ul>
+        </nav>
+    </div>
     <main>
         <div class="cr-main">
             <div class="cr-title">
@@ -60,31 +125,34 @@
                 <hr>
             </div>
         </div>
-        <form>
+        <form class="formcontainer">
             <div class="formflex">
-                <div class="cr-formleft">
-                    <label for="tpub">Tipo:</label>
-                    <select name="tpub" id="tpub">
-                        <option value="Publicação">Publicação</option>
-                        <option value="Noticia">Noticia</option>
-                        <option value="Projeto">Projeto</option>
-                    </select>
-                    <Label for="titulo">Título:</label>
-                    <input type="text" name="Titulo" id="titulo" placeholder="Insira o título">
-                    <Label for="titulo">Autor:</label>
-                    <input type="text" name="autor" id="autor" placeholder="Insira o nome do Autor">
-                </div>
-                <div class="cr-formright">
+                <div class="cr-formup">
+                    <div class="cr-formleft">
+                        <label for="tpub">Tipo:</label>
+                        <select name="tpub" id="tpub">
+                            <option value="Publicação">Publicação</option>
+                            <option value="Noticia">Noticia</option>
+                            <option value="Projeto">Projeto</option>
+                        </select>
+                        <Label for="titulo">Título:</label>
+                        <input type="text" name="Titulo" id="titulo" placeholder="Insira o título">
+                        <Label for="titulo">Autor:</label>
+                        <input type="text" name="autor" id="autor" placeholder="Insira o nome do Autor">
 
-                    <label for="imgbut" id="bt">Clique aqui para inserir uma imagem</label>
-                    <input type="file" id="imgbut" name="imgbut" />
+                    </div>
+                    <div class="cr-formright">
+
+                        <label for="imgbut" id="bt">Clique aqui para inserir uma imagem</label>
+                        <input type="file" id="imgbut" name="imgbut" />
 
 
-                    <label for="autor">Data de Criação:</label>
-                    <input type="date" name="Data da criação" id="dat" placeholder="Insira a data">
+                        <label for="autor">Data de Criação:</label>
+                        <input type="date" name="Data da criação" id="dat" placeholder="Insira a data">
 
-                    <label for="lead">Lead:</label>
-                    <input type="text" name="lead" id="lead" placeholder="Insira o lead">
+                        <label for="lead">Lead:</label>
+                        <input type="text" name="lead" id="lead" placeholder="Insira o lead">
+                    </div>
                 </div>
             </div>
             <div class="cr-formdown">
@@ -101,6 +169,34 @@
 
 
     </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-title"><b>AgrisLab</b></div>
+            <div class="footer-options">
+
+                <b><a href="">Home</a></b>
+                <b><a href="">Sobre</a></b>
+                <b><a href="">Membros</a></b>
+                <b><a href="">Projetos</a></b>
+                <b><a href="">Vagas</a></b>
+                <b><a href="">Feed</a></b>
+                <b><a href="">Notícias</a></b>
+                <b><a href="">Contato</a></b>
+
+            </div>
+            <hr>
+            <div class="infos">
+                <div class="dev-team">
+                    <p>©2025 Nighthawks. All rights reserved.</p>
+                </div>
+                <div class="social-midia">
+                    <a href=""><img src="../src/assets/image/linkedin.png" alt=""></a>
+                    <a href=""><img src="../src/assets/image/instagram.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>
