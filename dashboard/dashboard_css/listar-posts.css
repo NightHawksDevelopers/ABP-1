@@ -1,8 +1,4 @@
-      body {
-          font-family: Arial, sans-serif;
-          
-          background-color: #f4f4f4;
-      }
+
 
       h1 {
           text-align: center;
@@ -23,6 +19,7 @@
           width: 100%;
           border-collapse: collapse;
           background-color: #fff;
+          margin-bottom: 40px;
       }
 
       th,

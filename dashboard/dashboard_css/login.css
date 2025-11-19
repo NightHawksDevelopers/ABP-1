@@ -1,11 +1,6 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f3f3f3;
-  display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  margin: 0;
 }
 
 /* Contêiner principal */
@@ -16,6 +11,7 @@ body {
   background: #245C4D;
   border-radius: 12px;
   overflow: hidden;   /* importante para a imagem ficar contida */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* sombra leve */
 }
 
 /* Painel da imagem */
@@ -62,7 +58,15 @@ body {
   background: #007bff;
   color: #fff;
   cursor: pointer;
+  transition: background 0.3s ease; /* transição suave */
 }
+
 .login-container button:hover {
-  background: #0056b3;
+  background: #429dff;
+}
+
+
+#error-message{
+  text-align: center;
+  color: white;
 }
