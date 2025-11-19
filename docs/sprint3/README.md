@@ -25,6 +25,33 @@
 
 Finalizar o Backend integrando com o dashboard. Refinamento de páginas html com adição de estilos e finalização de páginas em inglês. Entrega do produto 100% completo e funcional para o cliente com todos os requisitos funionais e não funcionais.
 ##  Backlog e progresso <a id="us"></a>
+<div style="display: flex; gap: 40px;">
+
+  <div>
+    <p><strong>🏷️ Legendas Tasks</strong></p>
+    <ul>
+      <li><strong>DD</strong> — Design Digital</li>
+      <li><strong>DW</strong> — Desenvolvimento Web</li>
+      <li><strong>ES</strong> — Engenharia de Software</li>
+      <li><strong>AL</strong> — Algoritmos e Lógica de Programação</li>
+      <li><strong>MB</strong> — Modelagem de Banco de Dados</li>
+      <li><strong>SO</strong> — Sistemas Operacionais e Redes</li>
+    </ul>
+  </div>
+
+  <div>
+    <p><strong>🏷️ Legendas Backlog ID</strong></p>
+    <ul>
+      <li><strong>RF</strong> — Requisito funcional</li>
+      <li><strong>RNF</strong> — Requisito não funcional</li>
+    </ul>
+  </div>
+
+</div>
+
+
+----------------------------------------------------
+
 
 
 
