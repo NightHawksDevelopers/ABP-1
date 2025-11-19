@@ -5,7 +5,6 @@
   <title>Dashboard - Agência de Sensoriamento Remoto</title>
   <link rel="stylesheet" href="../dashboard_css/dashboard.css">
   <link rel="stylesheet" href="../../src/styles/global.css">
-  <script src="../dashboard_js/dashboard.js"></script>
 </head>
 
 
@@ -38,7 +37,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="box">
+                    <div class="box admin-only">
                         <a href="./criar-membros.html"><b>Cadastrar membros</b></a>
                         <div class="center">
                             <hr>
@@ -47,8 +46,14 @@
                     </div>
 
                     <hr>
-                    <div class="box">
+                    <div class="box admin-only">
                         <a href="./listar-membros.html"><b>Listar membros</b></a>
+                        <div class="center">
+                            <hr>
+                        </div>
+                    </div>
+                      <div class="box user-only">
+                        <a href="./editar-membro.html"><b>Editar meu perfil</b></a>
                         <div class="center">
                             <hr>
                         </div>
@@ -56,14 +61,6 @@
                 </div>
             </div>
         </div>
-        <label class="sw-switch">
-            <input type="checkbox">
-            <div class="sw-slider">
-                <span class="sw-text-left">en-us</span>
-                <span class="sw-text-right">pt-br</span>
-                <div class="sw-circle"></div>
-            </div>
-        </label>
     </header>
 
         <div class="responsive-menu">
@@ -83,14 +80,6 @@
             <nav class="menu">
                 
                 <ul>
-                    <label class="sw-switch">
-                        <input type="checkbox">
-                        <div class="sw-slider">
-                        <span class="sw-text-left">en</span>
-                        <span class="sw-text-right">pt-br</span>
-                        <div class="sw-circle"></div>
-                        </div>
-                    </label>
                     <li><a href="./dashboard.html">Dashboard</a></li>
                     <hr>
 
@@ -117,50 +106,61 @@
   <main>
 
     <section class="welcome">
-      <img src="../../src/assets/image/mingcute--user-4-line.svg">
-      <h1>Bem vindo!</h1>
+        <svg width="50" height="50" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Outer circle for the user icon -->
+            <circle cx="50" cy="50" r="45" fill="white" stroke="#245C4D" stroke-width="4"/>
+            <!-- Inner circle for the head -->
+            <circle cx="50" cy="35" r="15" fill="#245C4D"/>
+            <!-- Arc for the body -->
+            <path d="M 25 75 A 25 25 0 0 1 75 75" fill="#245C4D"/>
+          </svg>
+      <h1>Bem vindo(a), <span id="user-name"></span>!</h1>
       <p>O que deseja fazer hoje?</p>
 
     </section>
    
-    <section class="cards">
-      <div class="full-card">
-      <a href="./posts.html">
-      <h2 class="card-title">Criar conteúdo</h2>
-      <div class="card">
-        
-        <img src="../../src/assets/image/pc_home_publicacoes.webp" alt="criar conteudo">
-        <p>Crie vagas, noticias, projetos ou publicações. Deixe nosso portal repleto de conteúdo!</p>
-      </div>
-      </a>
-      </div>
-      <div class="full-card">
-        <a href="./listar-posts.html">
-      <h2 class="card-title">Listar conteudos</h2>
-    <div class="card">
-        <img src="../../src/assets/image/pc_home_projeto.webp" alt="listar conteudo">
-        <p>Visualize, altere ou exclua todos os conteúdos do nosso portal AgriRSLab por aqui!</p>
-      </div>
-      </a>
-      </div>
-      <div class="full-card">
-         <a href="./criar-membros.html">
-      <h2 class="card-title">Cadastrar membros</h2>
-      <div class="card">
-        <img src="../../src/assets/image/pc_home_sobre.webp" alt="cadastrar membros">
-        <p>Membro novo na nossa equipe? Sem problemas! Cadastre-o por aqui!</p>
-      </div>
-         </a>
-      </div>
-      <div class="full-card">
-         <a href="./listar-membros.html">
-      <h2 class="card-title">Listar membros</h2>
-      <div class="card">
-        <img src="../../src/assets/image/pc_home_equipe.webp" alt="listar membros">
-        <p>Administre cadastros, altere dados e visualize todos os nossos colaboradores.</p>
-      </div>
-      </a>
-      </div>
+    <section class="cards">          
+
+        <a href="./posts.html" class="ho-card">
+            <h3 class="ho-titulo-cards">Criar <br>conteúdo</h3>
+            <div class="ho-cxazul">
+                <div class="ho-img-membros"></div>
+                <p class="ho-txt-cxazul">Crie vagas, noticias, projetos ou publicações. Deixe nosso portal repleto de conteúdo!</p>
+            </div>
+        </a>
+
+        <a href="./listar-posts.html" class="ho-card">
+            <h3 class="ho-titulo-cards">Listar conteudos</h3>
+            <div class="ho-cxazul">
+                <div class="ho-img-projetos"></div>
+                <p class="ho-txt-cxazul">Visualize, altere ou exclua os conteúdos do nosso portal AgriRSLab por aqui!</p>
+            </div>
+        </a>
+
+        <a href="./criar-membros.html" class="ho-card admin-only">
+            <h3 class="ho-titulo-cards">Cadastrar membros</h3>
+            <div class="ho-cxazul">
+                <div class="ho-img-sobre"></div>
+                <p class="ho-txt-cxazul">Membro novo na nossa equipe? Sem problemas! Cadastre-o por aqui!</p>
+            </div>
+        </a>
+
+        <a href="./listar-membros.html" class="ho-card admin-only">
+            <h3 class="ho-titulo-cards">Listar <br>membros</h3>
+            <div class="ho-cxazul">
+                <div class="ho-img-publicacoes"></div>
+                <p class="ho-txt-cxazul">Administre cadastros, altere dados e visualize todos os nossos colaboradores.</p>
+            </div>
+        </a>
+
+        <a href="./editar-membro.html" class="ho-card user-only editar-membro">
+            <h3 class="ho-titulo-cards">Editar meu perfil</h3>
+            <div class="ho-cxazul">
+                <div class="ho-img-sobre"></div>
+                <p class="ho-txt-cxazul">Por aqui você pode editar as informações do seu perfil </p>
+            </div>
+        </a>
+
     </section>
   </main>
 
@@ -172,8 +172,9 @@
                     <b><a href="dashboard.html">Dashboard</a></b>
                     <b><a href="posts.html">Criar conteúdo</a></b>
                     <b><a href="listar-posts.html">Lista de conteúdos</a></b>
-                    <b><a href="criar-membros.html">Cadastrar membros</a></b>
-                    <b><a href="listar-membros.html">Lista de membros</a></b>
+                    <b><a href="criar-membros.html" class="admin-only">Cadastrar membros</a></b>
+                    <b><a href="listar-membros.html" class="admin-only">Lista de membros</a></b>
+                     <b><a href="./editar-membro.html" class="user-only">Editar meu perfil</a></b>
                    
 
                 </div>
@@ -208,27 +209,7 @@
             </div>
         </div>
     </footer>
-
-    <div class="responsive-footer">
-
-        <div class="infos">
-            <div class="footer-title"><a href="#"></a><b>AgriRSLab</b></div>
-            <hr>
-            <div class="footer-bottom">
-                <div class="dev-team">
-                    <p>©2025 Nighthawks. <br> All rights reserved.</p>
-                </div>
-            </div>
-            <div class="responsive-social">
-                <div class="social-midia">
-                    <a href="#" class="linkedin2"><img src="../../src/assets/image/linkedin.png" alt=""></a>
-                    <a href="#" class="instagram2"><img src="../../src/assets/image/instagram.png" alt=""></a>
-                </div>
-            </div>
-        </div>
-
-            </label>
-        </div>
-  
+            <script src="../dashboard_js/dashboard.js"></script>
+            <script src="../dashboard_js/script.js"></script>
 </body>
 </html>

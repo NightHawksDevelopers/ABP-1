@@ -1,21 +1,39 @@
 const apiUrl = "http://localhost:3000/posts";
+const userData = JSON.parse(localStorage.getItem("user"));
 
+let currentFilter = ""; // variável global para armazenar filtro atual
 
+// Mapeamento de tipos
+const tipoMap = {
+  1: "Publicações",
+  2: "Notícias",
+  3: "Projetos",
+  4: "Vagas de Estágio"
+};
 
-let currentFilter = ""; // variável global
-
+// =============================
+// FILTRO POR TIPO
+// =============================
 document.getElementById("filterTipo").addEventListener("change", e => {
   currentFilter = e.target.value;
   loadConteudos(currentFilter);
 });
 
-
-
-
+// =============================
+// CARREGAR CONTEÚDOS
+// =============================
 async function loadConteudos(tipo = "") {
   const url = tipo ? `${apiUrl}?tipo=${tipo}` : apiUrl;
   const res = await fetch(url);
-  const data = await res.json();
+  let data = await res.json();
+
+  if (!userData.isAdmin) {
+    // Supondo que cada post tem 'coautor' como identificador do usuário autor
+    data = data.filter(post => post.co_publicante == userData.id);
+  }
+
+  // Ordenar por id_conteudo
+  data.sort((a, b) => a.id_conteudo - b.id_conteudo);
 
   const tbody = document.querySelector("#conteudoTable tbody");
   tbody.innerHTML = "";
@@ -26,7 +44,7 @@ async function loadConteudos(tipo = "") {
       <td>${c.id_conteudo}</td>
       <td>${c.co_titulo}</td>
       <td>${c.co_autor}</td>
-      <td>${c.co_tipo_conteudo}</td>
+      <td>${tipoMap[c.co_tipo_conteudo] || c.co_tipo_conteudo}</td>
       <td>${c.co_data_inicio || ""}</td>
       <td class="actions">
         <button type="button" class="edit" onclick="editConteudo(${c.id_conteudo})">Editar</button>
@@ -37,13 +55,15 @@ async function loadConteudos(tipo = "") {
   });
 }
 
+// =============================
+// EDITAR CONTEÚDO
+// =============================
 let editingId = null;
 
 async function editConteudo(id){
- console.log("Abrindo modal para ID:", id); // DEPURAÇÃO
+  console.log("Abrindo modal para ID:", id); // DEPURAÇÃO
 
   editingId = id;
-
   currentFilter = document.getElementById("filterTipo").value; // salva filtro atual
   console.log("Filtro salvo:", currentFilter);
 
@@ -77,34 +97,26 @@ async function saveEdit() {
 
   if (res.ok) {
     closeModal();
-    console.log("Antes do reload, filtro:", document.getElementById("filterTipo").value);
-    loadConteudos(currentFilter);
-
+    loadConteudos(currentFilter); // recarrega tabela com filtro atual
   } else {
     alert("Erro ao salvar");
   }
-
-  console.log("Filtro atual:", currentFilter);
 }
-
 
 function closeModal() {
   document.getElementById("editModal").style.display = "none";
 }
 
-
-
-// EXCLUIR
+// =============================
+// EXCLUIR CONTEÚDO
+// =============================
 async function deleteConteudo(id) {
   if (!confirm("Deseja realmente excluir este conteúdo?")) return;
   await fetch(`${apiUrl}/${id}`, { method: "DELETE" });
-  loadConteudos(document.getElementById("filterTipo").value);
+  loadConteudos(currentFilter);
 }
 
-// FILTRO POR TIPO
-document.getElementById("filterTipo").addEventListener("change", e => {
-  loadConteudos(e.target.value);
-});
-
-// CARREGA CONTEÚDOS AO INICIAR
+// =============================
+// CARREGAR CONTEÚDOS AO INICIAR
+// =============================
 loadConteudos();

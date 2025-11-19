@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <hr>
-                <div class="box">
+                <div class="box admin-only">
                     <a href="./criar-membros.html"><b>Cadastrar membros</b></a>
                     <div class="center">
                         <hr>
@@ -77,8 +77,14 @@
                 </div>
 
                 <hr>
-                <div class="box">
+                <div class="box admin-only">
                     <a href="./listar-membros.html"><b>Listar membros</b></a>
+                    <div class="center">
+                        <hr>
+                    </div>
+                </div>
+                <div class="box user-only">
+                    <a href="./editar-membro.html"><b>Editar meu perfil</b></a>
                     <div class="center">
                         <hr>
                     </div>
@@ -86,14 +92,6 @@
             </div>
         </div>
         </div>
-        <label class="sw-switch">
-            <input type="checkbox">
-            <div class="sw-slider">
-                <span class="sw-text-left">en-us</span>
-                <span class="sw-text-right">pt-br</span>
-                <div class="sw-circle"></div>
-            </div>
-        </label>
     </header>
 
     <div class="responsive-menu">
@@ -113,14 +111,6 @@
         <nav class="menu">
 
             <ul>
-                <label class="sw-switch">
-                    <input type="checkbox">
-                    <div class="sw-slider">
-                        <span class="sw-text-left">en</span>
-                        <span class="sw-text-right">pt-br</span>
-                        <div class="sw-circle"></div>
-                    </div>
-                </label>
                 <li><a href="./dashboard.html">Dashboard</a></li>
                 <hr>
 
@@ -155,7 +145,7 @@
                 <option value="1">Publicações</option>
                 <option value="2">Notícias</option>
                 <option value="3">Projetos</option>
-                <option value="4">Vagas de Estágio</option>
+                <option value="4">Vagas</option>
             </select>
         </div>
 
@@ -184,8 +174,10 @@
                  <b><a href="dashboard.html">Dashboard</a></b>
                     <b><a href="posts.html">Criar conteúdo</a></b>
                     <b><a href="listar-posts.html">Lista de conteúdos</a></b>
-                    <b><a href="criar-membros.html">Cadastrar membros</a></b>
-                    <b><a href="listar-membros.html">Lista de membros</a></b>
+                    <b><a href="criar-membros.html" class="admin-only">Cadastrar membros</a></b>
+                    <b><a href="listar-membros.html" class="admin-only">Lista de membros</a></b>
+                    <b><a href="./editar-membro.html" class="user-only">Lista de membros</a></b>
+
 
             </div>
             <hr>
@@ -244,6 +236,7 @@
         
 
         <script src="../dashboard_js/listar-posts.js"></script>
+        <script src="../dashboard_js/script.js"></script>
 </body>
 
 </html>

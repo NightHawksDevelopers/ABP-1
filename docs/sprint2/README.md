@@ -27,6 +27,41 @@
 Desenvolver banco de dados iniciando através da 'entidade-relação' e dar início à programação do banco de dados. Realização do CRUD de páginas necessárias; script de funcionalidades dos botões.
 
 ##  Backlog e progresso <a id="us"></a>
+
+<table>
+  <tr>
+    <td>
+
+      <p><strong>🏷️ Legendas Tasks</strong></p>
+
+      <table>
+        <tr><th>Sigla</th><th>Descrição</th></tr>
+        <tr><td><strong>DD</strong></td><td>Design Digital</td></tr>
+        <tr><td><strong>DW</strong></td><td>Desenvolvimento Web</td></tr>
+        <tr><td><strong>ES</strong></td><td>Engenharia de Software</td></tr>
+        <tr><td><strong>AL</strong></td><td>Algoritmos e Lógica de Programação</td></tr>
+        <tr><td><strong>MB</strong></td><td>Modelagem de Banco de Dados</td></tr>
+        <tr><td><strong>SO</strong></td><td>Sistemas Operacionais e Redes</td></tr>
+      </table>
+
+    </td>
+
+    <td style="padding-left: 40px;">
+
+      <p><strong>🏷️ Legendas Backlog ID</strong></p>
+
+      <table>
+        <tr><th>Sigla</th><th>Descrição</th></tr>
+        <tr><td>RF</td><td>Requisito funcional</td></tr>
+        <tr><td>RNF</td><td>Requisito não funcional</td></tr>
+      </table>
+
+    </td>
+  </tr>
+</table>
+
+
+
 | Backlog ID | Task                  | Tipo do item   | Descrição                                    | Prioridade | Especifidades                                                                                                                         | Pontuação | Status    | Tecnologias utilizadas      | Prazo    |
 |------------|-----------------------|----------------|----------------------------------------------|------------|---------------------------------------------------------------------------------------------------------------------------------------|-----------|-----------|-----------------------------|----------|
 |            | BD-001,BD-002         | BANCO DE DADOS | CRIAÇÃO DE UM ESQUEMA DE ENTIDADE RELACIONAL | Alta       | Criar um esquema de entidade relacional do banco de dados que será utilizado                                                          | 5         | ✅ | DBDesigner, PostgreSQL      | 21/10/25 |

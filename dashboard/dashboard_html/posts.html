@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="box">
+                    <div class="box admin-only">
                         <a href="./criar-membros.html"><b>Cadastrar membros</b></a>
                         <div class="center">
                             <hr>
@@ -45,8 +45,14 @@
                     </div>
 
                     <hr>
-                    <div class="box">
+                    <div class="box admin-only">
                         <a href="./listar-membros.html"><b>Listar membros</b></a>
+                        <div class="center">
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="box user-only">
+                        <a href="./editar-membro.html"><b>Editar meu perfil</b></a>
                         <div class="center">
                             <hr>
                         </div>
@@ -54,14 +60,6 @@
                 </div>
             </div>
         </div>
-        <label class="sw-switch">
-            <input type="checkbox">
-            <div class="sw-slider">
-                <span class="sw-text-left">en-us</span>
-                <span class="sw-text-right">pt-br</span>
-                <div class="sw-circle"></div>
-            </div>
-        </label>
     </header>
 
         <div class="responsive-menu">
@@ -81,14 +79,6 @@
             <nav class="menu">
                 
                 <ul>
-                    <label class="sw-switch">
-                        <input type="checkbox">
-                        <div class="sw-slider">
-                        <span class="sw-text-left">en</span>
-                        <span class="sw-text-right">pt-br</span>
-                        <div class="sw-circle"></div>
-                        </div>
-                    </label>
                     <li><a href="./dashboard.html">Dashboard</a></li>
                     <hr>
 
@@ -115,68 +105,108 @@
 
 
   <main>
-  <div class="container">
-    <h1>Gerenciar Conteúdos</h1>
-    <!-- FORMULÁRIO DE CRIAÇÃO/EDIÇÃO -->
-    <form id="conteudoForm">
-      <input type="hidden" id="id_conteudo">
-
-      <label>Título</label>
-      <input type="text" id="co_titulo" required>
-
-      <label>Autor</label>
-      <input type="text" id="co_autor" required>
-
-      <label>Tipo</label>
-      <select id="co_tipo_conteudo" required>
-        <option value="">Selecione</option>
-        <option value="1">Publicação</option>
-        <option value="2">Notícia</option>
-        <option value="3">Projeto</option>
-        <option value="4">Vaga de Estágio</option>
-      </select>
-
-      <label>PDF (URL)</label>
-      <input type="text" id="co_pdf">
-
-      <label>Citação</label>
-      <textarea id="co_citacao"></textarea>
-
-      <label>DOI</label>
-      <input type="text" id="co_doi">
-
-      <label>Lide</label>
-      <textarea id="co_lide"></textarea>
-
-      <label>Status</label>
-      <input type="text" id="co_status">
-
-      <label>Data Início</label>
-      <input type="date" id="co_data_inicio">
-
-      <label>Data Término</label>
-      <input type="date" id="co_data_termino">
-
-      <label>Objetivo</label>
-      <textarea id="co_objetivo"></textarea>
-
-      <label>Requisitos</label>
-      <textarea id="co_requisitos"></textarea>
-
-      <label>Plano de Trabalho</label>
-      <textarea id="co_plano_trabalho"></textarea>
-
-      <label>Atividades</label>
-      <textarea id="co_atividades"></textarea>
-
-      <label>Conteúdo</label>
-      <textarea id="co_conteudo"></textarea>
-      
-      <label for="co_imagem">Imagem de capa:</label>
-      <input type="file" id="co_imagem" accept="image/*">
-
-      <button type="submit">Salvar Conteúdo</button>
-    </form>
+    <div class="container">
+        <h1>Gerenciar Conteúdos</h1>
+    
+        <form id="conteudoForm">
+    
+            <!-- PRIMEIRO CAMPO SEMPRE VISÍVEL -->
+            <label>Tipo</label>
+            <select id="co_tipo_conteudo" required>
+                <option value="">Selecione</option>
+                <option value="1">Publicação</option>
+                <option value="2">Notícia</option>
+                <option value="3">Projeto</option>
+                <option value="4">Vagas</option>
+            </select>
+    
+            <input type="hidden" id="id_conteudo">
+    
+            <!-- CAMPOS QUE SERÃO MOSTRADOS/ESCONDIDOS -->
+            <div id="dynamic-fields">
+    
+                <div class="field" data-field="co_titulo">
+                    <label>Título</label>
+                    <input type="text" id="co_titulo">
+                </div>
+    
+                <div class="field" data-field="co_autor">
+                    <label>Autor</label>
+                    <input type="text" id="co_autor">
+                </div>
+    
+                <div class="field" data-field="co_pdf">
+                    <label>PDF (URL)</label>
+                    <input type="text" id="co_pdf">
+                </div>
+    
+                <div class="field" data-field="co_citacao">
+                    <label>Citação</label>
+                    <textarea id="co_citacao"></textarea>
+                </div>
+    
+                <div class="field" data-field="co_doi">
+                    <label>DOI</label>
+                    <input type="text" id="co_doi">
+                </div>
+    
+                <div class="field" data-field="co_lide">
+                    <label>Lide</label>
+                    <textarea id="co_lide"></textarea>
+                </div>
+    
+                <div class="field" data-field="co_status">
+                    <label>Status</label>
+                    <input type="text" id="co_status">
+                </div>
+    
+                <div class="field" data-field="co_data_inicio">
+                    <label>Data Início</label>
+                    <input type="date" id="co_data_inicio">
+                </div>
+    
+                <div class="field" data-field="co_data_termino">
+                    <label>Data Término</label>
+                    <input type="date" id="co_data_termino">
+                </div>
+    
+                <div class="field" data-field="co_objetivo">
+                    <label>Objetivo</label>
+                    <textarea id="co_objetivo"></textarea>
+                </div>
+    
+                <div class="field" data-field="co_requisitos">
+                    <label>Requisitos</label>
+                    <textarea id="co_requisitos"></textarea>
+                </div>
+    
+                <div class="field" data-field="co_plano_trabalho">
+                    <label>Plano de Trabalho</label>
+                    <textarea id="co_plano_trabalho"></textarea>
+                </div>
+    
+                <div class="field" data-field="co_atividades">
+                    <label>Atividades</label>
+                    <textarea id="co_atividades"></textarea>
+                </div>
+    
+                <div class="field" data-field="co_conteudo">
+                    <label>Conteúdo</label>
+                    <textarea id="co_conteudo"></textarea>
+                </div>
+    
+                <div class="field" data-field="co_imagem">
+                    <label for="co_imagem">Imagem de capa:</label>
+                    <input type="file" id="co_imagem" accept="image/*">
+                </div>
+    
+                <button id="submitBtn" type="submit" style="display: none;">Salvar Conteúdo</button>
+            </div>
+    
+        </form>
+    </div>
+    
+    
   </main>
   <footer>
             <div class="footer">
@@ -186,8 +216,9 @@
                     <b><a href="dashboard.html">Dashboard</a></b>
                     <b><a href="posts.html">Criar conteúdo</a></b>
                     <b><a href="listar-posts.html">Lista de conteúdos</a></b>
-                    <b><a href="criar-membros.html">Cadastrar membros</a></b>
-                    <b><a href="listar-membros.html">Lista de membros</a></b>
+                    <b><a href="criar-membros.html" class="admin-only">Cadastrar membros</a></b>
+                    <b><a href="listar-membros.html" class="admin-only">Lista de membros</a></b>
+                    <b><a href="./editar-membro.html" class="user-only">Editar meu perfil</a></b>
                 </div>
                 <hr>
                 <div class="infos">
@@ -242,6 +273,8 @@
             </label>
         </div>
     <script src="../dashboard_js/posts.js"></script>
+    <script src="../dashboard_js/fields.js"></script>
+    <script src="../dashboard_js/script.js"></script>
 </body>
 
 </html>
