@@ -11,9 +11,15 @@
 <a href ="#burndown"> Burndown</a>
 </p>
 
-> Status da Sprint: Em andamento ✅
+> Status da Sprint: Finalizado ✅
 >
-> [Sprint 2 no YouTube] 📽️
+> [Sprint 2 no YouTube](https://www.youtube.com/watch?v=tCPADslzZis) 📽️
+
+##  Burndown Chart 📉🔥 <a id="burndown"></a>
+
+<p align="center">
+  <img src="Burndown_spr2.png" alt="BurnDown Sprint 2" width="400px" />
+</p>
 
 
 ##  Desafio <a id="desafio"></a>
@@ -57,12 +63,6 @@ Desenvolver banco de dados iniciando através da 'entidade-relação' e dar iní
 |     Tabelas Criadas e Programadas                   | Tabelas organizadas e funcionais.                                             |
 |     Botões                    | Scriptados conforme necessidade e 100% funcionais.                                                |
 |     CRUD                   | CRUD finalizado e funcional.                                               |
-
-##  Burndown Chart 📉🔥 <a id="burndown"></a>
-
-<p align="center">
-  <img src="Burndown_spr2.png" alt="BurnDown Sprint 2" width="400px" />
-</p>
 
 
 ## 🎓 Equipe <a id="equipe"></a>

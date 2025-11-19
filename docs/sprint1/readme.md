@@ -15,6 +15,11 @@
 >
 > [Sprint 1 no YouTube](https://www.youtube.com/watch?v=bLmCPFcv2Is) 📽️
 
+##  Burndown Chart 📉🔥 <a id="burndown"></a>
+
+<p align="center">
+  <img src="BurnDownspr1.png" alt="BurnDown Sprint 1" width="400px" />
+</p>
 
 ##  Desafio <a id="desafio"></a>
 
@@ -86,11 +91,7 @@ Desenvolver a Home Page responsiva de um site institucional do INPE seguindo um 
 |       Revisão e Deploy                | Código revisado, aprovado e build sem erros.                                         |
 |     Código Padronizado                   | Segue boas práticas e padrões do time.                                               |
 
-##  Burndown Chart 📉🔥 <a id="burndown"></a>
 
-<p align="center">
-  <img src="BurnDownspr1.png" alt="BurnDown Sprint 1" width="400px" />
-</p>
 
 
 ## 🎓 Equipe <a id="equipe"></a>
