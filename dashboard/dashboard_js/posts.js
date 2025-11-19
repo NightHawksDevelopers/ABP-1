@@ -1,10 +1,16 @@
 const apiUrl = "http://localhost:3000/posts";
+const token = localStorage.getItem("token");
+const userData = JSON.parse(localStorage.getItem("user"));
+
+
+    
 
 document.getElementById("conteudoForm").addEventListener("submit", async e => {
   e.preventDefault();
 
     const formData = new FormData();
   formData.append("co_titulo", document.getElementById("co_titulo").value);
+  formData.append("co_publicante", userData.id);
   formData.append("co_autor", document.getElementById("co_autor").value);
   formData.append("co_tipo_conteudo", document.getElementById("co_tipo_conteudo").value);
   formData.append("co_pdf", document.getElementById("co_pdf").value || "");

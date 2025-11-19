@@ -5,7 +5,6 @@
   <title>Dashboard - Agência de Sensoriamento Remoto</title>
   <link rel="stylesheet" href="../dashboard_css/dashboard.css">
   <link rel="stylesheet" href="../../src/styles/global.css">
-  <script src="../dashboard_js/dashboard.js"></script>
 </head>
 
 
@@ -38,7 +37,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="box">
+                    <div class="box admin-only">
                         <a href="./criar-membros.html"><b>Cadastrar membros</b></a>
                         <div class="center">
                             <hr>
@@ -47,8 +46,14 @@
                     </div>
 
                     <hr>
-                    <div class="box">
+                    <div class="box admin-only">
                         <a href="./listar-membros.html"><b>Listar membros</b></a>
+                        <div class="center">
+                            <hr>
+                        </div>
+                    </div>
+                      <div class="box user-only">
+                        <a href="./editar-membro.html"><b>Editar meu perfil</b></a>
                         <div class="center">
                             <hr>
                         </div>
@@ -109,7 +114,7 @@
             <!-- Arc for the body -->
             <path d="M 25 75 A 25 25 0 0 1 75 75" fill="#245C4D"/>
           </svg>
-      <h1>Bem vindo, <span id="user-name"></span>!</h1>
+      <h1>Bem vindo(a), <span id="user-name"></span>!</h1>
       <p>O que deseja fazer hoje?</p>
 
     </section>
@@ -128,11 +133,11 @@
             <h3 class="ho-titulo-cards">Listar conteudos</h3>
             <div class="ho-cxazul">
                 <div class="ho-img-projetos"></div>
-                <p class="ho-txt-cxazul">Visualize, altere ou exclua todos os conteúdos do nosso portal AgriRSLab por aqui!</p>
+                <p class="ho-txt-cxazul">Visualize, altere ou exclua os conteúdos do nosso portal AgriRSLab por aqui!</p>
             </div>
         </a>
 
-        <a href="./criar-membros.html" class="ho-card">
+        <a href="./criar-membros.html" class="ho-card admin-only">
             <h3 class="ho-titulo-cards">Cadastrar membros</h3>
             <div class="ho-cxazul">
                 <div class="ho-img-sobre"></div>
@@ -140,11 +145,19 @@
             </div>
         </a>
 
-        <a href="./listar-membros.html" class="ho-card">
+        <a href="./listar-membros.html" class="ho-card admin-only">
             <h3 class="ho-titulo-cards">Listar <br>membros</h3>
             <div class="ho-cxazul">
                 <div class="ho-img-publicacoes"></div>
                 <p class="ho-txt-cxazul">Administre cadastros, altere dados e visualize todos os nossos colaboradores.</p>
+            </div>
+        </a>
+
+        <a href="./editar-membro.html" class="ho-card user-only editar-membro">
+            <h3 class="ho-titulo-cards">Editar meu perfil</h3>
+            <div class="ho-cxazul">
+                <div class="ho-img-sobre"></div>
+                <p class="ho-txt-cxazul">Por aqui você pode editar as informações do seu perfil </p>
             </div>
         </a>
 
@@ -159,8 +172,9 @@
                     <b><a href="dashboard.html">Dashboard</a></b>
                     <b><a href="posts.html">Criar conteúdo</a></b>
                     <b><a href="listar-posts.html">Lista de conteúdos</a></b>
-                    <b><a href="criar-membros.html">Cadastrar membros</a></b>
-                    <b><a href="listar-membros.html">Lista de membros</a></b>
+                    <b><a href="criar-membros.html" class="admin-only">Cadastrar membros</a></b>
+                    <b><a href="listar-membros.html" class="admin-only">Lista de membros</a></b>
+                     <b><a href="./editar-membro.html" class="user-only">Editar meu perfil</a></b>
                    
 
                 </div>
@@ -195,6 +209,7 @@
             </div>
         </div>
     </footer>
-        <script src="../dashboard_js/script.js"></script>
+            <script src="../dashboard_js/dashboard.js"></script>
+            <script src="../dashboard_js/script.js"></script>
 </body>
 </html>

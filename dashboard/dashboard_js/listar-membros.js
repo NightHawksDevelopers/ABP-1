@@ -1,10 +1,14 @@
 const apiUrl = "http://localhost:3000/membros"; 
 
+
+
 // CARREGAR MEMBROS
 async function loadMembros(cargo = "") {
   const url = cargo ? `${apiUrl}?cargo=${cargo}` : apiUrl;
   const res = await fetch(url);
   const data = await res.json();
+
+   
 
   const tbody = document.querySelector("#membrosTable tbody");
   tbody.innerHTML = "";
