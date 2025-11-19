@@ -75,7 +75,7 @@ function criarCardHTML(m) {
             <p>${descricao}</p>
           </div>
 
-          ${lattes ? `<a href="${lattes}"><button class="button" role="button">lattes</button></a>` : ""}
+          ${lattes ? `<a href="${lattes}"><button class="mb-button" role="button">lattes</button></a>` : ""}
         </div>
       </div>
     </div>
