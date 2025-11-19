@@ -1,30 +1,20 @@
-// =====================
-// PROTEÇÃO UNIVERSAL
-// =====================
 const token = localStorage.getItem("token");
 const userData = JSON.parse(localStorage.getItem("user"));
 
-// Se não estiver logado → volta para login
+// Se não estiver logado, redireciona para login
 if (!token || !userData) {
     window.location.href = "../login.html";
 }
 
-
-// =====================
-// PREENCHER O DASHBOARD
-// =====================
 document.addEventListener("DOMContentLoaded", () => {
+    // Preencher dados do usuário
+    document.getElementById("userName").textContent = userData.name;
+    document.getElementById("userEmail").textContent = userData.email;
+    document.getElementById("userRole").textContent = userData.isAdmin ? "Administrador" : "Membro";
 
-    const userNameEl = document.getElementById("userName");
-    const userEmailEl = document.getElementById("userEmail");
-    const userRoleEl  = document.getElementById("userRole");
+   
 
-    if (userNameEl)  userNameEl.textContent = userData.me_nome;
-    if (userEmailEl) userEmailEl.textContent = userData.me_email;
-    if (userRoleEl)  userRoleEl.textContent =
-        userData.me_administrador ? "Administrador" : "Membro";
-
-    // BOTÃO LOGOUT
+    // Botão de logout
     const logoutBtn = document.getElementById("logoutBtn");
     if (logoutBtn) {
         logoutBtn.addEventListener("click", () => {

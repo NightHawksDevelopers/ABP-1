@@ -1,4 +1,5 @@
 const apiUrl = "http://localhost:3000/posts";
+const userData = JSON.parse(localStorage.getItem("user"));
 
 let currentFilter = ""; // variável global para armazenar filtro atual
 
@@ -24,7 +25,12 @@ document.getElementById("filterTipo").addEventListener("change", e => {
 async function loadConteudos(tipo = "") {
   const url = tipo ? `${apiUrl}?tipo=${tipo}` : apiUrl;
   const res = await fetch(url);
-  const data = await res.json();
+  let data = await res.json();
+
+  if (!userData.isAdmin) {
+    // Supondo que cada post tem 'coautor' como identificador do usuário autor
+    data = data.filter(post => post.co_publicante == userData.id);
+  }
 
   // Ordenar por id_conteudo
   data.sort((a, b) => a.id_conteudo - b.id_conteudo);
