@@ -28,38 +28,32 @@ Desenvolver banco de dados iniciando através da 'entidade-relação' e dar iní
 
 ##  Backlog e progresso <a id="us"></a>
 
-<table>
-  <tr>
-    <td>
+<div style="display: flex; gap: 40px;">
 
-      <p><strong>🏷️ Legendas Tasks</strong></p>
+  <div>
+    <p><strong>🏷️ Legendas Tasks</strong></p>
+    <ul>
+      <li><strong>DD</strong> — Design Digital</li>
+      <li><strong>DW</strong> — Desenvolvimento Web</li>
+      <li><strong>ES</strong> — Engenharia de Software</li>
+      <li><strong>AL</strong> — Algoritmos e Lógica de Programação</li>
+      <li><strong>MB</strong> — Modelagem de Banco de Dados</li>
+      <li><strong>SO</strong> — Sistemas Operacionais e Redes</li>
+    </ul>
+  </div>
 
-      <table>
-        <tr><th>Sigla</th><th>Descrição</th></tr>
-        <tr><td><strong>DD</strong></td><td>Design Digital</td></tr>
-        <tr><td><strong>DW</strong></td><td>Desenvolvimento Web</td></tr>
-        <tr><td><strong>ES</strong></td><td>Engenharia de Software</td></tr>
-        <tr><td><strong>AL</strong></td><td>Algoritmos e Lógica de Programação</td></tr>
-        <tr><td><strong>MB</strong></td><td>Modelagem de Banco de Dados</td></tr>
-        <tr><td><strong>SO</strong></td><td>Sistemas Operacionais e Redes</td></tr>
-      </table>
+  <div>
+    <p><strong>🏷️ Legendas Backlog ID</strong></p>
+    <ul>
+      <li><strong>RF</strong> — Requisito funcional</li>
+      <li><strong>RNF</strong> — Requisito não funcional</li>
+    </ul>
+  </div>
 
-    </td>
+</div>
 
-    <td style="padding-left: 40px;">
 
-      <p><strong>🏷️ Legendas Backlog ID</strong></p>
-
-      <table>
-        <tr><th>Sigla</th><th>Descrição</th></tr>
-        <tr><td>RF</td><td>Requisito funcional</td></tr>
-        <tr><td>RNF</td><td>Requisito não funcional</td></tr>
-      </table>
-
-    </td>
-  </tr>
-</table>
-
+----------------------------------------------------
 
 
 | Backlog ID | Task                  | Tipo do item   | Descrição                                    | Prioridade | Especifidades                                                                                                                         | Pontuação | Status    | Tecnologias utilizadas      | Prazo    |
