@@ -11,9 +11,15 @@
 <a href ="#burndown"> Burndown</a>
 </p>
 
-> Status da Sprint: Em andamento ✅
+> Status da Sprint: Finalizado ✅
 >
-> [Sprint 2 no YouTube] 📽️
+> [Sprint 2 no YouTube](https://www.youtube.com/watch?v=tCPADslzZis) 📽️
+
+##  Burndown Chart 📉🔥 <a id="burndown"></a>
+
+<p align="center">
+  <img src="Burndown_spr2.png" alt="BurnDown Sprint 2" width="400px" />
+</p>
 
 
 ##  Desafio <a id="desafio"></a>
@@ -21,6 +27,35 @@
 Desenvolver banco de dados iniciando através da 'entidade-relação' e dar início à programação do banco de dados. Realização do CRUD de páginas necessárias; script de funcionalidades dos botões.
 
 ##  Backlog e progresso <a id="us"></a>
+
+<div style="display: flex; gap: 40px;">
+
+  <div>
+    <p><strong>🏷️ Legendas Tasks</strong></p>
+    <ul>
+      <li><strong>DD</strong> — Design Digital</li>
+      <li><strong>DW</strong> — Desenvolvimento Web</li>
+      <li><strong>ES</strong> — Engenharia de Software</li>
+      <li><strong>AL</strong> — Algoritmos e Lógica de Programação</li>
+      <li><strong>MB</strong> — Modelagem de Banco de Dados</li>
+      <li><strong>SO</strong> — Sistemas Operacionais e Redes</li>
+    </ul>
+  </div>
+
+  <div>
+    <p><strong>🏷️ Legendas Backlog ID</strong></p>
+    <ul>
+      <li><strong>RF</strong> — Requisito funcional</li>
+      <li><strong>RNF</strong> — Requisito não funcional</li>
+    </ul>
+  </div>
+
+</div>
+
+
+----------------------------------------------------
+
+
 | Backlog ID | Task                  | Tipo do item   | Descrição                                    | Prioridade | Especifidades                                                                                                                         | Pontuação | Status    | Tecnologias utilizadas      | Prazo    |
 |------------|-----------------------|----------------|----------------------------------------------|------------|---------------------------------------------------------------------------------------------------------------------------------------|-----------|-----------|-----------------------------|----------|
 |            | BD-001,BD-002         | BANCO DE DADOS | CRIAÇÃO DE UM ESQUEMA DE ENTIDADE RELACIONAL | Alta       | Criar um esquema de entidade relacional do banco de dados que será utilizado                                                          | 5         | ✅ | DBDesigner, PostgreSQL      | 21/10/25 |
@@ -57,12 +92,6 @@ Desenvolver banco de dados iniciando através da 'entidade-relação' e dar iní
 |     Tabelas Criadas e Programadas                   | Tabelas organizadas e funcionais.                                             |
 |     Botões                    | Scriptados conforme necessidade e 100% funcionais.                                                |
 |     CRUD                   | CRUD finalizado e funcional.                                               |
-
-##  Burndown Chart 📉🔥 <a id="burndown"></a>
-
-<p align="center">
-  <img src="Burndown_spr2.png" alt="BurnDown Sprint 2" width="400px" />
-</p>
 
 
 ## 🎓 Equipe <a id="equipe"></a>

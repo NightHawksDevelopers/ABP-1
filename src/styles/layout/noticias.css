@@ -36,6 +36,14 @@
   margin-left: 10%;
   min-height: 200px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  background-color: rgb(207, 219, 207);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.no-content:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 
 .no-title hr {
@@ -89,6 +97,8 @@
 a {
   text-decoration: none;
 }
+
+
 
 @media (max-width: 768px) {
   .no-content {

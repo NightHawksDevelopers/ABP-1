@@ -1,11 +1,4 @@
--- 1. CRIAR BANCO (rode no terminal, depois conecte ao banco)
-CREATE DATABASE nighthawks_agrirslab;
- 
--- Depois, conecte ao banco 'nighthawks_agrirslab'
--- No psql, faça: \c nighthawks_agrirslab
- 
--- 2. CRIAR TABELAS
- 
+
 CREATE TABLE cargo (
     id_cargo SERIAL PRIMARY KEY,
     ca_nome_cargo VARCHAR(100) NOT NULL

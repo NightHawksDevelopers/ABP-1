@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriRSLab - Áreas de atuação</title>
+    <link rel="stylesheet" href="../src/styles/global.css">
+    <link rel="stylesheet" href="../src/styles/layout/atuacao.css">
+    <link rel="stylesheet" href="../src/styles/components/title.css">
+    <link rel="icon" type="image/x-icon" href="../src/assets/image/Logo.svg">
+</head>
+
+
+
+<body>
+    <header>
+        <div class="content-header">
+            <div class="logo"></div>
+            <div class="options">
+                <div class="box">
+                    <a href="home.html"><b>Home</b></a>
+                    <div class="center">
+                        <hr>
+                    </div>
+                </div>
+                <hr>
+                <div class="selected-box">
+                    <a href="sobre.html"><b>AgriRSLab</b></a>
+                    <div class="center">
+                        <hr>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="sobre.html">Sobre</a>
+
+                        <a href="membros.html">Membros</a>
+
+                        <a href="projetos.html">Projetos</a>
+
+                        <a href="atuacao.html">Áreas de atuação</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="box">
+                    <a href="vagas.html"><b>Vagas</b></a>
+                    <div class="center">
+                        <hr>
+                    </div>
+                </div>
+                <hr>
+                <div class="box">
+                    <a href="publicacoes.html"><b>Publicações</b></a>
+                    <div class="center">
+                        <hr>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="publicacoes.html">Feed</a>
+
+                        <a href="noticias.html">Notícias</a>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="box">
+                    <a href="contato.html"><b>Contato</b></a>
+                    <div class="center">
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <label class="sw-switch">
+            <input type="checkbox" checked>
+            <div class="sw-slider">
+                <span class="sw-text-left">en-us</span>
+                <span class="sw-text-right">pt-br</span>
+                <div class="sw-circle"></div>
+            </div>
+        </label>
+    </header>
+
+    <div class="responsive-menu">
+        <div class="logo"></div>
+        <div class="space"></div>
+        <!-- Checkbox invisível para controlar o menu -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- Ícone hambúrguer -->
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- Menu Dropdown -->
+        <nav class="menu">
+
+            <ul>
+                <label class="sw-switch">
+                    <input type="checkbox">
+                    <div class="sw-slider">
+                        <span class="sw-text-left">en</span>
+                        <span class="sw-text-right">pt-br</span>
+                        <div class="sw-circle"></div>
+                    </div>
+                </label>
+                <li><a href="home.html">Home</a></li>
+                <hr>
+
+                <li class="dropdown">
+                    <input type="checkbox" id="AgriRSLab-menu" class="dropdown-toggle">
+                    <label for="AgriRSLab-menu" class="menu-AgriRSLab">AgriRSLab <div class="icon-arrow"><img
+                                src="../src/assets/svg/caret-down-solid-full.svg" alt=""></div></label>
+
+                    <div class="mbl-dropdown-content">
+                        <a href="sobre.html">Sobre</a>
+                        <a href="membros.html">Membros</a>
+                        <a href="projetos.html">Projetos</a>
+                        <a href="atuacao.html">Áreas de atuação</a>
+                    </div>
+                </li>
+
+                <hr>
+                <li><a href="vagas.html">Vagas</a></li>
+                <hr>
+                <li class="dropdown">
+                    <input type="checkbox" id="Publicacoes-menu" class="dropdown-toggle">
+                    <label for="Publicacoes-menu" class="menu-AgriRSLab">Publicações <div class="icon-arrow"><img
+                                src="../src/assets/svg/caret-down-solid-full.svg" alt=""></div></label>
+
+                    <div class="mbl-dropdown-content">
+                        <a href="publicacoes.html">Feed</a>
+                        <a href="noticias.html">Notícias</a>
+                    </div>
+                </li>
+                <hr>
+                <li><a href="contato.html">Contato</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <h1 id="title">Areas of Expertise</h1>
+        <div class="title-line"></div>
+    
+        <div class="atu-monitoramento">
+            <div class="atu-img1"></div>
+            <div class="atu-content">
+                <div class="atu-boxinfo">
+                    <h2>Agricultural Monitoring and Mapping</h2>
+                    <p>AgriRS conducts monitoring and mapping of major agricultural crops cultivated in Brazil using remote sensing data. Classifications are performed using pre-processed satellite imagery and classification algorithms designed to identify cultivated areas with different crops. This approach makes it possible to track the spatial dynamics of fields throughout the seasons, contributing to agricultural planning and public policies aimed at the sector.</p>
+                </div>
+    
+                <div class="accordion">
+                    <input type="checkbox" id="monit-item1" class="accordion-checkbox" hidden>
+                    <label for="monit-item1" class="accordion-header">
+                        <span class="icon">+</span> Objectives
+                    </label>
+                    <div class="accordion-body">
+                        <li>Carry out monitoring and mapping of the main agricultural crops cultivated in Brazil.</li>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                    <input type="checkbox" id="monit-item2" class="accordion-checkbox" hidden>
+                    <label for="monit-item2" class="accordion-header">
+                        <span class="icon">+</span> Technology Used
+                    </label>
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Employs remote sensing and pre-processed satellite images.</li>
+                            <li>Uses classification algorithms to identify different crops.</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                    <input type="checkbox" id="monit-item3" class="accordion-checkbox" hidden>
+                    <label for="monit-item3" class="accordion-header">
+                        <span class="icon">+</span> Field Monitoring
+                    </label>
+                    <div class="accordion-body">
+                        <p>Allows monitoring of the spatial dynamics of crops throughout the seasons.</p>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                    <input type="checkbox" id="monit-item4" class="accordion-checkbox" hidden>
+                    <label for="monit-item4" class="accordion-header">
+                        <span class="icon">+</span> Benefits and Applications
+                    </label>
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Supports agricultural planning and the creation of public policies for the sector.</li>
+                            <li>Contributes to more efficient and informed agricultural management.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="atu-desmatamento">
+            <div class="atu-img2"></div>
+            <div class="atu-content">
+                <div class="atu-boxinfo">
+                    <h2>Environmental Impact Analysis and Deforestation Detection</h2>
+                    <p>AgriRS applies remote sensing techniques to detect changes in land use, such as deforestation, agricultural expansion over natural areas, and degradation of native vegetation. These analyses can support environmental monitoring actions and more sustainable management of natural resources. This contributes to the preservation of biomes and the development of more sustainable agricultural practices.</p>
+                </div>
+    
+                <div class="accordion">
+                    <input type="checkbox" id="desmat-item1" class="accordion-checkbox" hidden>
+                    <label for="desmat-item1" class="accordion-header">
+                        <span class="icon">+</span> Detection Focus: Land Use Changes
+                    </label>
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Vegetation Degradation: Analysis of quality and health loss of native vegetation, even when not fully removed.</li>
+                            <li>Agricultural Expansion: Monitoring the advance of croplands or pasture over natural ecosystems.</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                    <input type="checkbox" id="desmat-item2" class="accordion-checkbox" hidden>
+                    <label for="desmat-item2" class="accordion-header">
+                        <span class="icon">+</span> Environmental Enforcement
+                    </label>
+                    <div class="accordion-body">
+                        <li>Provides data and evidence to support inspection, control, and environmental crime prevention actions.</li>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                    <input type="checkbox" id="desmat-item3" class="accordion-checkbox" hidden>
+                    <label for="desmat-item3" class="accordion-header">
+                        <span class="icon">+</span> Biome Preservation
+                    </label>
+                    <div class="accordion-body">
+                        <li>Directly contributes to protecting ecosystems and biodiversity.</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="atu-safras">
+            <div class="atu-img3"></div>
+    
+            <div class="atu-content">
+                <div class="atu-boxinfo">
+                    <h2>Productivity Estimates and Crop Failure Analysis</h2>
+                    <p>Based on time series of satellite images and meteorological data, AgriRS develops methodologies to estimate crop productivity and assess losses caused by extreme events such as droughts and frosts. These analyses make it possible to identify areas at risk of crop failure and provide strategic information for planning agencies, technical assistance services, and agricultural insurance.</p>
+                </div>
+    
+                <div class="accordion">
+                    <input type="checkbox" id="safras-item1" class="accordion-checkbox" hidden>
+                    <label for="safras-item1" class="accordion-header">
+                        <span class="icon">+</span> Satellite Image Time Series
+                    </label>
+                    <div class="accordion-body">
+                        <li>Use of remote sensing data collected sequentially over time to track crop development.</li>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                    <input type="checkbox" id="safras-item2" class="accordion-checkbox" hidden>
+                    <label for="safras-item2" class="accordion-header">
+                        <span class="icon">+</span> Loss Identification
+                    </label>
+                    <div class="accordion-body">
+                        <li>Estimate Crop Productivity: Provide quantitative forecasts of expected yields.</li>
+                        <li>Identify Risk Areas: Map regions with a high probability of crop failure before the damage becomes irreversible.</li>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                    <input type="checkbox" id="safras-item3" class="accordion-checkbox" hidden>
+                    <label for="safras-item3" class="accordion-header">
+                        <span class="icon">+</span> Assessment of Losses From Extreme Events
+                    </label>
+                    <div class="accordion-body">
+                        <li>Analyze the impact of adverse climate phenomena such as droughts (prolonged dry periods) and frosts (sharp temperature drops).</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="atu-fenologia">
+            <div class="atu-img4"></div>
+    
+            <div class="atu-content">
+                <div class="atu-boxinfo">
+                    <h2>Crop Phenology</h2>
+                    <p>At AgriRS, crop phenology monitoring is conducted using time series of spectral indices derived from satellite images. This approach makes it possible to identify important stages of crop cycles, such as planting dates, grain filling, flowering, and harvesting.</p>
+                </div>
+    
+                <div class="accordion">
+                    <input type="checkbox" id="feno-item1" class="accordion-checkbox" hidden>
+                    <label for="feno-item1" class="accordion-header">
+                        <span class="icon">+</span> Phenological Monitoring via Satellite
+                    </label>
+                    <div class="accordion-body">
+                        <li>We monitor the life cycle of crops (phenology) using remote data, allowing field development tracking without frequent in-person inspections.</li>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                    <input type="checkbox" id="feno-item2" class="accordion-checkbox" hidden>
+                    <label for="feno-item2" class="accordion-header">
+                        <span class="icon">+</span> Spectral Indices
+                    </label>
+                    <div class="accordion-body">
+                        <li>Use of mathematical calculations over different spectral bands captured by satellites (such as NDVI – Normalized Difference Vegetation Index), which measure vegetation health and density.</li>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                    <input type="checkbox" id="feno-item3" class="accordion-checkbox" hidden>
+                    <label for="feno-item3" class="accordion-header">
+                        <span class="icon">+</span> Time Series
+                    </label>
+                    <div class="accordion-body">
+                        <li>Analysis of index variation over time (days, weeks, or months). The curve of the spectral index reflects the crop’s “growth signature,” making it possible to identify its growth stage.</li>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                    <input type="checkbox" id="feno-item4" class="accordion-checkbox" hidden>
+                    <label for="feno-item4" class="accordion-header">
+                        <span class="icon">+</span> Identified Cycle Stages
+                    </label>
+                    <div class="accordion-body">
+                        <li>Planting dates, flowering, grain filling, and harvest (maturation/senescence).</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <button class="btn-projeto">
+            <a href="projetos.html" class="btn-name">Our Projects</a>
+        </button>
+    
+    </main>
+    
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-title"><a href=""></a><b>AgriRSLab</b></div>
+            <div class="footer-options">
+
+                <b><a href="home.html">Home</a></b>
+                <b><a href="sobre.html">Sobre</a></b>
+                <b><a href="membros.html">Membros</a></b>
+                <b><a href="projetos.html">Projetos</a></b>
+                <b><a href="atuacao.html">Áreas de atuação</a></b>
+                <b><a href="vagas.html">Vagas</a></b>
+                <b><a href="publicacoes.html">Feed</a></b>
+                <b><a href="noticias.html">Notícias</a></b>
+                <b><a href="contato.html">Contato</a></b>
+
+            </div>
+            <hr>
+            <div class="infos">
+                <div class="dev-team">
+                    <p>©2025 Nighthawks. All rights reserved.</p>
+                </div>
+                <div class="social-midia">
+                    <a href=""><img src="../src/assets/image/linkedin.png" alt=""></a>
+                    <a href=""><img src="../src/assets/image/instagram.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="responsive-footer">
+
+        <div class="infos">
+            <div class="footer-title"><a href="#"></a><b>AgriRSLab</b></div>
+            <hr>
+            <div class="footer-bottom">
+                <div class="dev-team">
+                    <p>©2025 Nighthawks. <br> All rights reserved.</p>
+                </div>
+            </div>
+            <div class="responsive-social">
+                <div class="social-midia">
+                    <a href="#" class="linkedin2"><img src="../src/assets/image/linkedin.png" alt=""></a>
+                    <a href="#" class="instagram2"><img src="../src/assets/image/instagram.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        </label>
+    </div>
+    <script src="../src/scripts/switch.js" defer></script>
+
+</body>
+
+
+</html>

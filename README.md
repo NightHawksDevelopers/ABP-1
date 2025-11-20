@@ -111,8 +111,8 @@ As soluções esperadas incluem o desenvolvimento de um site moderno, responsivo
 | Sprint | Ojetivos        | Documentação | Período| Status  | 
 |--------|-----------------|------|--------|---------- | 
 | 1      | HTML/Figma      | [Sprint 1 Docs](./docs/sprint1/readme.md)     |    15/09/25 - 03/10/25    |   ✔ Concluído    | 
-| 2      | Backend         |  [Sprint 2 Docs](./docs/sprint2/README.md)     |   13/10/25 - 31/10/25     |  ⏳ Em andamento         | 
-| 3      | Backend/Ajustes |  [Sprint 3 Docs](docs/sprint3/README.md)    |        |           | 
+| 2      | Backend         |  [Sprint 2 Docs](./docs/sprint2/README.md)     |   13/10/25 - 31/10/25     |  ✔ Concluído         | 
+| 3      | Backend/Ajustes |  [Sprint 3 Docs](./docs/sprint3/README.md)    |        |           | 
 
 
 
@@ -122,7 +122,7 @@ As soluções esperadas incluem o desenvolvimento de um site moderno, responsivo
 
 > [Sprint 1 Tasks](./docs/sprint1/tasks.md)
 >
-> [Sprint 2 Tasks]   
+> [Sprint 2 Tasks](./docs/sprint2/tasks.md)   
 > 
 > [Sprint 3 Tasks] 
 
