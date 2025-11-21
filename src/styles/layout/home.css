@@ -825,3 +825,70 @@ font-family: 'Roboto Condensed', sans-serif;
         text-align: center; /* Centraliza o texto no mobile */
     }
 }
+
+
+/* --- Ajuste dos Cards (Seção "Conheça nosso portal") --- */
+@media (max-width: 900px) {
+
+    /* ... código existente ... */
+
+    /* Garante que a seção de cards apareça */
+    .ho-faixaazul {
+        display: block; /* Garante que a seção de cards apareça */
+        padding: 40px 20px; /* Ajusta o padding para ter espaço em cima e embaixo */
+        margin: 20px auto; /* Centraliza a faixa e adiciona margens */
+    }
+
+    /* Ajuste para o título "Conheça nosso portal" na faixa azul */
+    #ho-titulo-cards {
+        display: block; /* Garante que o título apareça */
+        font-size: 2.5rem; /* Ajusta o tamanho da fonte para mobile */
+        text-align: center; /* Centraliza o título */
+        margin-bottom: 30px; /* Adiciona espaço abaixo do título */
+        color: var(--color-3); /* Mudei para a cor do texto padrão, branco estava ruim no fundo claro */
+    }
+
+    .ho-caixaazul {
+        flex-direction: column; /* Coloca os cards em coluna */
+        padding: 0; /* Remove o padding grande */
+        align-items: center; /* Centraliza os cards na coluna */
+        gap: 25px; /* Adiciona espaçamento entre os cards */
+    }
+
+    .ho-card {
+        width: 95%; /* Ocupa quase toda a largura da tela */
+        max-width: 400px; /* Limita a largura máxima para não ficar muito grande em tablets */
+        height: 350px; /* Ajusta a altura para caber o conteúdo */
+        margin-bottom: 0; /* O gap do ho-caixaazul já cuida do espaço */
+    }
+
+    /* Ajuste de tamanho de fonte no mobile */
+    .ho-titulo-cards { /* Este é o título DENTRO dos cards (MEMBROS, PROJETOS) */
+        font-size: 1.3rem;
+        inset: auto auto 20px 20px; /* Posiciona o título mais embaixo/lateral no mobile */
+    }
+
+    .ho-card:hover .ho-titulo-cards {
+        inset: auto auto 120px 20px; /* Ajusta a posição no hover */
+    }
+
+    .ho-txt-cxazul {
+        font-size: 0.9rem;
+        inset: auto auto 50px 20px; /* Posiciona o texto da descrição */
+    }
+}
+
+/* Ajuste adicional para telas muito pequenas (abaixo de 480px) */
+@media (max-width: 480px) {
+    .ho-card {
+        width: 100%; /* Garante 100% de largura total no mobile estreito */
+        max-width: none; /* Remove a largura máxima para telas muito pequenas */
+        height: 300px; /* Ajusta a altura para telas ainda menores */
+    }
+    #ho-titulo-cards { /* O título principal da seção */
+        font-size: 2rem;
+    }
+    .ho-titulo-cards { /* O título DENTRO dos cards */
+        font-size: 1.1rem;
+    }
+}cd
