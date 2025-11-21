@@ -73,7 +73,17 @@ async function editConteudo(id){
   document.getElementById("editTitulo").value = data.co_titulo;
   document.getElementById("editAutor").value = data.co_autor || data.autor_nome;
   document.getElementById("editTipo").value = data.co_tipo_conteudo;
+  document.getElementById("editPdf").value = data.co_pdf;
+  document.getElementById("editCitacao").value = data.co_citacao;
+  document.getElementById("editDoi").value = data.co_doi;
+  document.getElementById("editStatus").value = data.co_status;
+  document.getElementById("editObjetivo").value = data.co_objetivo;
+  document.getElementById("editRequisitos").value = data.co_requisitos;
+  document.getElementById("editPlano").value = data.co_plano_trabalho;
+  document.getElementById("editAtividades").value = data.co_atividades;
+  document.getElementById("editConteudo").value = data.co_conteudo;
   document.getElementById("editData").value = data.co_data_inicio ? data.co_data_inicio.split("T")[0] : "";
+  
 
   document.getElementById("editModal").style.display = "flex";
 }
@@ -83,6 +93,14 @@ async function saveEdit() {
   formData.append("co_titulo", document.getElementById("editTitulo").value);
   formData.append("co_autor", document.getElementById("editAutor").value);
   formData.append("co_tipo_conteudo", document.getElementById("editTipo").value);
+  formData.append("co_tipo_pdf", document.getElementById("editPdf").value);
+  formData.append("co_citacao", document.getElementById("editCitacao").value);
+  formData.append("co_doi", document.getElementById("editDoi").value);
+  formData.append("co_status", document.getElementById("editStatus").value);
+  formData.append("co_objetivo", document.getElementById("editObjetivo").value);
+  formData.append("co_requisitos", document.getElementById("editRequisitos").value);
+  formData.append("co_plano_trabalho", document.getElementById("editTipo").value);
+  formData.append("co_atividades", document.getElementById("editAtividades").value);
   formData.append("co_data_inicio", document.getElementById("editData").value);
 
   const fileInput = document.getElementById("editImagem");

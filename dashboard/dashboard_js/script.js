@@ -38,7 +38,7 @@ if (form) {
 // =============================
 // DASHBOARD (protegido)
 // =============================
-if (window.location.pathname.endsWith(".html")) {
+if (window.location.pathname.endsWith("dashboard.html")) {
     const user = JSON.parse(localStorage.getItem("user"));
     const token = localStorage.getItem("token");
 
@@ -80,7 +80,7 @@ editProfileLinks.forEach(link => {
         logoutBtn.addEventListener("click", () => {
             localStorage.removeItem("token");
             localStorage.removeItem("user");
-            window.location.href = "login.html";
+            window.location.href = "../login.html";
         });
     }
 }
