@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
  
-  background-color: #f4f4f4;
+  background-color: white;
 }
 
 h1 {
@@ -36,6 +36,7 @@ th {
   color: #fff;
 }
 
+.actions a,
 .actions button {
   margin-right: 5px;
   padding: 5px 10px;
@@ -43,6 +44,8 @@ th {
   cursor: pointer;
   border-radius: 4px;
   color: #fff;
+  text-decoration: none; /* pra tirar o sublinhado do <a> */
+  display: inline-block; /* pra ficar com cara de botão */
 }
 
 .actions .edit {
@@ -53,6 +56,7 @@ th {
   background-color: #f44336;
 }
 
+.actions a:hover,
 .actions button:hover {
   opacity: 0.9;
 }
