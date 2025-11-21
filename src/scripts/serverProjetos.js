@@ -24,6 +24,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         { day: "2-digit", month: "2-digit", year: "numeric" }
       );
 
+      let dataFormatadaFiltro = "";
+      if (projeto.co_data_inicio) {
+        // Garante que é uma string e pega os 10 primeiros chars (ex: 2007-10-31)
+        dataFormatadaFiltro = String(projeto.co_data_inicio).substring(0, 10);
+      }
+
       // Traduz o número (1, 2, 3) para texto. Se não achar, usa "Desconhecido"
       const statusTexto = mapaStatus[projeto.co_status] || "Desconhecido";
 
@@ -41,7 +47,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           
           <h5>Situação: ${statusTexto}</h5> 
           
-          <h6 data-date="${projeto.co_data_inicio}">Data de inicio: ${dataInicio}</h6>
+          <h6 data-date="${dataFormatadaFiltro}">Data de inicio: ${dataInicio}</h6>
         </div>
       `;
 

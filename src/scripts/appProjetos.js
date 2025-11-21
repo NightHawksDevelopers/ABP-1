@@ -10,8 +10,8 @@ document.addEventListener("projetosCarregados", () => {
 
 function inicializarApp() {
   const articles = document.getElementsByTagName("article");
-  const botaoProx = document.getElementById("prox");
-  const botaoPrev = document.getElementById("prev");
+  let botaoProx = document.getElementById("prox");
+  let botaoPrev = document.getElementById("prev");
   const formFiltro = document.getElementById("pr-filter");
 
   // Estado Global da Aplicação
@@ -88,9 +88,11 @@ function inicializarApp() {
   // Limpeza total dos eventos antigos
   const novoProx = botaoProx.cloneNode(true);
   botaoProx.parentNode.replaceChild(novoProx, botaoProx);
+  botaoProx = novoProx;
 
   const novoPrev = botaoPrev.cloneNode(true);
   botaoPrev.parentNode.replaceChild(novoPrev, botaoPrev);
+  botaoPrev = novoPrev;
 
   novoProx.onclick = (e) => {
     e.preventDefault();

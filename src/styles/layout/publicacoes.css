@@ -184,7 +184,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 100%;
+    width: 325px;
     height: 350px;
     max-width: 100%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
