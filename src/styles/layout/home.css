@@ -588,85 +588,6 @@ font-family: 'Roboto Condensed', sans-serif;
 }
 
 
-.ho-patrocinador {
-    display: 1;
-    padding: 10px 10px 30px;
-
-}
-
-.ho-img-p1 {
-
-    background-image: url("../../assets/image/pc_home_CNPQ.webp");
-    height: 100px;
-    width: 100px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-
-
-}
-
-.ho-img-p2 {
-
-    background-image: url("../../assets/image/pc_home_BRAZILDATACUBE.webp");
-    height: 100px;
-    width: 100px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-
-}
-
-.ho-img-p3 {
-
-    background-image: url("../../assets/image/pc_home_FAFESP.webp");
-    height: 100px;
-    width: 100px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-
-
-}
-
-.ho-img-p4 {
-
-    background-image: url("../../assets/image/pc_home_CONAB.webp");
-    height: 100px;
-    width: 100px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-
-}
-
-.ho-img-p5 {
-
-    background-image: url("../../assets/image/pc_home_CAPES.webp");
-    height: 100px;
-    width: 100px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-
-}
-
-.ho-img-p6 {
-
-    background-image: url("../../assets/image/pc_home_INPE.webp");
-    height: 100px;
-    width: 100px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-
-}
 
 
 #ho-faixaazulmbl {
@@ -677,218 +598,278 @@ font-family: 'Roboto Condensed', sans-serif;
 }
 
 
-/* SLIDES COLABORADORES */
+@media (max-width: 1400px) {
+    /* Container dos Cards */
+    .ho-caixaazul {
+        max-width: 90%; /* Ocupa mais largura na tela */
+        padding: 30px 15px; /* Reduz o padding */
+        gap: 20px; /* Reduz o espaçamento */
+        
+    }
 
-@media (max-width: 1120px) {
+    /* Card Individual: 2 por linha */
+    .ho-card {
+        width: 47%; /* Garante que 2 cards caibam (2 * 47% = 94% + gap) */
+        min-width: 320px; /* Aumenta a largura mínima para dar mais destaque */
+        height: 380px;
+    }
 
-    .ho-imgtitulo {
-        width: 100%;
+    /* Título principal da seção */
+    #ho-titulo-cards {
+        font-size: 2.5rem;
+    }
+
+    /* Título DENTRO dos cards (Ajuste para 2 cards) */
+    .ho-card:hover .ho-titulo-cards {
+        inset: auto auto 150px 30px; /* Sobe um pouco menos */
     }
 }
 
+/* ========================================================= */
+/* === PONTO DE QUEBRA: 1 CARD POR LINHA (até 900px) === */
+/* ========================================================= */
 @media (max-width: 900px) {
 
+    /* --- GERAL: Tópicos e Notícias em Coluna --- */
+    .ho-materia-topicos,
+    .ho-noticias-container {
+        flex-direction: column;
+    }
+    
+    /* --- CARDS: 1 por linha (Coluna) --- */
+    .ho-caixaazul {
+        flex-direction: column; /* Coloca os cards em coluna */
+        align-items: center;
+        padding: 20px 0;
+        gap: 25px;
+        max-width: 100%;
+    }
+
+    /* Card Individual: 1 por linha */
+    .ho-card {
+        width: 90%; /* Ocupa a maior parte da tela */
+        max-width: 450px; /* Limita a largura máxima para tablets */
+        min-width: unset; /* Remove o min-width para permitir flexibilidade */
+        height: 350px;
+    }
+
+    /* Título DENTRO dos cards (Ajuste para 1 card) */
+    .ho-titulo-cards {
+        font-size: 1.3rem;
+        inset: auto auto 20px 20px;
+    }
+
+    .ho-card:hover .ho-titulo-cards {
+        inset: auto auto 120px 20px;
+    }
+
+    .ho-txt-cxazul {
+        font-size: 0.9rem;
+        inset: auto auto 50px 20px;
+    }
+}
+
+/* ========================================================= */
+/* === PONTO DE QUEBRA: CELULARES (até 600px) === */
+/* ========================================================= */
+@media (max-width: 600px) {
+    /* Ajustes finos para telas menores */
+    .ho-card {
+        height: 300px;
+    }
+    #ho-titulo-cards {
+        font-size: 2rem;
+    }
+}
+
+/* ========================================================= */
+/* === PONTO DE QUEBRA: TELAS MÉDIAS (até 900px) === */
+/* ========================================================= */
+@media (max-width: 900px) {
+
+    /* --- RESPONSIVIDADE GERAL DE LAYOUT --- */
+
+    /* Desativa as faixas fixas, se houver */
+    #faixaazul {
+        display: none;
+    }
+
+    /* Colunas de conteúdo (se houver a classe .ho-materia) */
+    .ho-materia {
+        flex-direction: column;
+    }
+    .ho-txtomateria,
+    .ho-imgmateria {
+        width: 100%;
+        padding: 0px;
+        margin-bottom: 20px;
+    }
+
+    /* Menu mobile (A faixa azul .ho-faixaazulmbl é exibida) */
     #ho-faixaazulmbl {
         color: var(--color-2);
         display: flex;
         margin-bottom: -2px;
     }
 
-
-    .ho-materia {
-        flex-direction: column;
+    /* Carrossel principal (Ajusta a altura) */
+    .ho-carrosel:not(.feat) {
+        height: 500px; /* Redução de altura para telas médias */
     }
 
-    .ho-txtomateria {
-        width: 100%;
-        padding: 0px;
-        margin-bottom: 20px;
+    /* --- TÓPICOS (.ho-materia-topicos) --- */
+    .ho-materia-topicos {
+        flex-direction: column; /* Tópicos em coluna */
+        gap: 30px;
+        margin: 40px auto;
+    }
+    .ho-topico-item {
+        padding: 0 10px;
+    }
+    .ho-topico-texto {
+        text-align: center;
     }
 
-    .ho-imgmateria {
-        width: 100%;
+    /* --- CARDS (Seção "Conheça nosso portal") --- */
+
+    /* Container principal da seção de cards */
+    .ho-faixaazul {
+        display: block;
+        padding: 40px 20px;
+        margin: 20px auto;
+        /* As linhas 'display: none' anteriores foram removidas */
     }
 
+    /* Título principal da seção */
+    #ho-titulo-cards {
+        display: block;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 30px;
+        color: var(--color-5);
+    }
 
-    .ho-cards {
-        flex-direction: column;
-        margin-bottom: 20px;
-        justify-content: center;
+    /* Container dos cards */
+    .ho-caixaazul {
+        flex-direction: column; /* Cards em coluna */
+        padding: 0;
         align-items: center;
+        gap: 25px;
     }
 
+    /* Card individual */
+    .ho-card {
+        width: 95%;
+        max-width: 400px;
+        height: 350px;
+        margin-bottom: 0;
+    }
+
+    /* Título DENTRO dos cards */
+    .ho-titulo-cards {
+        font-size: 1.3rem;
+        inset: auto auto 20px 20px;
+    }
+    .ho-card:hover .ho-titulo-cards {
+        inset: auto auto 120px 20px;
+    }
+
+    /* Texto de descrição DENTRO dos cards */
+    .ho-txt-cxazul {
+        font-size: 0.9rem;
+        inset: auto auto 50px 20px;
+    }
+
+    /* --- NOTÍCIAS --- */
+    .ho-noticias-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .ho-noticias-principal {
+        flex: auto;
+        width: 100%;
+    }
+    .ho-img-principal {
+        height: 400px;
+    }
+    .ho-noticias-lista h2 {
+        font-size: 2rem;
+        margin-top: 0;
+    }
+    .ho-noticia-item {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+    .ho-noticia-thumb {
+        flex: 0 0 120px;
+        height: 80px;
+    }
+
+    /* Regras de legado que não parecem ser usadas no HTML atual */
     .ho-imgtitulo {
         width: 80%;
         height: 550px;
     }
-
     .ho-imgtitulo h3 {
         font-size: 40px;
     }
-
-    .ho-cxazul {
+    .ho-cxazul { /* Altura aqui está duplicada com a de baixo, mas mantida por segurança */
         height: 500px;
     }
-
-    .ho-txt-cxazul {
+    .ho-txt-cxazul { /* Duplicada e sobrescrita pela regra acima, mas mantida por segurança */
         font-size: 25px;
     }
-
-    #ho-titulo-cards {
+    #ho-titulo-cards { /* Duplicada e sobrescrita pela regra acima, mas mantida por segurança */
         display: flex;
         align-items: center;
         justify-content: center;
         height: 60px;
     }
-
-    #faixaazul {
-        display: none;
-    }
-
-    .ho-faixaazul {
-        display: none;
-    }
-
     .ho-carrosel.feat {
         display: block;
         background-color: var(--color-6);
     }
 }
 
+/* ========================================================= */
+/* === PONTO DE QUEBRA: TELAS PEQUENAS (até 700px) === */
+/* ========================================================= */
 @media (max-width: 700px) {
+    /* Regras para ajuste de tamanho/padding */
     .ho-txt-cxazul {
         font-size: 20px;
     }
-
     .ho-cxazul {
         height: 400px;
     }
-
     .ho-imgtitulo {
         height: 425px;
     }
-
     .ho-carrosel:not(.feat) {
-        height: 500px;
+        height: 500px; /* Duplicada, mantida por segurança */
     }
 }
 
-
-/* MEDIA QUERIES PARA RESPONSIVIDADE DA NITICIAS*/
-
-@media (max-width: 900px) {
-    /* Em telas menores, as colunas viram linhas */
-    .ho-noticias-container {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .ho-noticias-principal {
-        flex: auto; /* Ocupa 100% da largura */
+/* ========================================================= */
+/* === PONTO DE QUEBRA: CELULARES (até 600px, era 480px) === */
+/* ========================================================= */
+@media (max-width: 600px) {
+    /* Ajustes finos para o tamanho dos cards no celular */
+    .ho-card {
         width: 100%;
+        max-width: none;
+        height: 300px;
     }
-    
-    .ho-img-principal {
-        height: 400px; /* Reduz a altura da imagem principal no mobile */
-    }
-
-    .ho-noticias-lista h2 {
-        font-size: 2rem;
-        margin-top: 0;
-    }
-    
-    .ho-noticia-item {
-        margin-bottom: 20px;
-        padding-bottom: 20px;
-    }
-    
-    .ho-noticia-thumb {
-        flex: 0 0 120px; /* Reduz o tamanho da thumb */
-        height: 80px;
-    }
-}
-
-
-/* RESPONSIVIDADE PARA TÓPICOS */
-@media (max-width: 900px) {
-    .ho-materia-topicos {
-        flex-direction: column; /* Em telas menores, os tópicos ficam em coluna */
-        gap: 30px;
-        margin: 40px auto;
-    }
-
-    .ho-topico-item {
-        padding: 0 10px;
-    }
-    
-    .ho-topico-texto {
-        text-align: center; /* Centraliza o texto no mobile */
-    }
-}
-
-
-/* --- Ajuste dos Cards (Seção "Conheça nosso portal") --- */
-@media (max-width: 900px) {
-
-    /* ... código existente ... */
-
-    /* Garante que a seção de cards apareça */
     .ho-faixaazul {
-        display: block; /* Garante que a seção de cards apareça */
-        padding: 40px 20px; /* Ajusta o padding para ter espaço em cima e embaixo */
-        margin: 20px auto; /* Centraliza a faixa e adiciona margens */
+        justify-content: center;
+        align-content: center;
+        margin: 0px;
+        padding: 40px 10px 0px 10px; /* Reduz o padding horizontal */
     }
-
-    /* Ajuste para o título "Conheça nosso portal" na faixa azul */
     #ho-titulo-cards {
-        display: block; /* Garante que o título apareça */
-        font-size: 2.5rem; /* Ajusta o tamanho da fonte para mobile */
-        text-align: center; /* Centraliza o título */
-        margin-bottom: 30px; /* Adiciona espaço abaixo do título */
-        color: var(--color-3); /* Mudei para a cor do texto padrão, branco estava ruim no fundo claro */
-    }
-
-    .ho-caixaazul {
-        flex-direction: column; /* Coloca os cards em coluna */
-        padding: 0; /* Remove o padding grande */
-        align-items: center; /* Centraliza os cards na coluna */
-        gap: 25px; /* Adiciona espaçamento entre os cards */
-    }
-
-    .ho-card {
-        width: 95%; /* Ocupa quase toda a largura da tela */
-        max-width: 400px; /* Limita a largura máxima para não ficar muito grande em tablets */
-        height: 350px; /* Ajusta a altura para caber o conteúdo */
-        margin-bottom: 0; /* O gap do ho-caixaazul já cuida do espaço */
-    }
-
-    /* Ajuste de tamanho de fonte no mobile */
-    .ho-titulo-cards { /* Este é o título DENTRO dos cards (MEMBROS, PROJETOS) */
-        font-size: 1.3rem;
-        inset: auto auto 20px 20px; /* Posiciona o título mais embaixo/lateral no mobile */
-    }
-
-    .ho-card:hover .ho-titulo-cards {
-        inset: auto auto 120px 20px; /* Ajusta a posição no hover */
-    }
-
-    .ho-txt-cxazul {
-        font-size: 0.9rem;
-        inset: auto auto 50px 20px; /* Posiciona o texto da descrição */
-    }
-}
-
-/* Ajuste adicional para telas muito pequenas (abaixo de 480px) */
-@media (max-width: 480px) {
-    .ho-card {
-        width: 100%; /* Garante 100% de largura total no mobile estreito */
-        max-width: none; /* Remove a largura máxima para telas muito pequenas */
-        height: 300px; /* Ajusta a altura para telas ainda menores */
-    }
-    #ho-titulo-cards { /* O título principal da seção */
         font-size: 2rem;
     }
-    .ho-titulo-cards { /* O título DENTRO dos cards */
+    .ho-titulo-cards {
         font-size: 1.1rem;
     }
-}cd
+}
