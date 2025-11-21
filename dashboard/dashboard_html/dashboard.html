@@ -5,6 +5,7 @@
   <title>Dashboard - Agência de Sensoriamento Remoto</title>
   <link rel="stylesheet" href="../dashboard_css/dashboard.css">
   <link rel="stylesheet" href="../../src/styles/global.css">
+  <link rel="stylesheet" href="../dashboard_css/dashboard-responsivo.css">
 </head>
 
 
@@ -36,8 +37,12 @@
                             <hr>
                         </div>
                     </div>
-                    <hr>
+                    
+                    <div class="admin-only">
+                        <hr>
+                    </div>
                     <div class="box admin-only">
+                        
                         <a href="./criar-membros.html"><b>Cadastrar membros</b></a>
                         <div class="center">
                             <hr>
@@ -117,6 +122,7 @@
       <h1>Bem vindo(a), <span id="user-name"></span>!</h1>
       <p>O que deseja fazer hoje?</p>
 
+
     </section>
    
     <section class="cards">          
@@ -153,16 +159,17 @@
             </div>
         </a>
 
-        <a href="./editar-membro.html" class="ho-card user-only editar-membro">
+        <a href="./editar-membro.html" class="ho-card editar-membro">
             <h3 class="ho-titulo-cards">Editar meu perfil</h3>
             <div class="ho-cxazul">
-                <div class="ho-img-sobre"></div>
+                <div class="ho-img-edit"></div>
                 <p class="ho-txt-cxazul">Por aqui você pode editar as informações do seu perfil </p>
             </div>
         </a>
 
     </section>
   </main>
+
 
    <footer>
             <div class="footer">
@@ -211,5 +218,6 @@
     </footer>
             <script src="../dashboard_js/dashboard.js"></script>
             <script src="../dashboard_js/script.js"></script>
+            <script src="../dashboard_js/editar-membro.js"></script>
 </body>
 </html>
