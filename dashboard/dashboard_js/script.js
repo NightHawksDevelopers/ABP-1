@@ -42,10 +42,10 @@ if (window.location.pathname.endsWith(".html")) {
     const user = JSON.parse(localStorage.getItem("user"));
     const token = localStorage.getItem("token");
 
-    if (!token || !user) {
-        alert("Você precisa estar logado.");
-        window.location.href = "login.html";
-    }
+    // if (!token || !user) {
+    //     alert("Você precisa estar logado.");
+    //     window.location.href = "login.html";
+    // }
 
     // Exibir nome do usuário
     const userNameEl = document.getElementById("user-name");
@@ -74,15 +74,6 @@ editProfileLinks.forEach(link => {
     link.href = `./editar-membro.html?id=${user.id}`;
 });
 
-    // Botão de sair
-    const logoutBtn = document.getElementById("logout");
-    if (logoutBtn) {
-        logoutBtn.addEventListener("click", () => {
-            localStorage.removeItem("token");
-            localStorage.removeItem("user");
-            window.location.href = "login.html";
-        });
-    }
 }
     
         
