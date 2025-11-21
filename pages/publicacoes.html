@@ -7,6 +7,7 @@
     <title>AgriRSLab - Publicações</title>
     <link rel="stylesheet" href="../src/styles/layout/publicacoes.css">
     <link rel="stylesheet" href="../src/styles/global.css">
+    <link rel="stylesheet" href="../src/styles/components/button.css">
     <link rel="stylesheet" href="../src/styles/components/title.css">
     <link rel="icon" type="image/x-icon" href="../src/assets/image/Logo.svg">
 </head>
@@ -164,7 +165,7 @@
             
                     <div class="pr-search-item">
                         <label for="data">Ano de Publicação:</label>
-                        <input type="number" name="data" min="2000" max="2025" class="pr-filters pr-year" id="pr-date" />
+                        <input type="number" name="data" min="2000" max="2030" class="pr-filters pr-year" id="pr-date" />
                     </div>
             
                     <div class="pr-search-item">
@@ -291,9 +292,16 @@
                     </article>
                 </div>
 
-            </div>
-        </section>
-    </main>
+</div>
+
+<div class="main-buttons-pos">
+    <button type="button" class="main-buttons" id="prev">Anterior</button>
+    <button type="button" class="main-buttons" id="prox">Proximo</button>
+</div>
+
+</section>
+</main>
+
     <script src="../src/scripts/filtropub.js"></script>
     <footer>
         <div class="footer">
