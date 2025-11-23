@@ -62,10 +62,12 @@ let editingId = null;
 
 async function editConteudo(id){
   console.log("Abrindo modal para ID:", id); // DEPURAÇÃO
+  
 
   editingId = id;
   currentFilter = document.getElementById("filterTipo").value; // salva filtro atual
   console.log("Filtro salvo:", currentFilter);
+  atualizarCamposModal();
 
   const res = await fetch(`${apiUrl}/${id}`);
   const data = await res.json();
@@ -82,8 +84,11 @@ async function editConteudo(id){
   document.getElementById("editPlano").value = data.co_plano_trabalho;
   document.getElementById("editAtividades").value = data.co_atividades;
   document.getElementById("editConteudo").value = data.co_conteudo;
-  document.getElementById("editData").value = data.co_data_inicio ? data.co_data_inicio.split("T")[0] : "";
-  
+  document.getElementById("editDataInicio").value = data.co_data_inicio ? data.co_data_inicio.split("T")[0] : "";
+  document.getElementById("editDataTermino").value = data.co_data_termino ? data.co_data_termino.split("T")[0] : "";
+
+    atualizarCamposModal();
+
 
   document.getElementById("editModal").style.display = "flex";
 }
@@ -93,7 +98,7 @@ async function saveEdit() {
   formData.append("co_titulo", document.getElementById("editTitulo").value);
   formData.append("co_autor", document.getElementById("editAutor").value);
   formData.append("co_tipo_conteudo", document.getElementById("editTipo").value);
-  formData.append("co_tipo_pdf", document.getElementById("editPdf").value);
+  formData.append("co_pdf", document.getElementById("editPdf").value);
   formData.append("co_citacao", document.getElementById("editCitacao").value);
   formData.append("co_doi", document.getElementById("editDoi").value);
   formData.append("co_status", document.getElementById("editStatus").value);
@@ -101,7 +106,9 @@ async function saveEdit() {
   formData.append("co_requisitos", document.getElementById("editRequisitos").value);
   formData.append("co_plano_trabalho", document.getElementById("editTipo").value);
   formData.append("co_atividades", document.getElementById("editAtividades").value);
-  formData.append("co_data_inicio", document.getElementById("editData").value);
+  formData.append("co_data_inicio", document.getElementById("editDataInicio").value);
+  formData.append("co_data_termino", document.getElementById("editDataTermino").value);
+
 
   const fileInput = document.getElementById("editImagem");
   if (fileInput.files.length > 0) {
@@ -115,7 +122,8 @@ async function saveEdit() {
 
   if (res.ok) {
     closeModal();
-    loadConteudos(currentFilter); // recarrega tabela com filtro atual
+    loadConteudos(currentFilter);
+    alert("Edição realizada com sucesso!");
   } else {
     alert("Erro ao salvar");
   }
