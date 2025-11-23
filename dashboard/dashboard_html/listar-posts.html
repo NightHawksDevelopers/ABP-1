@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Listar Posts</title>
+    <title>Listar conteúdos</title>
     <link rel="stylesheet" href="../dashboard_css/listar-posts.css">
     <link rel="stylesheet" href="../../src/styles/global.css">
+    <link rel="icon" type="image/x-icon" href="../../src/assets/image/Logo.svg">
 </head>
 
 
@@ -110,54 +111,55 @@
 <body>
 
     <header>
-        <div class="content-header">
-            <div class="logo"></div>
-            <div class="options">
-                <div class="box">
-                    <a href="./dashboard.html"><b>Dashboard</b></a>
-                    <div class="center">
+            <div class="content-header">
+                <div class="logo"></div>
+                <div class="options">
+                    <div class="box">
+                        <a href="./dashboard.html"><b>Dashboard</b></a>
+                        <div class="center">
+                            <hr>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="box">
+                        <a href="./posts.html"><b>Criar conteúdo</b></a>
+                        <div class="center">
+                            <hr>
+                        </div>
+                        
+                    </div>
+                <hr>
+                    <div class="selected-box">
+                        <a href="./listar-posts.html"><b>Listar conteudos</b></a>
+                        <div class="center">
+                            <hr>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-only">
                         <hr>
                     </div>
-                </div>
-                <hr>
-                <div class="box">
-                    <a href="./posts.html"><b>Criar conteúdo</b></a>
-                    <div class="center">
-                        <hr>
+                    <div class="box admin-only">
+                        
+                        <a href="./criar-membros.html"><b>Cadastrar membros</b></a>
+                        <div class="center">
+                            <hr>
+                        </div>
+                        
                     </div>
 
-                </div>
-                <hr>
-                <div class="selected-box">
-                    <a href="./listar-posts.html"><b>Listar conteudos</b></a>
-                    <div class="center">
+                    <div class="admin-only">
                         <hr>
                     </div>
-                </div>
-                <hr>
-                <div class="box admin-only">
-                    <a href="./criar-membros.html"><b>Cadastrar membros</b></a>
-                    <div class="center">
-                        <hr>
-                    </div>
-
-                </div>
-
-                <hr>
-                <div class="box admin-only">
-                    <a href="./listar-membros.html"><b>Listar membros</b></a>
-                    <div class="center">
-                        <hr>
-                    </div>
-                </div>
-                <div class="box user-only">
-                    <a href="./editar-membro.html"><b>Editar meu perfil</b></a>
-                    <div class="center">
-                        <hr>
+                    <div class="box admin-only">
+                        
+                        <a href="./listar-membros.html"><b>Listar membros</b></a>
+                        <div class="center">
+                            <hr>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </header>
 
@@ -189,8 +191,8 @@
                     <div class="mbl-dropdown-content">
                         <a href="./posts.html">Criar conteudos</a>
                         <a href="./listar-posts.html">Listar conteudos</a>
-                        <a href="./criar-membros.html">Cadastrar membros</a>
-                        <a href="./listar-membros.html">Listar membros</a>
+                        <a href="./criar-membros.html" class="admin-only">Cadastrar membros</a>
+                        <a href="./listar-membros.html" class="admin-only">Listar membros</a>
                     </div>
                 </li>
 
@@ -241,9 +243,9 @@
                  <b><a href="dashboard.html">Dashboard</a></b>
                     <b><a href="posts.html">Criar conteúdo</a></b>
                     <b><a href="listar-posts.html">Lista de conteúdos</a></b>
-                    <b><a href="criar-membros.html" class="admin-only">Cadastrar membros</a></b>
-                    <b><a href="listar-membros.html" class="admin-only">Lista de membros</a></b>
-                    <b><a href="./editar-membro.html" class="user-only">Lista de membros</a></b>
+                    <b class="admin-only"><a href="criar-membros.html">Cadastrar membros</a></b>
+                    <b class="admin-only"><a href="listar-membros.html" >Lista de membros</a></b>
+
 
 
             </div>
@@ -260,24 +262,6 @@
         </div>
     </footer>
 
-    <div class="responsive-footer">
-
-        <div class="infos">
-            <div class="footer-title"><a href="#"></a><b>AgriRSLab</b></div>
-            <hr>
-            <div class="footer-bottom">
-                <div class="dev-team">
-                    <p>©2025 Nighthawks. <br> All rights reserved.</p>
-                </div>
-            </div>
-            <div class="responsive-social">
-                <div class="social-midia">
-                    <a href="#" class="linkedin2"><img src="../../src/assets/image/linkedin.png" alt=""></a>
-                    <a href="#" class="instagram2"><img src="../../src/assets/image/instagram.png" alt=""></a>
-                </div>
-            </div>
-        </div>
-        </footer>
 
         <div class="responsive-footer">
 
