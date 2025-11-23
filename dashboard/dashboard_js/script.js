@@ -56,8 +56,8 @@ if (window.location.pathname.endsWith(".html")) {
     // Mostrar ou esconder botões conforme papel
     if (!user.isAdmin) {
         document.querySelectorAll(".admin-only").forEach(el => {
-            el.style.display = "none";
-        });
+    el.style.display = "none";
+});
     }else {
               document.querySelectorAll(".user-only").forEach(el => {
             el.style.display = "none";
