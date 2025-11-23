@@ -8,34 +8,69 @@
 
     /* Removemos os estilos antigos (sombra, borda) do container */
     border-radius: 0;
-    box-shadow: none;
-    padding: 0;
+    padding: 0
 }
 
 /* --- Estilo Base do Card (aplicado a todas as seções) --- */
 main section {
-    background-color: var(--color-2); /* Cor Branca (do global.css) */
+    background-color: #007c5a;
     border-radius: 12px;       /* Bordas arredondadas (da referência) */
     padding: 25px 30px;
     /* Sombra suave (da referência, mas adaptada p/ tema claro) */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
     margin-bottom: 0; /* O 'gap' do grid agora controla o espaçamento */
+    color: #ffffff
 }
 
-/* --- Títulos --- */
-
-/* O Título H1 e a linha devem ocupar a largura total do grid */
+main section img {
+    width: 80px;
+    height: auto;
+    margin-right: 20px; 
+    align-self: center; 
+}
 #title, 
 .title-line {
     grid-column: 1 / -1; /* Faz o item ocupar as 2 colunas */
 }
 
+.icn-sobre{
+    width: 60px;      
+    height: auto;
+    margin-right: 15px; 
+}
+
+.icn-missao{
+    width: 60px;        
+    height: auto;
+    margin-right: 15px;
+}
+.icn-valor{
+    width: 60px;      
+    height: auto;
+    margin-right: 15px;
+}
+.icn-visao{
+    width: 60px;      
+    height: auto;
+    margin-right: 15px;
+}
+.icn-metodo{
+    width: 60px;      
+    height: auto;
+    margin-right: 15px;
+}
 /* O card "Sobre" (o primeiro) também deve ocupar a largura total */
 .sobre {
     grid-column: 1 / -1;
-    
+    color: #ffffff;
+    padding: 15px;
+    display:flex;
+    align-items: center;
 }
-.so-img{
+.icn-sobre{
+    width: 60px;      
+    height: auto;
+    margin-right: 15px; 
 
 
 
@@ -46,7 +81,7 @@ main section {
 
 /* Estilo do Título da Página (H1) */
 #title {
-    color: var(--color-1); /* Cor primária (do global.css) */
+    color: #ffffff; /* Cor primária (do global.css) */
     font-size: 2.5rem;
     font-weight: 800;
     text-align: left; /* Alinha à esquerda em vez de justificar */
@@ -65,7 +100,7 @@ main section {
 h2 {
     font-size: 1.8rem;
     font-weight: 900;
-    color: var(--color-1); /* Cor primária (do global.css) */
+    color:#ffffff ; /* Cor primária (do global.css) */
     margin-bottom: 15px;
     text-align: left; /* Alinha à esquerda */
 }
@@ -74,6 +109,7 @@ h2 {
 ul {
     list-style-type: none;
     padding-left: 0;
+    color:#ffffff
 }
 
 main li {
@@ -91,6 +127,7 @@ main li::before {
     color: var(--color-5); /* Cor Verde (do global.css) */
     font-weight: bold;
     font-size: 1.1rem;
+    color: rgb(253, 253, 253);
 }
 
 /* --- Responsividade --- */
@@ -101,15 +138,45 @@ main li::before {
         gap: 20px;
     }
 
-    .sobre-content-with-icon {
-    flex-direction: column; /* Empilha o ícone e o texto */
-    align-items: center; /* Centraliza */
-    gap: 15px;
+     main section, 
+    .sobre {
+        display: flex;          
+        flex-direction: column; 
+        align-items: center;     
+        text-align: center;     
+        padding: 20px;
     }
 
-    .sobre-content-with-icon::before {
-    width: 50px;
-    height: 50px;
-}
+  
+    main section img,
+    .sobre img {
+        width: 60px;             
+        height: auto;
+        margin-bottom: 15px;     
+        margin-top: 0;           
+       
+        grid-column: auto;
+        grid-row: auto;
+        align-self: center !important; 
 
+    }
+    main section h2,
+    main section p,
+    main section ul {
+        grid-column: auto;
+        width: 100%;
+    }
+
+    
+    main section ul {
+        text-align: left;
+        display: inline-block;
+        width: auto;
+    }
+
+    
+    #title {
+        font-size: 2rem;
+        text-align: center;
+    }
 }
