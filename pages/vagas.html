@@ -147,17 +147,23 @@
             <h1 id="title">Vagas em aberto</h1>
             <div id="va-title__info">
                 <p>Última atualização em <em>data a definir</em></p>
-                <div id="va-title__info-nav">
-                    <span id="va-title__info-nav_title">Compartilhe: </span>
-                    <span>
+                <div class="share-container">
+                <span id="no-title__info-nav_title">Compartilhe: </span>
+
+                    <a href="#" id="share-facebook" target="_blank" rel="noopener noreferrer"
+                        aria-label="Compartilhar no Facebook" class="btn-share">
                         <i style="color: #2f4f4f;" class="fa-brands fa-facebook fa-xl"></i>
-                    </span>
-                    <span>
+                    </a>
+
+                    <a href="#" id="share-linkedin" target="_blank" rel="noopener noreferrer"
+                        aria-label="Compartilhar no LinkedIn" class="btn-share">
                         <i class="fa-brands fa-linkedin fa-xl" style="color: #2f4f4f;"></i>
-                    </span>
-                    <span>
+                    </a>
+
+                    <a href="https://www.instagram.com/agrirslab.inpe/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Ir para o Instagram" class="btn-share">
                         <i class="fa-brands fa-instagram fa-xl" style="color: #2f4f4f;"></i>
-                    </span>
+                    </a>
                 </div>
             </div>
             <div class="title-line"></div>
@@ -252,9 +258,10 @@
 
         </label>
     </div>
-    <script src="../src/scripts/switch.js" defer></script>
+    <!-- <script src="../src/scripts/switch.js" defer></script> -->
 
     <script src="../src/scripts/servervagas.js"></script>
+    <script src="../src/scripts/share.js"></script>
 </body>
 
 </html>
