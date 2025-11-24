@@ -45,7 +45,7 @@ async function loadConteudos(tipo = "") {
       <td>${c.co_titulo}</td>
       <td>${c.co_autor}</td>
       <td>${tipoMap[c.co_tipo_conteudo] || c.co_tipo_conteudo}</td>
-      <td>${c.co_data_inicio || ""}</td>
+      <td>${c.co_data || c.co_data_inicio}</td>
       <td class="actions">
         <button type="button" class="edit" onclick="editConteudo(${c.id_conteudo})">Editar</button>
         <button class="delete" onclick="deleteConteudo(${c.id_conteudo})">Excluir</button>
@@ -62,10 +62,12 @@ let editingId = null;
 
 async function editConteudo(id){
   console.log("Abrindo modal para ID:", id); // DEPURAÇÃO
+  
 
   editingId = id;
   currentFilter = document.getElementById("filterTipo").value; // salva filtro atual
   console.log("Filtro salvo:", currentFilter);
+  atualizarCamposModal();
 
   const res = await fetch(`${apiUrl}/${id}`);
   const data = await res.json();
@@ -73,7 +75,21 @@ async function editConteudo(id){
   document.getElementById("editTitulo").value = data.co_titulo;
   document.getElementById("editAutor").value = data.co_autor || data.autor_nome;
   document.getElementById("editTipo").value = data.co_tipo_conteudo;
-  document.getElementById("editData").value = data.co_data_inicio ? data.co_data_inicio.split("T")[0] : "";
+  document.getElementById("editPdf").value = data.co_pdf;
+  document.getElementById("editCitacao").value = data.co_citacao;
+  document.getElementById("editDoi").value = data.co_doi;
+  document.getElementById("editStatus").value = data.co_status;
+  document.getElementById("editObjetivo").value = data.co_objetivo;
+  document.getElementById("editRequisitos").value = data.co_requisitos;
+  document.getElementById("editPlano").value = data.co_plano_trabalho;
+  document.getElementById("editAtividades").value = data.co_atividades;
+  document.getElementById("editConteudo").value = data.co_conteudo;
+  document.getElementById("editData").value = data.co_data ? data.co_data.split("T")[0] : "";
+  document.getElementById("editDataInicio").value = data.co_data_inicio;
+  document.getElementById("editDataTermino").value = data.co_data_termino;
+
+    atualizarCamposModal();
+
 
   document.getElementById("editModal").style.display = "flex";
 }
@@ -83,7 +99,18 @@ async function saveEdit() {
   formData.append("co_titulo", document.getElementById("editTitulo").value);
   formData.append("co_autor", document.getElementById("editAutor").value);
   formData.append("co_tipo_conteudo", document.getElementById("editTipo").value);
-  formData.append("co_data_inicio", document.getElementById("editData").value);
+  formData.append("co_pdf", document.getElementById("editPdf").value);
+  formData.append("co_citacao", document.getElementById("editCitacao").value);
+  formData.append("co_doi", document.getElementById("editDoi").value);
+  formData.append("co_status", document.getElementById("editStatus").value);
+  formData.append("co_objetivo", document.getElementById("editObjetivo").value);
+  formData.append("co_requisitos", document.getElementById("editRequisitos").value);
+  formData.append("co_plano_trabalho", document.getElementById("editTipo").value);
+  formData.append("co_atividades", document.getElementById("editAtividades").value);
+  formData.append("co_data", document.getElementById("editData").value);
+  formData.append("co_data_inicio", document.getElementById("editDataInicio").value);
+  formData.append("co_data_termino", document.getElementById("editDataTermino").value);
+
 
   const fileInput = document.getElementById("editImagem");
   if (fileInput.files.length > 0) {
@@ -97,7 +124,8 @@ async function saveEdit() {
 
   if (res.ok) {
     closeModal();
-    loadConteudos(currentFilter); // recarrega tabela com filtro atual
+    loadConteudos(currentFilter);
+    alert("Edição realizada com sucesso!");
   } else {
     alert("Erro ao salvar");
   }
