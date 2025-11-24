@@ -45,7 +45,7 @@ async function loadConteudos(tipo = "") {
       <td>${c.co_titulo}</td>
       <td>${c.co_autor}</td>
       <td>${tipoMap[c.co_tipo_conteudo] || c.co_tipo_conteudo}</td>
-      <td>${c.co_data_inicio || ""}</td>
+      <td>${c.co_data || c.co_data_inicio}</td>
       <td class="actions">
         <button type="button" class="edit" onclick="editConteudo(${c.id_conteudo})">Editar</button>
         <button class="delete" onclick="deleteConteudo(${c.id_conteudo})">Excluir</button>
@@ -84,8 +84,9 @@ async function editConteudo(id){
   document.getElementById("editPlano").value = data.co_plano_trabalho;
   document.getElementById("editAtividades").value = data.co_atividades;
   document.getElementById("editConteudo").value = data.co_conteudo;
-  document.getElementById("editDataInicio").value = data.co_data_inicio ? data.co_data_inicio.split("T")[0] : "";
-  document.getElementById("editDataTermino").value = data.co_data_termino ? data.co_data_termino.split("T")[0] : "";
+  document.getElementById("editData").value = data.co_data ? data.co_data.split("T")[0] : "";
+  document.getElementById("editDataInicio").value = data.co_data_inicio;
+  document.getElementById("editDataTermino").value = data.co_data_termino;
 
     atualizarCamposModal();
 
@@ -106,6 +107,7 @@ async function saveEdit() {
   formData.append("co_requisitos", document.getElementById("editRequisitos").value);
   formData.append("co_plano_trabalho", document.getElementById("editTipo").value);
   formData.append("co_atividades", document.getElementById("editAtividades").value);
+  formData.append("co_data", document.getElementById("editData").value);
   formData.append("co_data_inicio", document.getElementById("editDataInicio").value);
   formData.append("co_data_termino", document.getElementById("editDataTermino").value);
 
