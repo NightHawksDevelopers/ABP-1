@@ -11,9 +11,9 @@
 
 #va{
     border-radius: 8px;
-    box-shadow: 2px 2px 5px gray;
-    padding-left: 10px;
-    padding-right: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding-left: 50px;
+    padding-right: 50px;
     padding-top: 15px;    /* Dá um espaço no topo */
     padding-bottom: 20px; /* Dá um espaço embaixo para o botão "Voltar" */
     margin-bottom: 50px;
