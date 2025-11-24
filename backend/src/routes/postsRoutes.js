@@ -24,6 +24,42 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 
+
+async function getHomeNoticias(req, res) {
+    // ID 2 é o tipo 'Notícia'
+    const ID_NOTICIA = 2; 
+    
+    // Consulta SQL para buscar as 3 notícias mais recentes
+    const query = `
+        SELECT
+            id_conteudo,
+            co_titulo,
+            co_lide,
+            co_data,
+            co_imagem
+        FROM
+            conteudo
+        WHERE
+            co_tipo_conteudo = $1
+        ORDER BY
+            co_data DESC, id_conteudo DESC
+        LIMIT
+            4;
+    `;
+    
+    try {
+        const result = await pool.query(query, [ID_NOTICIA]);
+        // Retorna o array de notícias (máximo 3)
+        res.json(result.rows); 
+    } catch (err) {
+        console.error("Erro ao buscar as últimas notícias para a home:", err);
+        res.status(500).json({ error: "Erro ao buscar as últimas notícias" });
+    }
+}
+
+
+
+
 async function getPostById(req, res) {
   try {
     const { id } = req.params; // Pega o 'id' da URL (ex: /posts/7)
@@ -128,7 +164,14 @@ router.get("/", async (req, res) => {
   }
 });
 
+
+// ROTA DEDICADA PARA A HOMEPAGE (Ultimas 3 Notícias)
+router.get("/ultimas", getHomeNoticias);
+
+
 router.get("/:id", getPostById); // Isso vai pegar o /posts/7
+
+
 
 router.put("/:id", upload.single("imagem"), async (req, res) => {
   try {

@@ -14,23 +14,94 @@
             <div class="modal-content">
                 <h2>Editar Conteúdo</h2>
 
+                <label for="editTipo">Tipo</label>
+                <select id="editTipo" required>
+                    <option value="1">Publicação</option>
+                    <option value="2">Notícia</option>
+                    <option value="3">Projeto</option>
+                    <option value="4">Vaga de Estágio</option>
+                    </select>
+
+                <div class="field" data-field="co_titulo">
                 <label for="editTitulo">Título</label>
                 <input id="editTitulo" type="text">
+                    </div>
 
+                <div class="field" data-field="co_autor">
                 <label for="editAutor">Autor</label>
                 <input id="editAutor" type="text">
+                </div>
 
-                <label for="editTipo">Tipo</label>
-                <input id="editTipo" type="text">
+                <div class="field" data-field="co_pdf">
+                <label for="editPdf">PDF</label>
+                <input id="editPdf" type="text">
+                </div>
+                
+                <div class="field" data-field="co_citacao">
+                <label for="editCitacao">Citacao</label>
+                <input id="editCitacao" type="text">
+                </div>
 
+                <div class="field" data-field="co_doi"></div>
+                <label for="editDoi">DOI</label>
+                <input id="editDoi" type="text">
+
+                <div class="field" data-field="co_lide">
+                <label for="editLide">Lide</label>
+                <input id="editLide" type="text">
+                </div>
+
+                <div class="field" data-field="co_status">
+                <label for="editStatus">Status</label>
+                <input id="editStatus" type="number">
+                </div>
+
+                <div class="field" data-field="co_objetivo">
+                <label for="editObjetivo">Objetivo</label>
+                <input id="editObjetivo" type="text">
+                </div>
+
+                <div class="field" data-field="co_requisitos">
+                <label for="editRequisitos">Requisitos</label>
+                <input id="editRequisitos" type="text">
+                </div>
+
+                <div class="field" data-field="co_plano">
+                <label for="editPlano">Plano</label>
+                <input id="editPlano" type="text">
+                </div>
+                
+                <div class="field" data-field="co_atividades">
+                <label for="editAtividades">Atividades</label>
+                <input id="editAtividades" type="text">
+                </div>
+
+                <div class="field" data-field="co_conteudo">
+                <label for="editConteudo">Conteudo</label>
+                <input id="editConteudo" type="text">
+                </div>
+                
+                <div class="field" data-field="co_data">
                 <label for="editData">Data</label>
                 <input id="editData" type="date">
+                </div>
+                
+                <div class="field" data-field="co_data_inicio">
+                <label for="editDataInicio">Data inicio</label>
+                <input id="editDataInicio" type="date">
+                </div>
 
+                <div class="field" data-field="co_data_termino">
+                <label for="editDataTermino">Data termino</label>
+                <input id="editDataTermino" type="date">
+                </div>
 
+                <div class="field" data-field="co_imagem">
                 <label for="editImagem">Imagem de capa:</label>
                 <input type="file" id="editImagem" accept="image/*">
+                </div>
 
-                <button type="button" onclick="saveEdit()">Salvar</button>
+                <button id="saveEdit" type="button" onclick="saveEdit()">Salvar</button>
                 <button onclick="closeModal()">Cancelar</button>
 
                 
@@ -218,7 +289,7 @@
         </div>
 
         
-
+        <script src="../dashboard_js/fields-listar-posts.js"></script>
         <script src="../dashboard_js/listar-posts.js"></script>
         <script src="../dashboard_js/script.js"></script>
 </body>

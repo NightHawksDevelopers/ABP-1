@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // IMAGEM
     const imgDiv = document.querySelector(".ni-img");
-    const base = `../src/assets/image/co${noticia.id_conteudo}`;
+    const base = `./backend/uploads/${noticia.co_imagem}`;
 
     const imageUrl = await findImage(base); // Usa a função mestre
 
