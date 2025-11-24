@@ -461,7 +461,7 @@ h4 {
 
 /* COLUNA PRINCIPAL (ESQUERDA) */
 .ho-noticias-principal {
-    flex: 0 0 40%; /* Largura fixa para a coluna principal (40%) */
+    flex: 0 0 35%; /* Largura fixa para a coluna principal 35%) */
     background-color: var(--color-4); /* Cor de fundo para garantir espaço */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -486,6 +486,7 @@ font-family: 'Roboto Condensed', sans-serif;
 /* COLUNA DE LISTA (DIREITA) */
 .ho-noticias-lista {
     flex-grow: 1; /* Ocupa o restante do espaço */
+
 }
 
 .ho-noticias-lista h2 {
@@ -518,14 +519,15 @@ font-family: 'Roboto Condensed', sans-serif;
 
 /* Imagem da notícia na lista */
 .ho-noticia-thumb {
-    flex: 0 0 150px; /* Tamanho fixo para a thumb */
+    width: 200px;
     height: 100px;
     margin-right: 20px;
-    background-size: cover;
+    background-size: cover; /* <-- Esta linha sugere que é background, não tag <img> */
     background-position: center;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Conteúdo da notícia */
 .ho-noticia-conteudo {
@@ -556,16 +558,6 @@ font-family: 'Roboto Condensed', sans-serif;
     text-transform: uppercase;
 }
 
-/* PLACEHOLDERS DE IMAGEM (TROQUE PELAS SUAS IMAGENS REAIS!) */
-.ho-thumb-1 {
-    background-image: url("../../assets/image/thumb-agri-1.webp"); 
-}
-.ho-thumb-2 {
-    background-image: url("../../assets/image/thumb-agri-2.webp");
-}
-.ho-thumb-3 {
-    background-image: url("../../assets/image/thumb-agri-3.webp");
-}
 
 
 
