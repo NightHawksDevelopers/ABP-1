@@ -1,31 +1,35 @@
 async function findImage(base) {
   const exts = ["webp", "jpg", "png"];
-  console.log(`[findImage] Buscando imagem com base: ${base}`); // LOG 1
 
-  const check = (url) =>
-    new Promise((resolve, reject) => {
-      const img = new Image();
-      img.onload = () => resolve(url);
-      img.onerror = () => {
-        console.log(`[findImage] Falha ao carregar: ${url}`); // LOG 2
-        reject();
-      };
-      img.src = url;
-    });
+  // Se o nome já termina com alguma extensão, só tenta ele direto
+  if (/\.(webp|jpg|png)$/i.test(base)) {
+    try {
+      await check(base);
+      console.log(`[findImage] SUCESSO! Imagem encontrada: ${base}`);
+      return base;
+    } catch (e) {
+      console.warn(`[findImage] Nenhuma imagem encontrada para base: ${base}`);
+      return null;
+    }
+  }
 
+  // Senão, tenta cada extensão normalmente
   for (const ext of exts) {
     const path = `${base}.${ext}`;
     try {
       await check(path);
-      console.log(`[findImage] SUCESSO! Imagem encontrada: ${path}`); // LOG 3
+      console.log(`[findImage] SUCESSO! Imagem encontrada: ${path}`);
       return path;
     } catch (e) {
       // Tenta o próximo
+      console.log(`[findImage] Falha ao carregar: ${path}`);
     }
   }
-  console.warn(`[findImage] Nenhuma imagem encontrada para base: ${base}`); // LOG 4
+
+  console.warn(`[findImage] Nenhuma imagem encontrada para base: ${base}`);
   return null;
 }
+
 
 /*
   Nosso script principal
@@ -60,18 +64,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.querySelector(".ni-text p").innerHTML = noticia.co_conteudo
       ? noticia.co_conteudo.replace(/\n/g, "<br>")
       : "";
-    // (Pode adicionar .ni-author e .ni-reference se tiver no HTML)
-
-    // IMAGEM
-    const imgDiv = document.querySelector(".ni-img");
-    const base = `./backend/uploads/${noticia.co_imagem}`;
-
-    const imageUrl = await findImage(base); // Usa a função mestre
-
-    if (imageUrl) {
-      imgDiv.style.backgroundImage = `url('${imageUrl}')`;
-    }
-    // Se não achou, deixa a imagem padrão do CSS
+   
+      const imgPath = `http://localhost:3000/uploads/${noticia.co_imagem}`;
+      document.getElementById('ni-img').src = imgPath;
   } catch (err) {
     console.error("Erro ao carregar notícia:", err);
   }
