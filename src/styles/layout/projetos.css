@@ -17,7 +17,7 @@
 }
 
 form {
-    height:max-content;
+    height: max-content;
     max-width: 100%;
     width: 100%;
     height: 120px;
@@ -46,15 +46,16 @@ form {
 
 fieldset {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     flex-direction: row;
     height: min-content;
     width: 100%;
-    flex-wrap:nowrap;
+    flex-wrap: nowrap;
     border: none;
     align-items: center;
 }
-legend{
+
+legend {
     float: left;
     width: 100px;
     text-align: right;
@@ -70,17 +71,28 @@ legend{
     border: none;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.pr-search-item{
+
+.pr-search-item {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: center;
     gap: 5px;
+    width: 30%;
+    padding: 5px;
 }
-.pr-nome{
+
+.pr-search-item label {
+    text-align: left;
+    position: relative;
+    top: -6px;
+}
+
+.pr-nome {
     color: #fff;
     width: 150px;
 }
+
 #nomeprojeto::placeholder {
     color: white;
     text-indent: 10px;
@@ -149,6 +161,7 @@ article {
     justify-content: center;
     margin-bottom: 30px;
     margin-top: 30px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -190,6 +203,7 @@ article p {
 a {
     color: black;
 }
+
 .button {
     width: 260px;
     height: 50px;
@@ -255,6 +269,7 @@ a {
         flex-direction: column;
         align-items: center;
         padding: 10px;
+        height: 100%;
     }
 
     article {
@@ -303,14 +318,12 @@ a {
     }
 
     .pr-filters {
-
-        max-width: 90%;
+        width: 300px;
         margin-bottom: 10px;
-
     }
 
     #palavra-chave {
-        width: 100%;
+        width: 300px;
     }
 
     .search-box {
@@ -339,13 +352,21 @@ a {
     }
 
     #aplicar {
-
         justify-content: center;
         margin-left: 0;
     }
+
+    .pr-search-item {
+        gap: 5px;
+        width: 50%;
+        padding: 5px;
+    }
+
+    .pr-search-item label {
+        width: 80px;
+        text-align: left;
+    }
 }
-
-
 
 @media (max-width:300px) {
     section {

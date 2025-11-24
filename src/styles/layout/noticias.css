@@ -70,28 +70,14 @@
   color: #2f4f4f;
 }
 
-.no-button {
-  color: #ffffff;
-  background-color: #2f4f4f;
-  border-radius: 25px;
-  border: none;
-  outline: none;
-  padding: 5px 15px;
-  float: right;
-
-  cursor: pointer;
-
-  transition: all 0.3s ease-in-out;
-}
-
-.no-button:hover {
-  background-color: #2f4f4f;
-}
-
 .no-buttons {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: end;
+  gap: 10px;
   margin-top: 10px;
-  width: 85%;
-  margin-bottom: 55px;
+  width: 90%;
+
 }
 
 a {
