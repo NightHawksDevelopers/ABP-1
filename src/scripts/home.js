@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const noticiaItem = document.createElement('a');
                     noticiaItem.classList.add('ho-noticia-item');
                     // Usar o id_conteudo para criar o link de detalhe
-                    noticiaItem.href = `noticias/${noticia.id_conteudo}`; 
+                    noticiaItem.href = `notindividual.html?id=${noticia.id_conteudo}`;
                     
                     // Montar o HTML do card
                     noticiaItem.innerHTML = `
