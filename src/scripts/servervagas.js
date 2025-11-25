@@ -41,6 +41,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       // Joga o bloco pronto dentro do container
       containerVagas.appendChild(div);
     });
+
+    // --- NOVO: Avisa que as vagas chegaram ---
+    const eventoPronto = new Event("vagasCarregadas");
+    document.dispatchEvent(eventoPronto);
+
   } catch (err) {
     console.error("Erro ao carregar vagas:", err);
     // Mensagem de fallback caso a API dê pau

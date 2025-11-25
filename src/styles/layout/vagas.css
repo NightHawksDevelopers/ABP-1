@@ -17,6 +17,7 @@ hr {
     flex-direction: row;
     justify-content: space-between;
     align-items: end;
+    flex-wrap: wrap;
 }
 
 #va-title__info>p {
@@ -45,10 +46,10 @@ hr {
     height: fit-content;
     max-width: 100%;
     width: 100%;
-    background-color:rgb(207,219,207);
+    background-color: rgb(207, 219, 207);
     padding: 20px;
     display: flex;
-    justify-content:left;
+    justify-content: left;
     flex-direction: column;
     align-items: left;
     box-sizing: border-box;
@@ -56,31 +57,36 @@ hr {
     box-shadow: 2px 2px 5px gray;
     margin-bottom: 20px;
 
-    
+
 }
-.va-content__block:hover{
+
+.va-content__block:hover {
     transform: translateY(-5px);
-  box-shadow: 2px 2px 5px gray;
-  background-color: whitesmoke;
-  translate: scaleY(0);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 2px 2px 5px gray;
+    background-color: whitesmoke;
+    translate: scaleY(0);
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 
 .va-content__block>p {
     margin: 0;
-    
+
 }
 
 .va-content__block-title {
     margin-bottom: 0.5rem;
-    color: #2F4F4F;      
+    color: #2F4F4F;
     transition: color 0.3s;
 }
+
 .card-link {
-    text-decoration: none;      /* Remove o sublinhado padrão de links */
-    color: inherit;             /* Herda a cor do texto original */
-    display: block;             /* Faz o link se comportar como um bloco */
+    text-decoration: none;
+    /* Remove o sublinhado padrão de links */
+    color: inherit;
+    /* Herda a cor do texto original */
+    display: block;
+    /* Faz o link se comportar como um bloco */
     width: 100%;
 }
 
@@ -90,7 +96,7 @@ hr {
 
 .va-content__block-title>a {
     text-decoration: none;
-    color:#2F4F4F;
+    color: #2F4F4F;
 }
 
 .va-content__block-desc {
@@ -102,10 +108,6 @@ hr {
     font-style: italic;
     padding-top: 5px;
 }
-
-
-
-
 
 /*Break-Point 1800*/
 @media (max-width: 1800px) {
@@ -223,11 +225,13 @@ hr {
         font-size: 16px;
     }
 }
+
 .share-btn-style {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0 10px; /* Um pouco de espaço nas laterais */
+    padding: 0 10px;
+    /* Um pouco de espaço nas laterais */
     transition: transform 0.2s ease;
 }
 
@@ -235,25 +239,31 @@ hr {
     transform: scale(1.1);
     opacity: 0.8;
 }
+
 .share-btn-style:focus {
     outline: none;
 }
+
 .share-container {
     display: flex;
     align-items: center;
-    gap: 15px; /* Espaço entre os itens */
+    gap: 15px;
+    /* Espaço entre os itens */
 }
 
 /* Estilo base dos botões */
 .btn-share {
-    text-decoration: none; /* Remove sublinhado de link */
+    text-decoration: none;
+    /* Remove sublinhado de link */
     cursor: pointer;
-    transition: transform 0.2s ease; /* Animação suave */
+    transition: transform 0.2s ease;
+    /* Animação suave */
 }
 
 /* Efeito ao passar o mouse (Hover) */
 .btn-share:hover {
-    transform: scale(1.2); /* Aumenta levemente o ícone */
+    transform: scale(1.2);
+    /* Aumenta levemente o ícone */
     opacity: 0.8;
 }
 
