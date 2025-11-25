@@ -52,17 +52,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     // Montar o HTML do card
                     noticiaItem.innerHTML = `
-                             
+                             <div class="ho-noticia-thumb-container">
                              <img class="ho-noticia-thumb" src="http://localhost:3000/uploads/${noticia.co_imagem}" 
                              onerror="this.onerror=null; this.src='../src/assets/image/pc_home_carrosel1.webp';" 
                              alt="${noticia.co_titulo}"
                             />
+                            </div>
                        
                         <div class="ho-noticia-conteudo">
                             <h3 class="ho-noticia-titulo">${noticia.co_titulo}</h3>
                             <p class="ho-noticia-resumo">${noticia.co_lide}</p>
                             <span class="ho-noticia-mais">MAIS</span>
                         </div>
+                
                     `;
                     
                     noticiasListaContainer.appendChild(noticiaItem);

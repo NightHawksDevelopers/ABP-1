@@ -7,6 +7,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     const res = await fetch("http://localhost:3000/posts?tipo=4");
     const data = await res.json();
 
+    data.sort((a, b) => {
+      // Transforma as strings de data em objetos Date reais para comparar
+      // b - a = Ordem Decrescente (Mais nova primeiro)
+      return new Date(b.co_data) - new Date(a.co_data);
+    });
+
     // 3. Limpa os blocos estáticos (os exemplos do HTML)
     containerVagas.innerHTML = "";
 

@@ -528,6 +528,14 @@ font-family: 'Roboto Condensed', sans-serif;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     object-fit: cover;
 }
+.ho-noticia-thumb-container {
+    flex-shrink: 0;
+    width: 200px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
 
 
 /* Conteúdo da notícia */
@@ -589,6 +597,7 @@ font-family: 'Roboto Condensed', sans-serif;
     justify-content: center;
     width: 100%;
 }
+
 
 
 @media (max-width: 1400px) {
