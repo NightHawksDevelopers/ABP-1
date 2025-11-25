@@ -8,6 +8,20 @@ const params = new URLSearchParams(window.location.search);
 const membroId = params.get("id");
 const apiUrl = "http://localhost:3000/membros";
 
+
+// Supondo que userData.me_administrador é o campo de admin do usuário logado
+// Supondo que membroId é o id do membro na URL (então está editando outro membro)
+if (!userData.isAdmin || !membroId || parseInt(membroId) === userData.id) {
+        // Esconde checkbox/admin se NÃO for admin ou se estiver editando o próprio usuário
+        document.getElementById("administrador").style.display = "none";
+        document.getElementById("label-admin").style.display = "none";
+        } else {
+        // Mostra se é admin e está editando outro membro
+        document.getElementById("administrador").style.display = "block";
+        document.getElementById("label-admin").style.display = "block";
+        }
+
+
 document.addEventListener("DOMContentLoaded", async () => {
     const cargoSelect = document.getElementById("cargo");
 
@@ -44,6 +58,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             document.getElementById("administrador").style.display = "none";
             document.querySelector("label[for='administrador']").style.display = "none";
         }
+
+        
+        
 
         // Preencher formulário
         document.getElementById("nome").value = membro.me_nome || "";
