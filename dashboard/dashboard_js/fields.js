@@ -14,7 +14,7 @@ tipoSelect.addEventListener("change", () => {
     // Esconde tudo primeiro
     document.querySelectorAll(".field").forEach(f => {
         f.style.display = "none";
-        const input = f.querySelector("input, textarea");
+        const input = f.querySelector("input, textarea,select");
         if (input) input.required = false;
     });
 
@@ -27,7 +27,7 @@ tipoSelect.addEventListener("change", () => {
         const field = document.querySelector(`.field[data-field="${id}"]`);
         if (field) {
             field.style.display = "block";
-            const input = field.querySelector("input, textarea");
+            const input = field.querySelector("input, textarea, select");
             if (input) input.required = true;
         }
     });
