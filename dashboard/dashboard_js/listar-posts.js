@@ -97,6 +97,8 @@ async function editConteudo(id){
 
 async function saveEdit() {
   const formData = new FormData();
+  
+  
   formData.append("co_titulo", document.getElementById("editTitulo").value);
   formData.append("co_lide", document.getElementById("editLide").value);
   formData.append("co_autor", document.getElementById("editAutor").value);
@@ -107,31 +109,41 @@ async function saveEdit() {
   formData.append("co_status", document.getElementById("editStatus").value);
   formData.append("co_objetivo", document.getElementById("editObjetivo").value);
   formData.append("co_requisitos", document.getElementById("editRequisitos").value);
-  formData.append("co_plano_trabalho", document.getElementById("editTipo").value);
+  formData.append("co_plano_trabalho", document.getElementById("editPlano").value); 
   formData.append("co_atividades", document.getElementById("editAtividades").value);
+  formData.append("co_conteudo", document.getElementById("editConteudo").value); 
   formData.append("co_data", document.getElementById("editData").value);
   formData.append("co_data_inicio", document.getElementById("editDataInicio").value);
   formData.append("co_data_termino", document.getElementById("editDataTermino").value);
 
-
+ 
   const fileInput = document.getElementById("editImagem");
   if (fileInput.files.length > 0) {
     formData.append("imagem", fileInput.files[0]);
   }
 
-  const res = await fetch(`${apiUrl}/${editingId}`, {
-    method: "PUT",
-    body: formData
-  });
+  try {
+    const res = await fetch(`${apiUrl}/${editingId}`, {
+        method: "PUT",
+        body: formData
+    });
 
-  if (res.ok) {
-    closeModal();
-    loadConteudos(currentFilter);
-    alert("Edição realizada com sucesso!");
-  } else {
-    alert("Erro ao salvar");
+    if (res.ok) {
+        closeModal();
+        // Recarrega a lista mantendo o filtro atual
+        loadConteudos(currentFilter);
+        alert("Edição realizada com sucesso!");
+    } else {
+        const errorText = await res.text();
+        console.error("Erro no backend:", errorText);
+        alert("Erro ao salvar. Verifique o console.");
+    }
+  } catch (error) {
+      console.error("Erro na requisição:", error);
+      alert("Erro de conexão ao tentar salvar.");
   }
 }
+
 
 function closeModal() {
   document.getElementById("editModal").style.display = "none";
