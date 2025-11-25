@@ -23,7 +23,7 @@
 
 ##  Modelo entidade relação banco de dados <a id="#"></a>
 <p align="center">
-  <img src="entidade-relacao_AgriRSlLAB.png" alt="entidade-relacao" width="600px" />
+  <img src="/docs/entidade-relacao_AgriRSLAB.png" alt="entidade-relacao" width="100%" />
 </p>
 
 > Arquivo.xml para DB Design 4
