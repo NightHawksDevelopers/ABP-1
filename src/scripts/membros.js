@@ -49,7 +49,7 @@ function criarCardHTML(m) {
   const nome = m.me_nome || "Nome não informado";
   const cargo = m.ca_nome_cargo || "Cargo não informado";
   const descricao = m.me_descricao || "";
-  const imagem = m.me_imagem || "../src/assets/image/default.jpg";
+  const imagem = m.me_imagem || "../src/assets/image/defaultuser.jpg";
   const lattes = m.me_lattes || "";
 
   return `
