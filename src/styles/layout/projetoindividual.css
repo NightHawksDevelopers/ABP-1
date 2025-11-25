@@ -1,0 +1,111 @@
+Opportunities:root {
+      --color-1: #2F4F4F;
+      --color-2: #ffffff;
+      --color-3: #000000;
+      --color-4: #efecec;
+      --color-5: #245C4D;
+}
+
+.pi-title {
+      width: 100%;
+      align-items: center;
+      margin-bottom: 3%;
+}
+
+.pi-title h1 {
+      font-size: 50px;
+      color: var(--color-5);
+}
+
+.pi-title p {
+      font-size: 25px;
+      color: var(--color-3);
+      width: 100%;
+}
+
+.pi-date {
+      text-align: end;
+}
+
+.pi-date {
+      font-size: 24px;
+      color: var(--color-3);
+}
+
+.pi-img {
+      height: 500px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 90%;
+      border-radius: 15px;
+      margin-bottom: 3%;
+}
+
+.pi-content {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+}
+
+.pi-text {
+      width: 90%;
+      font-size: 24px;
+      text-align: justify;
+      line-height: 30px;
+}
+
+.pi-reference {
+      justify-content: end;
+      display: flex;
+      margin: 4% 0% 4% 0%;
+}
+
+.pi-reference p {
+      text-align: justify;
+      width: 90%;
+      line-height: 20px;
+      font-size: 16px;
+}
+
+@media (max-width: 900px) {
+      .pi-title h1 {
+            font-size: 60px;
+      }
+
+      .pi-text {
+            width: 90%;
+      }
+}
+
+@media (max-width: 700px) {
+      .pi-img {
+            height: 450px;
+      }
+}
+
+@media (max-width: 600px) {
+
+      .pi-title h1 {
+            font-size: 40px;
+      }
+
+      .pi-title p {
+            font-size: 25px;
+      }
+}
+
+@media (max-width: 400px) {
+      .pi-img {
+            height: 350px;
+      }
+
+      .pi-title p {
+            font-size: 20px;
+      }
+
+      .pi-text {
+            font-size: 20px;
+            line-height: 25px;
+      }
+}

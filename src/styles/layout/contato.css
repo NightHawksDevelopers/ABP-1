@@ -36,6 +36,7 @@ iframe {
     align-items: center;
     margin-bottom: 50px;
     margin-top: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .co-form-left {
@@ -129,6 +130,15 @@ button {
     margin-top: 10px;
 }
 
+.co-button button {
+    background-color: white;
+    transition: background-color 0.3s ease; /* AQUI é a transição certa */
+}
+
+.co-button button:hover {
+    background-color: rgb(207, 219, 207);
+}
+
 .co-form-left p {
     margin-bottom: 10px;
 }
@@ -154,6 +164,13 @@ button {
         margin-top: 20px;
         margin-bottom: 20px;
     }
+    .co-form-content {
+    box-shadow: none;
+}
+.co-form-right{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+}
 }
 
 .sw-switch {
