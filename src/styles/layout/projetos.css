@@ -146,11 +146,11 @@ legend {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#aplicar:hover{
+#aplicar:hover {
     transform: translateY(-2px);
 }
 
-#aplicar:active{
+#aplicar:active {
     transform: translateY(2px);
 }
 
@@ -173,11 +173,7 @@ article {
     margin-top: 30px;
     border-radius: 10px;
     cursor: pointer;
-}
-
-article{
     transition: all 0.3s ease;
-    
 }
 
 article:hover {
@@ -496,5 +492,33 @@ a {
         cursor: pointer;
         height: 32px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    article {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 5px;
+        margin-top: 30px;
+    }
+
+    article img {
+        width: 65%;
+        height: fit-content;
+    }
+
+    .article-text {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
+    h6 {
+        font-size: 10px;
+    }
+
+    h5{
+        font-size: 12px;
     }
 }
