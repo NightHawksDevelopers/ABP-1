@@ -10,7 +10,6 @@ body {
     color: #222;
 }
 
-/* Container centralizado - para limitar largura da página */
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -25,7 +24,7 @@ body {
 }
 
 form {
-    height: min-content;
+    height: max-content;
     max-width: 100%;
     width: 100%;
     height: 120px;
@@ -54,10 +53,10 @@ form {
 
 fieldset {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
-        height: min-content;
-        width: 100%;
+    height: min-content;
+    width: 100%;
     flex-wrap: nowrap;
     border: none;
     align-items: center;
@@ -65,33 +64,51 @@ fieldset {
 
 legend {
     float: left;
-    width: 100px;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: right;
 }
 
 .pr-filters {
-    justify-content: center;
     border-radius: 20px;
     background-color: #2F4F4F;
     color: white;
     padding-left: 10px;
+    width: 100%;
     padding-right: 10px;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width: 120px;
+}
+
+.pr-line {
+    justify-content: space-between;
+    gap: 10px;
+    display: flex;
+    height: 100%;
+    width: 100%;
 }
 
 .pr-search-item {
+    margin-left: 2px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 5px;
+    width: 30%;
+    align-items: center;
+}
+
+.pr-search-item label {
+    text-align: left;
+    position: relative;
+    white-space: nowrap;
 }
 
 .pr-nome {
     color: #fff;
-    width: 150px;
 }
 
 #nomeprojeto::placeholder {
@@ -102,7 +119,6 @@ legend {
 .search-box {
     position: relative;
     display: flex;
-
 }
 
 .search-box input {
@@ -165,8 +181,6 @@ section {
 .pub-article {
     width: fit-content;
     cursor: pointer;
-
-
 }
 
 .pub-pub {
@@ -231,7 +245,7 @@ section {
     background: white;
     cursor: pointer;
     margin-top: 12px;
-    color:#0574BB;
+    color: #0574BB;
     text-decoration: none;
 }
 
@@ -242,6 +256,24 @@ section {
     margin: 10px auto 0;
     border-radius: 2px;
     margin-bottom: 1rem;
+}
+
+@media (max-width: 1100px) {
+    .pr-filters {
+        width: 70%;
+    }
+
+    .pr-search-item {
+        width: 50%;
+    }
+
+    .pr-nome {
+        width: 70%;
+    }
+
+    #aplicar {
+        width: 100%;
+    }
 }
 
 @media (max-width: 900px) {
@@ -260,6 +292,85 @@ section {
         width: 100%;
         max-width: 1000px;
     }
+
+    form {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        height: 100%;
+    }
+
+    .pr-line {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    legend {
+        text-align: center;
+        width: 100%;
+    }
+
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .pr-filters {
+        width: 300px;
+        margin-bottom: 10px;
+    }
+
+    #palavra-chave {
+        width: 300px;
+    }
+
+    .search-box {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        position: relative;
+    }
+
+    .search-box input {
+        width: 100%;
+        max-width: 300px;
+        padding-right: 40px;
+    }
+
+    .search-button {
+        position: absolute;
+        right: 10px;
+        margin-top: 5px;
+        top: 30%;
+        transform: translateY(-50%);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    #aplicar {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .pr-search-item {
+        gap: 5px;
+        width: 50%;
+        padding: 5px;
+        flex-direction: column;
+    }
+
+    .pr-search-item label {
+        width: 100px;
+        text-align: center;
+        top: -8px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -277,5 +388,73 @@ section {
     #pu-line {
         width: 100%;
         max-width: 1000px;
+    }
+}
+
+@media (max-width:400px) {
+    .search-box {
+        width: 100%;
+    }
+
+    legend {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    form {
+        font-size: 0.6rem;
+        height: 300px;
+    }
+
+    #palavra-chave {
+        width: 100%;
+    }
+
+    .pr-filters {
+        width: 100%;
+    }
+
+    .pr-search-item {
+        width: 60%;
+        flex-direction: column;
+        height: 50px;
+    }
+
+    .pr-search-item label {
+        top: 0px;
+        text-align: center;
+        font-size: 12px;
+        width: auto;
+    }
+
+    .search-button {
+        right: 3%;
+        top: 4px;
+        width: 22%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .search-button svg {
+        color: #888;
+        transition: color 0.2s ease;
+        height: 40%;
+        width: 40%;
+    }
+
+    .search-button:hover svg {
+        color: #007bff;
+    }
+
+    #aplicar {
+        max-width: 100%;
+        width: 200px;
+        background-color: #0574BB;
+        border-radius: 25px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        height: 32px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 }
