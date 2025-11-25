@@ -124,7 +124,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 localStorage.setItem("user", JSON.stringify(updated));
             }
             alert("Dados atualizados com sucesso!");
-            window.location.href = membroId ? "listar-membros.html" : "dashboard.html";
         } catch (error) {
             console.error("Erro ao atualizar membro:", error);
             alert("Falha na conexão com o servidor.");

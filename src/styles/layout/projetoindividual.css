@@ -55,6 +55,10 @@ Opportunities:root {
       line-height: 30px;
 }
 
+.pi-text p {
+      margin: 40px;
+}
+
 .pi-reference {
       justify-content: end;
       display: flex;

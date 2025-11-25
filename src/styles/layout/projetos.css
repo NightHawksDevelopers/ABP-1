@@ -179,6 +179,7 @@ article {
     cursor: pointer;
     transition: all 0.3s ease;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 
@@ -200,9 +201,9 @@ article:hover {
 
 .article-text {
     width: 60%;
-    margin-bottom: 10px;
     margin-right: 10%;
     padding: 20px;
+    height:100%;
 
 }
 
@@ -226,6 +227,11 @@ h6 {
 article p {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;      /* Mostra só 3 linhas */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
 }
 
 a {

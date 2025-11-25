@@ -1,3 +1,8 @@
+const statusMap = {
+  1: "Concluído",
+  2: "Em andamento",
+  3: "Agendado"
+}
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
@@ -22,6 +27,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Atualiza HTML
     document.querySelector(".pi-title h1").textContent =
       projeto.co_titulo || "";
+    document.querySelector(".pi-title p").textContent =
+    "Autor: " + projeto.co_autor;
+    document.querySelector("#statusProjeto").textContent =
+    "Situação: " + statusMap[projeto.co_status]
     document.querySelector(".pi-date p").textContent = projeto.co_data
       ? `Publicada em ${new Date(projeto.co_data).toLocaleDateString()}`
       : "";

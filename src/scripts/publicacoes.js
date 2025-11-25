@@ -12,31 +12,34 @@ document.addEventListener("DOMContentLoaded", async () => {
       const div = document.createElement("div");
       div.classList.add("pub-pub");
 
-      div.innerHTML = ` 
+      div.innerHTML = `
         <article class="pub-article" data-id="${pub.id_conteudo}">
-        <a href="${pub.co_pdf}" target="_blank" id="pdf">
-         <div class="pub-card">
-         
-         
+          <div class="pub-card">
+ 
             <img class="pub-cover"
-              <img src="http://localhost:3000/uploads/${pub.co_imagem}" alt="${pub.co_titulo
-        }">
+              <img src="http://localhost:3000/uploads/${pub.co_imagem}" alt="${
+        pub.co_titulo
+      }">
             
  
             <h2 class="pub-title">${pub.co_titulo}</h2>
             <p class="pub-authors">
-              Por ${pub.autor_nome || pub.co_autor || "Autor desconhecido"} (${new Date(pub.co_data).getFullYear() || "s/ano"
-        })
+              Por ${pub.co_citacao || "Autor desconhecido"} (${
+        new Date(pub.co_data).getFullYear() || "s/ano"
+      })
             </p>
-          </div></a>
+          </div>
  
           <div class="pub-actions">
-            <button class="btn" onclick="window.open('${pub.co_pdf
-        }', '_blank')">PDF</button>
-            <button class="btn" onclick="navigator.clipboard.writeText('${pub.co_citacao || ""
-        }')">Citação</button>
-            <button class="btn" onclick="window.open('https://doi.org/${pub.co_doi
-        }', '_blank')">DOI</button>
+            <button class="btn" onclick="window.open('${
+              pub.co_pdf
+            }', '_blank')">PDF</button>
+            <button class="btn" onclick="navigator.clipboard.writeText('${
+              pub.co_citacao || ""
+            }')">Citação</button>
+            <button class="btn" onclick="window.open('https://doi.org/${
+              pub.co_doi
+            }', '_blank')">DOI</button>
           </div>
         </article>
       `;
@@ -48,7 +51,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const eventoPronto = new Event("publicacoesCarregadas");
     document.dispatchEvent(eventoPronto);
   }
-
+  
   catch (err) {
     console.error("Erro ao carregar publicações:", err);
   }

@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // --- MUDANÇA 1: Mapa para traduzir os números do banco ---
     const mapaStatus = {
-      1: "Agendado",
+      1: "Concluido",
       2: "Em andamento",
-      3: "Concluido",
+      3: "Agendado"
     };
 
     data.sort((a, b) => new Date(b.co_data_inicio) - new Date(a.co_data_inicio));
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         
           <p>${projeto.co_atividades}</p> 
           
-          <h5>Situação: ${statusTexto}</h5> 
+          <h5>Situação: ${mapaStatus[projeto.co_status]}</h5> 
           
           <h6 data-date="${dataFormatadaFiltro}">Data de inicio: ${dataInicio}</h6>
           <h6 data-date="${dataFormatadaFiltro}">Data de término: ${dataTermino}</h6>
