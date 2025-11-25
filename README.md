@@ -21,7 +21,8 @@
 <a href ="#tecnologias">Tecnologias</a> |
   <a href ="#manual">Manual de Instalação</a>  | 
   <a href ="#equipe"> Equipe</a> |
-  <a href ="#usuario"> Manual do Usuário</a> |      
+  <a href ="#usuario"> Manual do Usuário</a> |
+      <a href ="#user-stories"> User Stories</a>
 </p>
 
 > Status do Projeto: Início 15/09/2025   
@@ -96,13 +97,13 @@ As soluções esperadas incluem o desenvolvimento de um site moderno, responsivo
 | **RNF06** | Seguir a identidade visual definida com os integrantes do laboratório.     |
 
 
-##  User Sotires <a id="user-stories"></a>
+##  User Stories <a id="user-stories"></a>
 
-# 👤📝 User Stories – Sistema AgriRS
+### 👤📝 User Stories – Sistema AgriRS
 
 A tabela abaixo relaciona cada requisito funcional e não funcional com sua respectiva User Story para facilitar o rastreamento e desenvolvimento.
 
-# 📋 Tabela de User Stories
+### 📋 Tabela de User Stories
 
 | Requisito | User Story |
 |-----------|------------|
@@ -135,9 +136,9 @@ A tabela abaixo relaciona cada requisito funcional e não funcional com sua resp
 | **RNF06** | Como visitante, eu quero que o site siga a identidade visual do laboratório, para ter uma experiência consistente. |
 
 
-##  Modelo entidade relação para criação do Banco de Dados <a id="#"></a>
+## 🔄 Modelo entidade relação para criação do Banco de Dados <a id="#"></a>
 <p align="center">
-  <img src="entidade-relacao_AgriRSlLAB.png" alt="entidade-relacao" width="100%" />
+  <img src="docs/entidade-relacao_AgriRSLAB.png" alt="entidade-relacao" width="100%" />
 </p>
 
 > Arquivo.xml para DB Design 4
