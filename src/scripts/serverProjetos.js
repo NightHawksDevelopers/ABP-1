@@ -25,6 +25,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         "pt-BR",
         { day: "2-digit", month: "2-digit", year: "numeric" }
       );
+      const dataTermino = new Date(projeto.co_data_termino).toLocaleDateString(
+        "pt-BR",
+        { day: "2-digit", month: "2-digit", year: "numeric" }
+      );
 
       let dataFormatadaFiltro = "";
       if (projeto.co_data_inicio) {
@@ -42,7 +46,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             alt="${projeto.co_titulo}"
         />
         <div class="article-text">
-          <a class="article-title" href="./projeto-individual.html?id=${projeto.id_conteudo}">
+          <a class="article-title" href="./projetoindividual.html?id=${projeto.id_conteudo}">
             <h2>${projeto.co_titulo}</h2>
           </a>
           <p>${projeto.co_atividades}</p> 
@@ -50,6 +54,8 @@ document.addEventListener("DOMContentLoaded", async () => {
           <h5>Situação: ${statusTexto}</h5> 
           
           <h6 data-date="${dataFormatadaFiltro}">Data de inicio: ${dataInicio}</h6>
+          <h6 data-date="${dataFormatadaFiltro}">Data de término: ${dataTermino}</h6>
+
         </div>
       `;
 

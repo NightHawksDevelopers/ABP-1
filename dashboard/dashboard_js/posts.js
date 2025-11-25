@@ -27,7 +27,6 @@ document.getElementById("conteudoForm").addEventListener("submit", async e => {
   formData.append("co_atividades", document.getElementById("co_atividades").value || "");
   formData.append("co_conteudo", document.getElementById("co_conteudo").value || "");
 
-  // 🧠 Aqui vem a diferença principal:
   const fileInput = document.getElementById("co_imagem");
   if (fileInput.files.length > 0) {
     formData.append("imagem", fileInput.files[0]);
@@ -36,15 +35,15 @@ document.getElementById("conteudoForm").addEventListener("submit", async e => {
   try {
     const res = await fetch(apiUrl, {
       method: "POST",
-      body: formData, // ⚠️ sem JSON, sem headers Content-Type
+      body: formData // ⚠️ sem JSON, sem headers Content-Type
     });
 
-    if (!res.ok) throw new Error("Erro ao criar conteúdo");
+    if (!res.ok) throw new Error("Erro ao criar conteúdo post");
 
     alert("Conteúdo criado com sucesso!");
     document.getElementById("conteudoForm").reset();
   } catch (err) {
     console.error("Erro ao enviar conteúdo:", err);
-    alert("Erro ao criar conteúdo");
+    alert("Erro ao criar conteúdo post");
   }
 });
