@@ -602,9 +602,9 @@ font-family: 'Roboto Condensed', sans-serif;
 
 @media (max-width: 1400px) {
     /* Container dos Cards */
-    .ho-caixaazul {
+    .ho-faixaazul {
         max-width: 90%; /* Ocupa mais largura na tela */
-        padding: 30px 15px; /* Reduz o padding */
+        padding: 30px 30px; /* Reduz o padding */
         gap: 20px; /* Reduz o espaçamento */
         
     }

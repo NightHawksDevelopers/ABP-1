@@ -47,6 +47,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // Preencher formulário
         document.getElementById("nome").value = membro.me_nome || "";
+        document.getElementById("lattes").value = membro.me_lattes || "";
+        document.getElementById("descricao").value = membro.me_descricao || "";
         document.getElementById("cpf").value = membro.me_cpf || "";
         document.getElementById("email").value = membro.me_email || "";
         cargoSelect.value = membro.me_cargo || "";
@@ -69,6 +71,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const formData = new FormData();
         formData.append("me_nome", document.getElementById("nome").value);
+        formData.append("me_lattes", document.getElementById("lattes").value);
+        formData.append("me_descricao", document.getElementById("descricao").value);
         formData.append("me_cpf", document.getElementById("cpf").value);
         formData.append("me_email", document.getElementById("email").value);
         formData.append("me_cargo", cargoSelect.value);

@@ -73,6 +73,7 @@ async function editConteudo(id){
   const data = await res.json();
 
   document.getElementById("editTitulo").value = data.co_titulo;
+  document.getElementById("editLide").value = data.co_lide;
   document.getElementById("editAutor").value = data.co_autor || data.autor_nome;
   document.getElementById("editTipo").value = data.co_tipo_conteudo;
   document.getElementById("editPdf").value = data.co_pdf;
@@ -97,6 +98,7 @@ async function editConteudo(id){
 async function saveEdit() {
   const formData = new FormData();
   formData.append("co_titulo", document.getElementById("editTitulo").value);
+  formData.append("co_lide", document.getElementById("editLide").value);
   formData.append("co_autor", document.getElementById("editAutor").value);
   formData.append("co_tipo_conteudo", document.getElementById("editTipo").value);
   formData.append("co_pdf", document.getElementById("editPdf").value);

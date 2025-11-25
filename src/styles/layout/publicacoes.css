@@ -89,7 +89,10 @@ legend {
     height: 100%;
     width: 100%;
 }
-
+#pdf{
+text-decoration: none;
+color: #2F4F4F;
+}
 .pr-search-item {
     margin-left: 2px;
     display: flex;
@@ -220,7 +223,8 @@ section {
 
 .pub-title {
     font-size: 15px;
-    color: #234;
+    color: #2F4F4F;
+;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     line-clamp: 3;
