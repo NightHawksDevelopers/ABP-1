@@ -1,4 +1,4 @@
--- 1. LIMPEZA INICIAL
+-- 1. LIMPEZA TOTAL (Reseta o banco)
 DROP SCHEMA public CASCADE;
 CREATE SCHEMA public;
 GRANT ALL ON SCHEMA public TO postgres;
@@ -73,9 +73,9 @@ CREATE SEQUENCE public.tipo_conteudo_id_tipo_conteudo_seq AS integer START WITH 
 ALTER TABLE ONLY public.tipo_conteudo ALTER COLUMN id_tipo_conteudo SET DEFAULT nextval('public.tipo_conteudo_id_tipo_conteudo_seq');
 
 
--- 4. INSERÇÃO DE DADOS (Convertido de COPY para INSERT)
+-- 4. INSERÇÃO DE DADOS
 
--- CARGO
+-- CARGOS
 INSERT INTO public.cargo (id_cargo, ca_nome_cargo) VALUES
 (1, 'Pesquisador'),
 (2, 'Coordenador'),
@@ -96,34 +96,42 @@ INSERT INTO public.tipo_conteudo (id_tipo_conteudo, tc_conteudo) VALUES
 (3, 'Projeto'),
 (4, 'Vaga');
 
--- MEMBROS (Senhas já criptografadas mantidas)
+-- MEMBROS
 INSERT INTO public.membros (id_membro, me_nome, me_cpf, me_email, me_descricao, me_lattes, me_senha, me_imagem, me_administrador, me_cargo) VALUES
-(2, 'Cleverton Santana', '997.003.290-97', 'cleverton.santana@uni.edu.br', 'Engenheiro Agrônomo...', 'https://lattes.cnpq.br/6403186357124271', '$2b$10$pUo54Eoi89l.w4bYTcyEw.xjNRe5Yn.SVEkNhjxR2vTe.Km5Rmx8q', '1764071032309-309397110.jpeg', false, 1),
-(1, 'Marcos Adami', '276.552.230-84', 'marcos.adami@uni.edu.br', 'Pesquisador titular...', 'http://lattes.cnpq.br/7484071887086439', '$2b$10$ySY33.sc3qFmIKf3fSrtduv59vUN3e.XmBtNA7BX4z3xOQyQ0A95O', 'Marcos_Adami.jpg', true, 2),
-(20, 'Ana Júlia Dias', '672.534.050-48', 'ana.julia@uni.edu.br', 'Mestranda...', 'http://lattes.cnpq.br/3916239078525280', '$2b$10$9YyFqTLmRru/vW67O/DwauhD.gcZ25QoV5FIrF1ReZijsPhw26jbm', '1764075148498-65764159.jpg', false, 5),
-(21, 'Marina Galdez', '730.385.610-29', 'marina.galdez@uni.edu.br', 'Engenheira Agrícola...', 'http://lattes.cnpq.br/3273203574648394', '$2b$10$aonJVi9K2rSULMd11SwtjeuJo0gA8eVq3W5h3rmAB5zyxzxr6mUAm', '1764075419255-732406575.jpg', false, 5),
-(19, 'Yan Azeredo da Silva', '370.474.250-39', 'yan.azeredo@uni.edu.br', 'Geógrafo...', 'http://lattes.cnpq.br/7374513612608164', '$2b$10$JLikcJHnWLbwj5UuNg9wY.XPS6pb.wmUln8d/getswtRqcKDDYpY.', '1764075609936-353944884.jpg', false, 4),
-(18, 'Tânia Beatriz Hoffmann', '705.530.360-50', 'tania.beatriz@uni.edu.br', 'Geógrafa...', ' http://lattes.cnpq.br/4681448772106846', '$2b$10$Jp6V7NghE4t/VMg3KKgtkOoaAS1pN1CFL4FTZ2sVu7W3ZbiMHYo6q', '1764075711676-33007254.jpg', false, 4),
+(2, 'Cleverton Santana', '997.003.290-97', 'cleverton.santana@uni.edu.br', 'Engenheiro Agrônomo (UNEMAT)...', 'https://lattes.cnpq.br/6403186357124271', '$2b$10$pUo54Eoi89l.w4bYTcyEw.xjNRe5Yn.SVEkNhjxR2vTe.Km5Rmx8q', '1764071032309-309397110.jpeg', false, 1),
+(1, 'Marcos Adami', '276.552.230-84', 'marcos.adami@uni.edu.br', 'Pesquisador titular do INPE...', 'http://lattes.cnpq.br/7484071887086439', '$2b$10$ySY33.sc3qFmIKf3fSrtduv59vUN3e.XmBtNA7BX4z3xOQyQ0A95O', 'Marcos_Adami.jpg', true, 2),
+(20, 'Ana Júlia Dias', '672.534.050-48', 'ana.julia@uni.edu.br', 'Mestranda do Programa de Pós Graduação...', 'http://lattes.cnpq.br/3916239078525280', '$2b$10$9YyFqTLmRru/vW67O/DwauhD.gcZ25QoV5FIrF1ReZijsPhw26jbm', '1764075148498-65764159.jpg', false, 5),
+(21, 'Marina Galdez', '730.385.610-29', 'marina.galdez@uni.edu.br', 'Engenheira Agrícola e Ambiental...', 'http://lattes.cnpq.br/3273203574648394', '$2b$10$aonJVi9K2rSULMd11SwtjeuJo0gA8eVq3W5h3rmAB5zyxzxr6mUAm', '1764075419255-732406575.jpg', false, 5),
+(19, 'Yan Azeredo da Silva', '370.474.250-39', 'yan.azeredo@uni.edu.br', 'Geógrafo pela UFF...', 'http://lattes.cnpq.br/7374513612608164', '$2b$10$JLikcJHnWLbwj5UuNg9wY.XPS6pb.wmUln8d/getswtRqcKDDYpY.', '1764075609936-353944884.jpg', false, 4),
+(18, 'Tânia Beatriz Hoffmann', '705.530.360-50', 'tania.beatriz@uni.edu.br', 'Geógrafa pela UFSC...', 'http://lattes.cnpq.br/4681448772106846', '$2b$10$Jp6V7NghE4t/VMg3KKgtkOoaAS1pN1CFL4FTZ2sVu7W3ZbiMHYo6q', '1764075711676-33007254.jpg', false, 4),
 (17, 'Priscilla Santos', '491.374.480-13', 'priscilla.santos@uni.edu.br', 'Engenheira Agrimensora...', 'http://lattes.cnpq.br/1105545816489485', '$2b$10$N2m0.CPGSWvCYg0K0Y0cs.2QSd2S0gnPySmfkppmb.vQ2JLroMEgu', '1764075811738-847977584.jpg', false, 4),
 (16, 'Nildson Silva', '885.729.990-27', 'nildson.silva@edu.uni.br', 'Engenheiro Agrônomo...', 'http://lattes.cnpq.br/8478468854171346', '$2b$10$Ho9yJ/eX2eW7GxmG4M6y/eqMR9k8uKrON/SgbNrkg4HTBqj7TG1b2', '1764076264559-863217718.jpg', false, 4),
-(15, 'Luiz Gabriel', '213.187.970-98', 'luiz.gabriel@uni.edu.br', 'Doutorando...', 'https://lattes.cnpq.br/9832175220121645', '$2b$10$xhpORrZWZn7TlLSunkNeVe9hlvxHbc.fWxYOKVBZvvHCzybJUC3pu', '1764076342475-24992229.jpg', false, 4),
-(13, 'Gabriel Sansigolo', '802.081.210-56', 'gabriel.sansigolo@uni.edu.br', 'Doutorando...', 'http://lattes.cnpq.br/4094434844735694', '$2b$10$gjxyMuzfZBdlwjcXhX9TFej5zMi7YQVddYpe86sP13Rw/6dKxO45S', '1764076691665-657517487.jpeg', false, 4),
-(12, 'Darlan Teles', '305.094.710-13', 'darlan.teles@uni.edu.br', 'Doutorando...', 'http://lattes.cnpq.br/2688151470890069', '$2b$10$RDk31FoX44PGOoKWo8W20OhvtP6oK9DH.5RZAgq0VhYjSWijGRdby', '1764076758628-58468178.jpeg', false, 4),
+(15, 'Luiz Gabriel', '213.187.970-98', 'luiz.gabriel@uni.edu.br', 'Doutorando em Sensoriamento Remoto...', 'https://lattes.cnpq.br/9832175220121645', '$2b$10$xhpORrZWZn7TlLSunkNeVe9hlvxHbc.fWxYOKVBZvvHCzybJUC3pu', '1764076342475-24992229.jpg', false, 4),
+(13, 'Gabriel Sansigolo', '802.081.210-56', 'gabriel.sansigolo@uni.edu.br', 'Doutorando em Computação...', 'http://lattes.cnpq.br/4094434844735694', '$2b$10$gjxyMuzfZBdlwjcXhX9TFej5zMi7YQVddYpe86sP13Rw/6dKxO45S', '1764076691665-657517487.jpeg', false, 4),
+(12, 'Darlan Teles', '305.094.710-13', 'darlan.teles@uni.edu.br', 'Doutorando em Sensoriamento Remoto...', 'http://lattes.cnpq.br/2688151470890069', '$2b$10$RDk31FoX44PGOoKWo8W20OhvtP6oK9DH.5RZAgq0VhYjSWijGRdby', '1764076758628-58468178.jpeg', false, 4),
 (9, 'Lorrany Colegnac', '863.250.030-98', 'lorrany.colegnac@uni.edu.br', 'Bacharel em Geografia...', 'http://lattes.cnpq.br/1847544097139347', '$2b$10$w0lfmPEQ43tNJq6UNOI27.rX63ou07XkAgjV5VnimrVqqNqaBYeiq', '1764077023501-990826527.jpg', false, 3),
 (8, 'Kellin Kang', '087.146.680-50', 'kellin.kang@uni.edu.br', 'Cientista Ambiental...', NULL, '$2b$10$0Txuw1REHYbZJaL9yUBYu.tBOOgVxGpDb3VcCBnlpTZY2wHXlp5d.', NULL, false, 3),
-(14, 'Luis Maurano', '158.078.010-59', 'luis.maurano@uni.edu.br', 'Doutorando...', 'http://lattes.cnpq.br/8242319727045776', '$2b$10$KT16iJcPt0s6T7/bsmmNYuNfjtyalCbXY11juFYqOJ7zqGwtPz2F2', NULL, false, 4),
+(14, 'Luis Maurano', '158.078.010-59', 'luis.maurano@uni.edu.br', 'Doutorando em Sensoriamento Remoto...', 'http://lattes.cnpq.br/8242319727045776', '$2b$10$KT16iJcPt0s6T7/bsmmNYuNfjtyalCbXY11juFYqOJ7zqGwtPz2F2', NULL, false, 4),
 (10, 'Mayrine Silva', '426.266.430-92', 'mayrine.silva@uni.edu.br', 'Bióloga...', 'http://lattes.cnpq.br/7746175904660682', '$2b$10$VeK7czolgZ0lfLqQUR7NgedBCZ8xZMaobH2ccGvb4q0.tw2KSUHEG', '1764076984131-649199128.jpg', false, 3),
 (23, 'Grazieli Rodigheri', '217.409.240-96', 'grazieli.rodigheri@uni.edu.br', 'Engenheira Ambiental...', 'http://lattes.cnpq.br/0334477245993338', '$2b$10$rwR20oj4n5LLgL90hvkxveN.ITLc3GnUrvt0Eikgu3pOaxHePr8yy', '1764077159204-43202238.jpeg', false, 3),
-(4, 'André Garcia', '928.311.530-93', 'andre.garcia@uni.edu.br', 'Agrônomo...', 'http://lattes.cnpq.br/7262240008707700', '$2b$10$bLaisPhnFD4rcmTPJICx6ewi.W8UFoXzZksVHz11DhUidyEGBxBJC', '1764077219915-264441504.jpeg', false, 3),
-(3, 'Victor Prudente', '362.477.160-44', 'victor.prudente@edu.uni.br', 'Pesquisador...', 'http://lattes.cnpq.br/6154929133513022', '$2b$10$AdEkTii3W3b/ew82Rt/c9eluC6bBvJEylsZ1PLJuOyE66Uh5Jd.o.', '1764077269800-449617294.jpg', false, 1),
+(4, 'André Garcia', '928.311.530-93', 'andre.garcia@uni.edu.br', 'Agrônomo (IFES)...', 'http://lattes.cnpq.br/7262240008707700', '$2b$10$bLaisPhnFD4rcmTPJICx6ewi.W8UFoXzZksVHz11DhUidyEGBxBJC', '1764077219915-264441504.jpeg', false, 3),
+(3, 'Victor Prudente', '362.477.160-44', 'victor.prudente@edu.uni.br', 'Pesquisador de pós-doutorado...', 'http://lattes.cnpq.br/6154929133513022', '$2b$10$AdEkTii3W3b/ew82Rt/c9eluC6bBvJEylsZ1PLJuOyE66Uh5Jd.o.', '1764077269800-449617294.jpg', false, 1),
 (11, 'Thaísa', '665.212.680-07', 'thaisa@uni.edu.br', 'Cientista Ambiental...', NULL, '$2b$10$.Vl0LgN/uXuO.yCf29Qeg.JtcjR66jN7/Ofs6U4CR0CocPVn2gYcu', '1764077283364-860183707.jpeg', false, 3);
 
--- CONTEÚDO (Simplificado para o formato SQL)
+
+-- CONTEUDO (Atenção: todas as linhas têm exatamente 19 campos agora)
 INSERT INTO public.conteudo (id_conteudo, co_titulo, co_publicante, co_autor, co_pdf, co_citacao, co_doi, co_data, co_lide, co_status, co_data_inicio, co_data_termino, co_objetivo, co_requisitos, co_plano_trabalho, co_atividades, co_tipo_conteudo, co_conteudo, co_imagem) VALUES
-(2, 'Mapeamento de áreas agrícolas junto a CONAB', 1, 'André Garcia', NULL, NULL, NULL, NULL, NULL, 1, '2025-11-05', '2025-11-28', NULL, NULL, '3', 'O AgriRS integra um projeto...', 3, NULL, '1764079654406-af969293.png'),
-(3, 'Mapeamento e Monitoramento de Cultivos', 1, 'Priscilla Azevedo', NULL, NULL, NULL, NULL, NULL, 2, '2025-11-05', '2025-11-30', NULL, NULL, NULL, 'O objetivo da pesquisa...', 3, NULL, '1764081116805-250527.jpg'),
-(6, 'Estimating crop sowing and harvesting dates', 1, NULL, 'https://doi.org/10.3390/rs15225366', 'Rodigheri, G. et al.', 'https://doi.org/10.3390/rs15225366', '2025-11-25', NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, 1, NULL, '1764082393074-Figura_A1_GR.jpg');
--- (Adicionei apenas alguns conteúdos para o arquivo não ficar gigante aqui, mas a estrutura está pronta)
+(2, 'Mapeamento de áreas agrícolas junto a CONAB', 1, 'André Garcia', NULL, NULL, NULL, NULL, NULL, 1, '2025-11-05', '2025-11-28', NULL, NULL, '3', 'O AgriRS integra um projeto...', 3, NULL, '1764079654406-af969293-9905-4cf9-ab5f-2026a379f68a.png'),
+(3, 'Mapeamento e Monitoramento de Cultivos Agrícolas', 1, 'Priscilla Azevedo dos Santos', NULL, NULL, NULL, NULL, NULL, 2, '2025-11-05', '2025-11-30', NULL, NULL, NULL, 'O objetivo da pesquisa...', 3, NULL, '1764081116805-250527_MapaAptidÃ£oAgrÃ­cola_DiculgaÃ§Ã£o_mapa.jpg'),
+(4, 'Estimativa do Percentual de Cobertura do Solo', 1, 'Marina Galdez de Castro Silva', NULL, NULL, NULL, NULL, NULL, 2, '2025-11-01', '2025-11-03', NULL, NULL, NULL, 'Os resíduos culturais...', 3, NULL, '1764081673432-51028.png'),
+(5, 'Detecção de Desmatamento e Cicatriz de Fogo', 1, 'Ana Júlia Dias', NULL, NULL, NULL, NULL, NULL, 3, '2025-11-29', '2025-11-30', NULL, NULL, NULL, 'O Cerrado passou a ser...', 3, NULL, '1764081812797-validacao-pt.png'),
+(6, 'Estimating crop sowing and harvesting dates', 1, NULL, 'https://doi.org/10.3390/rs15225366', 'Rodigheri, G. et al.', 'https://doi.org/10.3390/rs15225366', '2025-11-25', NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, 1, NULL, '1764082393074-Figura_A1_GR.jpg'),
+(7, 'Sugarcane Yield Estimation Using Satellite Remote Sensing', 1, NULL, 'https://doi.org/10.3390/rs16050863', 'de França e Silva, N. R. et al.', 'https://doi.org/10.3390/rs16050863', '2024-06-25', NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, 1, NULL, '1764082794706-Figura_A2_NS.png'),
+(8, 'Limitations of cloud cover for optical remote sensing', 1, NULL, 'https://doi.org/10.1016/j.rsase.2020.100414', 'Prudente, V.H.R. et al.', 'https://doi.org/10.1016/j.rsase.2020.100414', '2025-11-30', NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, 1, NULL, '1764083586352-Figura_A3_VP.png'),
+(9, 'Land Use and Land Cover Products for Agricultural Mapping', 1, NULL, 'https://doi.org/10.3390/rs17132324', 'Santos, P.A.d. et al.', 'https://doi.org/10.3390/rs17132324', '2025-11-30', NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, 1, NULL, '1764083704167-Figura_A4_PS.png'),
+(11, 'A Method for Estimating Soybean Sowing', 1, NULL, 'https://doi.org/10.3390/rs16142520', 'Santana, C.T.C. et al.', 'https://doi.org/10.3390/rs16142520', '2025-11-01', NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, 1, NULL, '1764083814133-Figura_A5_CS.jpeg'),
+(13, 'Comprehensive workflow for image segmentation', 1, NULL, 'https://doi.org/10.1016/j.acags.2025.100223', 'Garcia, A. D. B. et al.', 'https://doi.org/10.1016/j.acags.2025.100223', '2025-11-16', NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, 1, NULL, '1764083899885-Figura_A6_AG.png'),
+(15, 'Growth behavior of irrigated rice', 1, NULL, 'https://doi.org/10.3390/agriengineering7030065', 'Garcia, A. D. B. et al.', 'https://doi.org/10.3390/agriengineering7030065', '2026-10-13', NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, 1, NULL, '1764085075997-Figura_A7_AG.png');
 
 
 -- 5. ATUALIZAR OS CONTADORES (SEQUENCES)
