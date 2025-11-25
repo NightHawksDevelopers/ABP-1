@@ -18,7 +18,7 @@
 ##  Burndown Chart 📉🔥 <a id="burndown"></a>
 
 <p align="center">
-  <img src="#" alt="BurnDown Sprint 3" width="400px" />
+  <img src="burndown_spr3.png" alt="BurnDown Sprint 3" width="600px" />
 </p>
 
 ##  Modelo entidade relação banco de dados <a id="#"></a>
