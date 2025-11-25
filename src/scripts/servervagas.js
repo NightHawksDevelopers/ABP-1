@@ -29,18 +29,25 @@ document.addEventListener("DOMContentLoaded", async () => {
       // 5. Monta o HTML com os nomes CORRETOS do BD
       //    (co_titulo, co_objetivo, co_data, id_conteudo)
       div.innerHTML = `
-        <h2 class="va-content__block-title">
-            <a href="./vaga-individual.html?id=${vaga.id_conteudo}">${vaga.co_titulo}</a>
-        </h2>
+        <a href="./vaga-individual.html?id=${vaga.id_conteudo}">
+          <h2 class="va-content__block-title">
+             ${vaga.co_titulo}
+          </h2>
 
-        <p class="va-content__block-desc">${vaga.co_objetivo}</p>
+          <p class="va-content__block-desc">${vaga.co_objetivo}</p>
 
-        <p class="va-content__block-date">Publicado em <em>${dataPublicacao}</em></p>
+          <p class="va-content__block-date">Publicado em <em>${dataPublicacao}</em></p>
+        </a>
       `;
 
       // Joga o bloco pronto dentro do container
       containerVagas.appendChild(div);
     });
+
+    // --- NOVO: Avisa que as vagas chegaram ---
+    const eventoPronto = new Event("vagasCarregadas");
+    document.dispatchEvent(eventoPronto);
+
   } catch (err) {
     console.error("Erro ao carregar vagas:", err);
     // Mensagem de fallback caso a API dê pau

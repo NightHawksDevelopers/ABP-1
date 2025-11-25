@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgriRSLab - Our projects</title>
+  <link rel="stylesheet" href="../src/styles/global.css" />
+  <link rel="stylesheet" href="../src/styles/layout/projetos.css" />
+  <link rel="stylesheet" href="../src/styles/layout/vagas.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../src/styles/components/title.css">
+  <link rel="stylesheet" href="../src/styles/components/button.css">
+  <link rel="icon" type="image/x-icon" href="../src/assets/image/Logo.svg">
+</head>
+
+<body>
+  <header>
+        <div class="content-header">
+            <a href="home.html"><div class="logo"></div></a>
+            <div class="options">
+                <div class="box">
+                    <a href="home.html"><b>Home</b></a>
+                    <div class="center"><hr></div>
+                </div>
+                <hr>
+
+                <div class="selected-box">
+                    <a href="sobre.html"><b>AgriRSLab</b></a>
+                    <div class="center"><hr></div>
+
+                    <div class="dropdown-content">
+                        <a href="sobre.html">About</a>
+                        <a href="membros.html">Members</a>
+                        <a href="projetos.html">Projects</a>
+                        <a href="atuacao.html">Areas of expertise</a>
+                        <a href="parceiros.html">Partners</a>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="box">
+                    <a href="vagas.html"><b>Opportunities</b></a>
+                    <div class="center"><hr></div>
+                </div>
+
+                <hr>
+                <div class="box">
+                    <a href="publicacoes.html"><b>Publications</b></a>
+                    <div class="center"><hr></div>
+                    <div class="dropdown-content">
+                        <a href="publicacoes.html">Feed</a>
+                        <a href="noticias.html">News</a>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="box">
+                    <a href="contato.html"><b>Contact</b></a>
+                    <div class="center"><hr></div>
+                </div>
+            </div>
+        </div>
+
+        <label class="sw-switch">
+            <input type="checkbox" checked>
+            <div class="sw-slider">
+                <span class="sw-text-left">en-us</span>
+                <span class="sw-text-right">pt-br</span>
+                <div class="sw-circle"></div>
+            </div>
+        </label>
+    </header>
+
+    <div class="responsive-menu">
+        <div class="logo"></div>
+        <div class="space"></div>
+
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" class="menu-icon">
+            <span></span><span></span><span></span>
+        </label>
+
+        <nav class="menu">
+
+            <ul>
+                <label class="sw-switch">
+                    <input type="checkbox" checked>
+                    <div class="sw-slider">
+                        <span class="sw-text-left">en</span>
+                        <span class="sw-text-right">pt-br</span>
+                        <div class="sw-circle"></div>
+                    </div>
+                </label>
+
+                <li><a href="home.html">Home</a></li>
+                <hr>
+
+                <li class="dropdown">
+                    <input type="checkbox" id="AgriRSLab-menu" class="dropdown-toggle">
+                    <label for="AgriRSLab-menu" class="menu-AgriRSLab">
+                        AgriRSLab <div class="icon-arrow"><img src="../src/assets/svg/caret-down-solid-full.svg" alt=""></div>
+                    </label>
+
+                    <div class="mbl-dropdown-content">
+                        <a href="sobre.html">About</a>
+                        <a href="membros.html">Members</a>
+                        <a href="projetos.html">Projects</a>
+                        <a href="atuacao.html">Areas of expertise</a>
+                        <a href="parceiros.html">Partners</a>
+                    </div>
+                </li>
+
+                <hr>
+                <li><a href="vagas.html">Opportunities</a></li>
+                <hr>
+
+                <li class="dropdown">
+                    <input type="checkbox" id="Publicacoes-menu" class="dropdown-toggle">
+                    <label for="Publicacoes-menu" class="menu-AgriRSLab">
+                        Publications <div class="icon-arrow"><img src="../src/assets/svg/caret-down-solid-full.svg" alt=""></div>
+                    </label>
+
+                    <div class="mbl-dropdown-content">
+                        <a href="publicacoes.html">Feed</a>
+                        <a href="noticias.html">News</a>
+                    </div>
+                </li>
+
+                <hr>
+                <li><a href="contato.html">Contact</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+  <main>
+    <h1 id="title">Our projects</h1>
+
+    <div id="va-title__info">
+        <p>Last updated on <em>date to be defined</em></p>
+
+        <div class="share-container">
+            <span id="no-title__info-nav_title">Share: </span>
+
+            <a href="#" id="share-facebook" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="btn-share">
+                <i style="color: #2f4f4f;" class="fa-brands fa-facebook fa-xl"></i>
+            </a>
+
+            <a href="#" id="share-linkedin" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" class="btn-share">
+                <i class="fa-brands fa-linkedin fa-xl" style="color: #2f4f4f;"></i>
+            </a>
+
+            <a href="https://www.instagram.com/agrirslab.inpe/" target="_blank" rel="noopener noreferrer" aria-label="Go to Instagram" class="btn-share">
+                <i class="fa-brands fa-instagram fa-xl" style="color: #2f4f4f;"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="title-line"></div>
+
+    <section>
+
+      <form id="pr-filter">
+        <div class="search-box">
+          <input type="text" name="palavra-chave" placeholder=" Keyword" id="palavra-chave" />
+          <button id="search-button" class="search-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+
+        <fieldset>
+          <div class="pr-line">
+
+          <legend><b>Filter by:</b></legend>
+
+          <div class="pr-search-item">
+            <label for="situacao">Status:</label>
+            <select name="situacao" class="pr-filters" id="pr-status">
+              <option value="concluido">Completed</option>
+              <option value="andamento">In progress</option>
+              <option value="agendado">Scheduled</option>
+            </select>
+          </div>
+
+          <div class="pr-search-item">
+            <label for="data">Date:</label>
+            <input type="date" name="data" class="pr-filters" id="pr-date" />
+          </div>
+
+          <div class="pr-search-item">
+            <label for="nome">Name:</label>
+            <input type="text" name="nome" class="pr-filters pr-nome" value="Name" id="pr-nome" />
+          </div>
+
+          <div class="pr-search-item">
+            <button type="submit" id="aplicar">Apply</button>
+          </div>
+
+          </div>
+        </fieldset>
+      </form>
+
+      <!-- PROJECT ARTICLES -->
+      <article>
+        <img src="../src/assets/image/pc_home_carrosel1.webp" alt="project1" />
+        <div class="article-text">
+          <a href="#">
+            <h2>
+              Mapping Amazonian Biodiversity at multiple scales through the integration of geological and ecological data
+            </h2>
+          </a>
+          <p>
+            Develop and explore remote sensing techniques that are useful for characterizing sedimentary cover areas in Brazilian territory, aiming to reconstruct their formation environments over time and space. The goal is to create a solid database that contributes to the analysis of probable factors that acted in the evolution of physical environments throughout geological time. These factors mainly include climate fluctuations, sea level variations, and tectonic movements on local and regional scales...
+          </p>
+          <h5>Status: In progress</h5>
+          <h6 data-date="2007-10-31">Start date: 31-10-2007</h6>
+        </div>
+      </article>
+
+      <article>
+        <img src="../src/assets/image/pc_home_carrosel2.webp" alt="project3" />
+        <div class="article-text">
+          <a href="#">
+            <h2>
+              Mapping Amazonian Biodiversity at multiple scales through the integration of geological and ecological data
+            </h2>
+          </a>
+          <p>
+            Develop and explore remote sensing techniques that are useful for characterizing sedimentary cover areas in Brazilian territory, aiming to reconstruct their formation environments over time and space. The goal is to create a solid database that contributes to the analysis of probable factors that acted in the evolution of physical environments throughout geological time. These factors mainly include climate fluctuations, sea level variations, and tectonic movements on local and regional scales...
+          </p>
+          <h5>Status: In progress</h5>
+          <h6 data-date="2007-10-31">Start date: 31-10-2007</h6>
+        </div>
+      </article>
+
+      <article>
+        <img src="../src/assets/image/pc_home_carrosel2.webp" alt="project3" />
+        <div class="article-text">
+          <a href="#">
+            <h2>
+              Mapping Amazonian Biodiversity at multiple scales through the integration of geological and ecological data
+            </h2>
+          </a>
+          <p>
+            Develop and explore remote sensing techniques that are useful for characterizing sedimentary cover areas in Brazilian territory, aiming to reconstruct their formation environments over time and space. The goal is to create a solid database that contributes to the analysis of probable factors that acted in the evolution of physical environments throughout geological time. These factors mainly include climate fluctuations, sea level variations, and tectonic movements on local and regional scales...
+          </p>
+          <h5>Status: Completed</h5>
+          <h6 data-date="2008-10-31">Start date: 31-10-2008</h6>
+        </div>
+      </article>
+
+      <article>
+        <img src="../src/assets/image/pc_home_carrosel3.webp" alt="project3" />
+        <div class="article-text">
+          <a href="#">
+            <h2>
+              Mapping Amazonian Biodiversity at multiple scales through the integration of geological and ecological data
+            </h2>
+          </a>
+          <p>
+            Develop and explore remote sensing techniques that are useful for characterizing sedimentary cover areas in Brazilian territory, aiming to reconstruct their formation environments over time and space. The goal is to create a solid database that contributes to the analysis of probable factors that acted in the evolution of physical environments throughout geological time. These factors mainly include climate fluctuations, sea level variations, and tectonic movements on local and regional scales...
+          </p>
+          <h5>Status: In progress</h5>
+          <h6 data-date="2007-11-30">Start date: 30-11-2007</h6>
+        </div>
+      </article>
+
+      <article>
+        <img src="../src/assets/image/pc_home_carrosel3.webp" alt="project3" />
+        <div class="article-text">
+          <a href="#">
+            <h2>
+              Mapping Amazonian Biodiversity at multiple scales through the integration of geological and ecological data
+            </h2>
+          </a>
+          <p>
+            Develop and explore remote sensing techniques that are useful for characterizing sedimentary cover areas in Brazilian territory, aiming to reconstruct their formation environments over time and space. The goal is to create a solid database that contributes to the analysis of probable factors that acted in the evolution of physical environments throughout geological time. These factors mainly include climate fluctuations, sea level variations, and tectonic movements on local and regional scales...
+          </p>
+          <h5>Status: In progress</h5>
+          <h6 data-date="2007-12-31">Start date: 31-12-2007</h6>
+        </div>
+      </article>
+      <div class="main-buttons-pos">
+        <button type="button" class="main-buttons" id="prev">Previous</button>
+        <button type="button" class="main-buttons" id="prox">Next</button>
+      </div>
+    </section>
+
+    
+
+  </main>
+
+  <script src="../src/scripts/serverProjetos.js"></script>
+  <script src="../src/scripts/appProjetos.js"></script>
+
+  <footer>
+        <div class="footer">
+            <div class="footer-title"><a href=""></a><b>AgriRSLab</b></div>
+            <div class="footer-options">
+
+                <b><a href="home.html">Home</a></b>
+                <b><a href="sobre.html">About</a></b>
+                <b><a href="membros.html">Members</a></b>
+                <b><a href="projetos.html">Projects</a></b>
+                <b><a href="atuacao.html">Areas of expertise</a></b>
+                <b><a href="parceiros.html">Partners</a></b>
+                <b><a href="vagas.html">Opportunities</a></b>
+                <b><a href="publicacoes.html">Feed</a></b>
+                <b><a href="noticias.html">News</a></b>
+                <b><a href="contato.html">Contact</a></b>
+
+            </div>
+            <hr>
+            <div class="infos">
+                <div class="dev-team">
+                    <p>©2025 Nighthawks. All rights reserved.</p>
+                </div>
+                <div class="social-midia">
+                    <a href="" target="_blank"><img src="../src/assets/image/linkedin.png" alt=""></a>
+                    <a href="https://www.instagram.com/agrirslab.inpe/" target="_blank"><img src="../src/assets/image/instagram.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="responsive-footer">
+
+        <div class="infos">
+            <div class="footer-title"><a href="#"></a><b>AgriRSLab</b></div>
+            <hr>
+            <div class="footer-bottom">
+                <div class="dev-team">
+                    <p>©2025 Nighthawks. <br> All rights reserved.</p>
+                </div>
+            </div>
+            <div class="responsive-social">
+                <div class="social-midia">
+                    <a href="#" class="linkedin2" target="_blank"><img src="../src/assets/image/linkedin.png" alt=""></a>
+                    <a href="https://www.instagram.com/agrirslab.inpe/" class="instagram2" target="_blank"><img src="../src/assets/image/instagram.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        </label>
+    </div>
+  <script src="../src/scripts/switch.js" defer></script>
+  <script src="../src/scripts/share.js"></script>
+</body>
+
+</html>

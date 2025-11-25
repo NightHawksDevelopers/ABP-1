@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../src/styles/components/title.css">
     <link rel="icon" type="image/x-icon" href="../src/assets/image/Logo.svg">
-    <title>AgriRSLab - Vagas</title>
+    <title>AgriRSLab - Opportunities</title>
 </head>
 
 <body>
@@ -22,59 +22,45 @@
             <div class="options">
                 <div class="box">
                     <a href="home.html"><b>Home</b></a>
-                    <div class="center">
-                        <hr>
-                    </div>
+                    <div class="center"><hr></div>
                 </div>
                 <hr>
                 <div class="box">
                     <a href="sobre.html"><b>AgriRSLab</b></a>
-                    <div class="center">
-                        <hr>
-                    </div>
+                    <div class="center"><hr></div>
                     <div class="dropdown-content">
-                        <a href="sobre.html">Sobre</a>
-
-                        <a href="membros.html">Membros</a>
-
-                        <a href="projetos.html">Projetos</a>
-
-                        <a href="atuacao.html">Áreas de atuação</a>
-
-                        <a href="parceiros.html">Parceiros</a>
+                        <a href="sobre.html">About</a>
+                        <a href="membros.html">Members</a>
+                        <a href="projetos.html">Projects</a>
+                        <a href="atuacao.html">Areas of Expertise</a>
+                        <a href="parceiros.html">Partners</a>
                     </div>
                 </div>
                 <hr>
                 <div class="selected-box">
-                    <a href="vagas.html"><b>Vagas</b></a>
-                    <div class="center">
-                        <hr>
-                    </div>
+                    <a href="vagas.html"><b>Opportunities</b></a>
+                    <div class="center"><hr></div>
                 </div>
                 <hr>
                 <div class="box">
-                    <a href="publicacoes.html"><b>Publicações</b></a>
-                    <div class="center">
-                        <hr>
-                    </div>
+                    <a href="publicacoes.html"><b>Publications</b></a>
+                    <div class="center"><hr></div>
                     <div class="dropdown-content">
                         <a href="publicacoes.html">Feed</a>
-
-                        <a href="noticias.html">Notícias</a>
+                        <a href="noticias.html">News</a>
                     </div>
                 </div>
-
                 <hr>
                 <div class="box">
-                    <a href="contato.html"><b>Contato</b></a>
-                    <div class="center">
-                        <hr>
-                    </div>
+                    <a href="contato.html"><b>Contact</b></a>
+                    <div class="center"><hr></div>
                 </div>
             </div>
         </div>
+
+        <!-- SWITCH CHECKED -->
         <label class="sw-switch">
-            <input type="checkbox">
+            <input type="checkbox" checked>
             <div class="sw-slider">
                 <span class="sw-text-left">en-us</span>
                 <span class="sw-text-right">pt-br</span>
@@ -86,61 +72,61 @@
     <div class="responsive-menu">
         <div class="logo"></div>
         <div class="space"></div>
-        <!-- Checkbox invisível para controlar o menu -->
+
         <input type="checkbox" id="menu-toggle">
 
-        <!-- Ícone hambúrguer -->
         <label for="menu-toggle" class="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </label>
 
-        <!-- Menu Dropdown -->
         <nav class="menu">
-
             <ul>
+                <!-- SWITCH CHECKED -->
                 <label class="sw-switch">
-                    <input type="checkbox">
+                    <input type="checkbox" checked>
                     <div class="sw-slider">
                         <span class="sw-text-left">en</span>
                         <span class="sw-text-right">pt-br</span>
                         <div class="sw-circle"></div>
                     </div>
                 </label>
+
                 <li><a href="home.html">Home</a></li>
                 <hr>
 
                 <li class="dropdown">
                     <input type="checkbox" id="AgriRSLab-menu" class="dropdown-toggle">
-                    <label for="AgriRSLab-menu" class="menu-AgriRSLab">AgriRSLab <div class="icon-arrow"><img
-                                src="../src/assets/svg/caret-down-solid-full.svg" alt=""></div></label>
+                    <label for="AgriRSLab-menu" class="menu-AgriRSLab">AgriRSLab 
+                        <div class="icon-arrow"><img src="../src/assets/svg/caret-down-solid-full.svg" alt=""></div>
+                    </label>
 
                     <div class="mbl-dropdown-content">
-                        <a href="sobre.html">Sobre</a>
-                        <a href="membros.html">Membros</a>
-                        <a href="projetos.html">Projetos</a>
-                        <a href="atuacao.html">Áreas de atuação</a>
-                        <a href="parceiros.html">Parceiros</a>
+                        <a href="sobre.html">About</a>
+                        <a href="membros.html">Members</a>
+                        <a href="projetos.html">Projects</a>
+                        <a href="atuacao.html">Areas of Expertise</a>
+                        <a href="parceiros.html">Partners</a>
                     </div>
                 </li>
 
                 <hr>
-                <li><a href="vagas.html">Vagas</a></li>
+                <li><a href="vagas.html">Opportunities</a></li>
                 <hr>
+
                 <li class="dropdown">
                     <input type="checkbox" id="Publicacoes-menu" class="dropdown-toggle">
-                    <label for="Publicacoes-menu" class="menu-AgriRSLab">Publicações <div class="icon-arrow"><img
-                                src="../src/assets/svg/caret-down-solid-full.svg" alt=""></div></label>
+                    <label for="Publicacoes-menu" class="menu-AgriRSLab">Publications 
+                        <div class="icon-arrow"><img src="../src/assets/svg/caret-down-solid-full.svg" alt=""></div>
+                    </label>
 
                     <div class="mbl-dropdown-content">
                         <a href="publicacoes.html">Feed</a>
-                        <a href="noticias.html">Notícias</a>
+                        <a href="noticias.html">News</a>
                     </div>
                 </li>
-                <hr>
-                <li><a href="contato.html">Contato</a></li>
 
+                <hr>
+                <li><a href="contato.html">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -148,65 +134,67 @@
     <main>
         <div id="va">
         <div id="va-title">
-            <h1 id="title">Vaga 1</h1>
+            <h1 id="title">Opportunity 1</h1>
 
             <div id="va-title__info">
-                <p>Última atualização em <em>data a definir</em></p>
+                <p>Last updated on <em>to be defined</em></p>
                 <div class="share-container">
-                <span id="no-title__info-nav_title">Compartilhe: </span>
+                    <span id="no-title__info-nav_title">Share: </span>
 
-                    <a href="#" id="share-facebook" target="_blank" rel="noopener noreferrer"
-                        aria-label="Compartilhar no Facebook" class="btn-share">
+                    <a href="#" id="share-facebook" target="_blank" rel="noopener noreferrer" class="btn-share">
                         <i style="color: #2f4f4f;" class="fa-brands fa-facebook fa-xl"></i>
                     </a>
 
-                    <a href="#" id="share-linkedin" target="_blank" rel="noopener noreferrer"
-                        aria-label="Compartilhar no LinkedIn" class="btn-share">
+                    <a href="#" id="share-linkedin" target="_blank" rel="noopener noreferrer" class="btn-share">
                         <i class="fa-brands fa-linkedin fa-xl" style="color: #2f4f4f;"></i>
                     </a>
 
-                    <a href="https://www.instagram.com/agrirslab.inpe/" target="_blank" rel="noopener noreferrer"
-                        aria-label="Ir para o Instagram" class="btn-share">
+                    <a href="https://www.instagram.com/agrirslab.inpe/" target="_blank" rel="noopener noreferrer" class="btn-share">
                         <i class="fa-brands fa-instagram fa-xl" style="color: #2f4f4f;"></i>
                     </a>
                 </div>
             </div>
             <div class="title-line"></div>
         </div>
+
         <div id="va-content">
             <ol>
                 <li class="vai-content-block">
-                    <h2 class="vai-content-title">Objetivo da vaga</h2>
-                    <p>Breve descrição do motivo da criação da vaga.</p>
+                    <h2 class="vai-content-title">Opportunity Objective</h2>
+                    <p>Brief description of why this opportunity was created.</p>
                 </li>
+
                 <li class="vai-content-block">
-                    <h2 class="vai-content-title">Requisitos</h2>
+                    <h2 class="vai-content-title">Requirements</h2>
                     <ul>
-                        <li>Requisito 1</li>
-                        <li>Requisito 2</li>
-                        <li>Requisito 3</li>
+                        <li>Requirement 1</li>
+                        <li>Requirement 2</li>
+                        <li>Requirement 3</li>
                     </ul>
                 </li>
+
                 <li class="vai-content-block">
-                    <h2 class="vai-content-title">RESUMO DO PLANO DE TRABALHO</h2>
-                    <p>Breve descrição sobre a atividade que será exercida.</p>
+                    <h2 class="vai-content-title">WORKPLAN SUMMARY</h2>
+                    <p>Brief description of the activity to be performed.</p>
                 </li>
+
                 <li class="vai-content-block">
-                    <h2 class="vai-content-title">ATIVIDADES DO PLANO DE TRABALHO</h2>
+                    <h2 class="vai-content-title">WORKPLAN ACTIVITIES</h2>
                     <ul>
-                        <li>Descrição detalhada da atividade a ser executada</li>
-                        <li>Descrição detalhada da atividade a ser executada</li>
-                        <li>Descrição detalhada da atividade a ser executada</li>
-                        <li>Descrição detalhada da atividade a ser executada</li>
+                        <li>Detailed description of the activity</li>
+                        <li>Detailed description of the activity</li>
+                        <li>Detailed description of the activity</li>
+                        <li>Detailed description of the activity</li>
                     </ul>
                 </li>
+
                 <li class="vai-content-block">
-                    <h2 class="vai-content-title">PROCESSO DE SELEÇÃO</h2>
-                    <p>Os interessados deverão enviar o <em>currículo</em> para o endereço de email da <a
-                            href="../pages/contato.html">AgriRSLab</a> com o assunto preenchido com o nome da vaga.</p>
+                    <h2 class="vai-content-title">SELECTION PROCESS</h2>
+                    <p>Candidates must send their <em>résumé</em> to the <a href="../pages/contato.html">AgriRSLab</a> email with the subject filled with the name of the opportunity.</p>
                 </li>
+
                 <div id="vai-content-btn-box" class="vai-content-block">
-                    <a id="vai-content-btn" href="../pages/vagas.html">Voltar</a>
+                    <a id="vai-content-btn" href="../pages/vagas.html">Back</a>
                 </div>
             </ol>
         </div>
@@ -215,20 +203,18 @@
 
     <footer>
         <div class="footer">
-            <div class="footer-title"><a href=""></a><b>AgriRSLab</b></div>
+            <div class="footer-title"><b>AgriRSLab</b></div>
             <div class="footer-options">
-
                 <b><a href="home.html">Home</a></b>
-                <b><a href="sobre.html">Sobre</a></b>
-                <b><a href="membros.html">Membros</a></b>
-                <b><a href="projetos.html">Projetos</a></b>
-                <b><a href="atuacao.html">Áreas de atuação</a></b>
-                <b><a href="parceiros.html">Parceiros</a></b>
-                <b><a href="vagas.html">Vagas</a></b>
+                <b><a href="sobre.html">About</a></b>
+                <b><a href="membros.html">Members</a></b>
+                <b><a href="projetos.html">Projects</a></b>
+                <b><a href="atuacao.html">Areas of Expertise</a></b>
+                <b><a href="parceiros.html">Partners</a></b>
+                <b><a href="vagas.html">Opportunities</a></b>
                 <b><a href="publicacoes.html">Feed</a></b>
-                <b><a href="noticias.html">Notícias</a></b>
-                <b><a href="contato.html">Contato</a></b>
-
+                <b><a href="noticias.html">News</a></b>
+                <b><a href="contato.html">Contact</a></b>
             </div>
             <hr>
             <div class="infos">
@@ -236,7 +222,7 @@
                     <p>©2025 Nighthawks. All rights reserved.</p>
                 </div>
                 <div class="social-midia">
-                    <a href="" target="_blank"><img src="../src/assets/image/linkedin.png" alt=""></a>
+                    <a href="#" target="_blank"><img src="../src/assets/image/linkedin.png" alt=""></a>
                     <a href="https://www.instagram.com/agrirslab.inpe/" target="_blank"><img src="../src/assets/image/instagram.png" alt=""></a>
                 </div>
             </div>
@@ -244,15 +230,15 @@
     </footer>
 
     <div class="responsive-footer">
-
         <div class="infos">
-            <div class="footer-title"><a href="#"></a><b>AgriRSLab</b></div>
+            <div class="footer-title"><b>AgriRSLab</b></div>
             <hr>
             <div class="footer-bottom">
                 <div class="dev-team">
                     <p>©2025 Nighthawks. <br> All rights reserved.</p>
                 </div>
             </div>
+
             <div class="responsive-social">
                 <div class="social-midia">
                     <a href="#" class="linkedin2" target="_blank"><img src="../src/assets/image/linkedin.png" alt=""></a>
@@ -260,10 +246,8 @@
                 </div>
             </div>
         </div>
-
-        </label>
     </div>
-    
+
     <script src="../src/scripts/switch.js" defer></script>
     <script src="../src/scripts/share.js"></script>
     <script src="../src/scripts/serverVagaIndividual.js"></script>
