@@ -1,3 +1,4 @@
+
 import bcrypt from "bcrypt";
 import pool from "../db.js"; // ajusta o caminho se seu db.js estiver em outro local
 
