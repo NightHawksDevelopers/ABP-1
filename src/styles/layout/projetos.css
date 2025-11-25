@@ -19,7 +19,7 @@ form {
     justify-content: space-around;
     align-items: center;
     box-sizing: border-box;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 #palavra-chave {
@@ -27,7 +27,7 @@ form {
     border-radius: 20px;
     background-color: #245C4D4D;
     border-color: #2F4F4F;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 #palavra-chave::placeholder {
@@ -63,7 +63,7 @@ legend {
     width: 100%;
     padding-right: 10px;
     border: none;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .pr-line {
@@ -142,7 +142,16 @@ legend {
     border: none;
     cursor: pointer;
     height: 32px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#aplicar:hover{
+    transform: translateY(-2px);
+}
+
+#aplicar:active{
+    transform: translateY(2px);
 }
 
 section {
@@ -156,7 +165,7 @@ article {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     padding: 20px;
     align-content: center;
     justify-content: center;
@@ -164,6 +173,15 @@ article {
     margin-top: 30px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+article{
+    transition: all 0.3s ease;
+    
+}
+
+article:hover {
+    transform: translateY(-5px);
 }
 
 article img {
@@ -475,6 +493,6 @@ a {
         border: none;
         cursor: pointer;
         height: 32px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 }
