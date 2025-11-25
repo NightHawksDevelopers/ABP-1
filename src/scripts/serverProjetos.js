@@ -40,15 +40,17 @@ document.addEventListener("DOMContentLoaded", async () => {
       const statusTexto = mapaStatus[projeto.co_status] || "Desconhecido";
 
       article.innerHTML = `
-        <img 
+      <a class="article-link" href="./projetoindividual.html?id=${projeto.id_conteudo}">
+
+      
+      <img class="article-img"
             src="http://localhost:3000/uploads/${projeto.co_imagem}" 
             onerror="this.onerror=null; this.src='../src/assets/image/pc_home_carrosel1.webp';" 
             alt="${projeto.co_titulo}"
         />
         <div class="article-text">
-          <a class="article-title" href="./projetoindividual.html?id=${projeto.id_conteudo}">
-            <h2>${projeto.co_titulo}</h2>
-          </a>
+            <h2 class="article-title">${projeto.co_titulo}</h2>
+        
           <p>${projeto.co_atividades}</p> 
           
           <h5>Situação: ${statusTexto}</h5> 
@@ -57,6 +59,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           <h6 data-date="${dataFormatadaFiltro}">Data de término: ${dataTermino}</h6>
 
         </div>
+          </a>
       `;
 
       container.insertBefore(article, insertionPoint);
