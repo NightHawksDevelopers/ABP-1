@@ -21,6 +21,14 @@
   <img src="Burndown_spr2.png" alt="BurnDown Sprint 2" width="400px" />
 </p>
 
+##  Modelo entidade relação banco de dados <a id="#"></a>
+<p align="center">
+  <img src="entidade-relacao_AgriRSlLAB.png" alt="entidade-relacao" width="600px" />
+</p>
+
+> Arquivo.xml para DB Design 4
+>
+> [Arquivo.xml](docs\entidade-relacao-AgriRSLab_NightHawks.xml) 
 
 ##  Desafio <a id="desafio"></a>
 

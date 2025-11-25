@@ -1,6 +1,22 @@
 
 # Tasks - Sprint 1
 
+  <div>
+    <p><strong>🏷️ Legendas Tasks</strong></p>
+    <ul>
+      <li><strong>DD</strong> — Design Digital</li>
+      <li><strong>DW</strong> — Desenvolvimento Web</li>
+      <li><strong>ES</strong> — Engenharia de Software</li>
+      <li><strong>AL</strong> — Algoritmos e Lógica de Programação</li>
+      <li><strong>MB</strong> — Modelagem de Banco de Dados</li>
+      <li><strong>SO</strong> — Sistemas Operacionais e Redes</li>
+    </ul>
+  </div>
+
+-------------------
+
+
+
 <h1> 16/09 </h1>
 
 | Task   | Descrição                                                    | Atribuição                                                                      | Data    |
