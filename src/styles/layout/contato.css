@@ -6,7 +6,15 @@
     --color-5: #245C4D;
     --color-6: #0574BB;
 }
-
+#btn-enviar {
+    background-color: var(--color-2);
+    color: var(--color-1);
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+}
 main {
     width: 80%;
     margin-left: 10%;

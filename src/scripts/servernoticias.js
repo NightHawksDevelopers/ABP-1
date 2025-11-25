@@ -23,6 +23,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     const res = await fetch("http://localhost:3000/posts?tipo=2"); // notícias
     const noticias = await res.json();
 
+    
+noticias.sort((a, b) => {
+        return b.id_conteudo - a.id_conteudo;
+    });
+
     grid.innerHTML = ""; // limpa os cards estáticos
 
     for (const pub of noticias) {
