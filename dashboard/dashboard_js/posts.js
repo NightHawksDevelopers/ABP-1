@@ -18,6 +18,7 @@ document.getElementById("conteudoForm").addEventListener("submit", async e => {
   formData.append("co_doi", document.getElementById("co_doi").value || "");
   formData.append("co_lide", document.getElementById("co_lide").value || "");
   formData.append("co_status", document.getElementById("co_status").value || "");
+  formData.append("co_data", document.getElementById("co_data").value || "");
   formData.append("co_data_inicio", document.getElementById("co_data_inicio").value || "");
   formData.append("co_data_termino", document.getElementById("co_data_termino").value || "");
   formData.append("co_objetivo", document.getElementById("co_objetivo").value || "");

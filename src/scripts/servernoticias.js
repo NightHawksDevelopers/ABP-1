@@ -60,6 +60,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       grid.appendChild(div);
     }
+
+    const eventoPronto = new Event("noticiasCarregadas");
+    document.dispatchEvent(eventoPronto);
+
   } catch (err) {
     console.error("Erro ao carregar notícias:", err);
   }

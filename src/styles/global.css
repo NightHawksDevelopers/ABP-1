@@ -437,13 +437,13 @@ input:checked+.sw-slider .sw-text-right {
 
 @media (max-width: 1650px) {
   .footer-options {
-    width: 40%;
+    width: 45%;
   }
 }
 
 @media (max-width: 1300px) {
   .footer-options {
-    width: 60%;
+    width: 80%;
   }
 }
 
