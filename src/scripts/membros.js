@@ -92,9 +92,9 @@ function criarCardHTML(m) {
 const ordemCargos = [
   "Coordenador",
   "Pesquisador",
-  "Bolsista",
   "Doutorando",
   "Mestrando",
+  "Bolsista",
   "Sem cargo"
 ];
 
