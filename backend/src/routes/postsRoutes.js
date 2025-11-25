@@ -106,9 +106,9 @@ router.post("/", upload.single("imagem"), async (req, res) => {
 
     const result = await pool.query(
   `INSERT INTO conteudo
-  (co_titulo, co_publicante, co_autor, co_tipo_conteudo, co_pdf, co_citacao, co_doi, co_lide, co_status,
+  (co_titulo, co_publicante, co_autor, co_tipo_conteudo, co_pdf, co_citacao, co_doi,co_data, co_lide, co_status,
    co_data_inicio, co_data_termino, co_objetivo, co_requisitos, co_plano_trabalho, co_atividades, co_imagem, co_conteudo)
-   VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17) RETURNING *`,
+   VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18) RETURNING *`,
   [
     co_titulo,
     co_publicante,
@@ -117,6 +117,7 @@ router.post("/", upload.single("imagem"), async (req, res) => {
     co_pdf || null,
     co_citacao || null,
     co_doi || null,
+    co_data || null,
     co_lide || null,
     co_status || null,
     co_data_inicio || null,
