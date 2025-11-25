@@ -441,7 +441,7 @@ input:checked+.sw-slider .sw-text-right {
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1430px) {
   .footer-options {
     width: 80%;
   }
