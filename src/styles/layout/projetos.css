@@ -205,8 +205,10 @@ article::after {
     clear: both;
 }
 
-h2 {
+.article-title {
     font-weight: bold;
+    text-decoration: none;
+    color:#245C4D;
 }
 
 h6 {
