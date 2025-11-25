@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       3: "Concluido",
     };
 
+    data.sort((a, b) => new Date(b.co_data_inicio) - new Date(a.co_data_inicio));
+    
     data.forEach((projeto) => {
       const article = document.createElement("article");
 
@@ -40,7 +42,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             alt="${projeto.co_titulo}"
         />
         <div class="article-text">
-          <a href="./projeto-individual.html?id=${projeto.id_conteudo}">
+          <a class="article-title" href="./projeto-individual.html?id=${projeto.id_conteudo}">
             <h2>${projeto.co_titulo}</h2>
           </a>
           <p>${projeto.co_atividades}</p> 
