@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="ho-noticia-conteudo">
                             <h3 class="ho-noticia-titulo">${noticia.co_titulo}</h3>
                             <p class="ho-noticia-resumo">${noticia.co_lide}</p>
-                            <span class="ho-noticia-mais">MAIS</span>
+                            <span class="ho-noticia-mais">Ver mais</span>
                         </div>
                 
                     `;

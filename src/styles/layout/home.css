@@ -316,7 +316,6 @@ h4 {
     justify-content: space-around;
     flex-wrap: wrap;
     margin-bottom: 20px;
-    padding: 50px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -448,7 +447,6 @@ h4 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     border-radius: 15px;
     color: #2F4F4F;
-    
 }
 
 /* Container principal com duas colunas */
@@ -456,7 +454,9 @@ h4 {
     display: flex;
     gap: 40px; /* Espaço entre as duas colunas */
     align-items: flex-start;
-    max-width: 1200px;
+    width: 100%;
+    justify-content: space-around;
+
 }
 
 /* COLUNA PRINCIPAL (ESQUERDA) */
@@ -603,7 +603,7 @@ font-family: 'Roboto Condensed', sans-serif;
 @media (max-width: 1400px) {
     /* Container dos Cards */
     .ho-faixaazul {
-        max-width: 90%; /* Ocupa mais largura na tela */
+        max-width: 100%; /* Ocupa mais largura na tela */
         padding: 30px 30px; /* Reduz o padding */
         gap: 20px; /* Reduz o espaçamento */
         
@@ -614,6 +614,7 @@ font-family: 'Roboto Condensed', sans-serif;
         width: 47%; /* Garante que 2 cards caibam (2 * 47% = 94% + gap) */
         min-width: 320px; /* Aumenta a largura mínima para dar mais destaque */
         height: 380px;
+        margin-bottom: 40px;
     }
 
     /* Título principal da seção */
@@ -649,7 +650,7 @@ font-family: 'Roboto Condensed', sans-serif;
 
     /* Card Individual: 1 por linha */
     .ho-card {
-        width: 90%; /* Ocupa a maior parte da tela */
+        width: 100%; /* Ocupa a maior parte da tela */
         max-width: 450px; /* Limita a largura máxima para tablets */
         min-width: unset; /* Remove o min-width para permitir flexibilidade */
         height: 350px;
@@ -738,7 +739,7 @@ font-family: 'Roboto Condensed', sans-serif;
     .ho-faixaazul {
         display: block;
         padding: 40px 20px;
-        margin: 20px auto;
+        width: 100%;
         /* As linhas 'display: none' anteriores foram removidas */
     }
 

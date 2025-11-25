@@ -50,6 +50,11 @@ form {
     color: #00000080;
     text-indent: 20px;
 }
+.pr-filters .pr-nome::placeholder {
+    color: #ffffff;
+    text-indent: 20px;
+}
+
 
 fieldset {
     display: flex;
