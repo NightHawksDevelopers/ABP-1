@@ -14,7 +14,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       div.innerHTML = `
         <article class="pub-article" data-id="${pub.id_conteudo}">
-          <div class="pub-card">
+                <a href="${pub.co_pdf}" target="_blank" id="pdf">
+  
+        <div class="pub-card">
  
             <img class="pub-cover"
               <img src="http://localhost:3000/uploads/${pub.co_imagem}" alt="${
@@ -29,6 +31,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       })
             </p>
           </div>
+                  <a href="${pub.co_pdf}" target="_blank" id="pdf">
+
  
           <div class="pub-actions">
             <button class="btn" onclick="window.open('${
@@ -41,6 +45,7 @@ document.addEventListener("DOMContentLoaded", async () => {
               pub.co_doi
             }', '_blank')">DOI</button>
           </div>
+          
         </article>
       `;
 
@@ -50,9 +55,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // --- NOVO: Avisa que terminou de carregar (Igual ao serverProjetos.js) ---
     const eventoPronto = new Event("publicacoesCarregadas");
     document.dispatchEvent(eventoPronto);
-  }
-  
-  catch (err) {
+  } catch (err) {
     console.error("Erro ao carregar publicações:", err);
   }
 });
