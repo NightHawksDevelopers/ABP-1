@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
   "start": "node src/index.js",
-  "dev": "node src/db/restore-db.js && node src/db/criptografar-senhas.js && nodemon src/server.js"
+  "dev": "node src/db/criptografar-senhas.js && nodemon src/server.js",
+  "db:restore": "node src/db/restore-db.js"
 },
   "keywords": [],
   "author": "",
