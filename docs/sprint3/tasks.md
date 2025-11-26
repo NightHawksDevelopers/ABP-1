@@ -84,8 +84,8 @@
 | Task   | Descrição                                                                                               | Atribuição   | Data   | Sprint     |
 |--------|---------------------------------------------------------------------------------------------------------|--------------|--------|------------|
 | AL-013 | Criação dos botões de compartilhar nas páginas que possuem conteúdo                                      | Allan        | 24-Nov | Sprint - 3 |
-| SO-012 | Finalização do Manual de Usuário e documentação                                                        | Guilherme    | 24-Nov | Sprint - 3 |
-| SO-013 | Guia de Instalação e Execução Local do Projeto                                                          | Lucas Cobra  | 24-Nov | Sprint - 3 |
+| SO-01 | Finalização do Manual de Usuário e documentação                                                        | Guilherme    | 24-Nov | Sprint - 3 |
+| SO-02 | Guia de Instalação e Execução Local do Projeto                                                          | Lucas Cobra  | 24-Nov | Sprint - 3 |
 | DW-062 | Refinamento das páginas de Publicações                                                                 | Allan        | 24-Nov | Sprint - 3 |
 | DW-063 | Refinamento das páginas de Editar Membros                                                              | Allan        | 24-Nov | Sprint - 3 |
 | DW-064 | Refinamento das páginas de Vagas                                                                       | Allan        | 24-Nov | Sprint - 3 |
