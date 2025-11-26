@@ -13,7 +13,7 @@ const pool = new pg.Pool({
 });
 
 async function restaurarBanco() {
-    console.log('🗑️  Limpando e restaurando banco com db-limpo.sql...');
+    console.log('🗑️  Limpando e restaurando banco com db-1.sql...');
 
     try {
         // Aponta para o arquivo NOVO que criamos
