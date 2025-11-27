@@ -23,6 +23,7 @@
       transform: scale(1.0);
       transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      overflow-y: auto;
 }
 
 .mb-img img {
@@ -393,6 +394,7 @@ a {
       .mb-card {
             width: 450px;
             height: 675px;
+            overflow-y: auto;
       }
 
       .mb-img img {
