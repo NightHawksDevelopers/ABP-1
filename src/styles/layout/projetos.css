@@ -61,6 +61,7 @@ legend {
     color: white;
     padding-left: 10px;
     width: 100%;
+    text-align: center;
     padding-right: 10px;
     border: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -154,57 +155,47 @@ legend {
     transform: translateY(2px);
 }
 
-section {
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
-}
-
 article {
-    width:100%;
+    width: 100%;
     margin-bottom: 30px;
     margin-top: 30px;
-}
-
-.article-link{
-    width:100%;
-    height:300px;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    align-content: center;
-    justify-content: center;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
     box-sizing: border-box;
     text-decoration: none;
+    padding: 20px;
 }
 
+.article-link {
+    text-decoration: none;
+    color: inherit;
+    display: contents;
+}
 
 article:hover {
     transform: translateY(-5px);
 }
 
-
-.article-img {
+article img {
     width: 30%;
-    height: 100%;
+    height: auto;
     order: 2;
-    float: right;
-    border-radius: 5px;    
-    display:block;
+    border-radius: 5px;
+    display: block;
     object-fit: cover;
-    
+    margin-left: 10px;
 }
 
 .article-text {
     width: 60%;
-    margin-right: 10%;
-    padding: 20px;
-    height:100%;
-
+    margin-right: 5%;
+    padding: 10px;
+    height: 100%;
 }
 
 article::after {
@@ -216,7 +207,7 @@ article::after {
 .article-title {
     font-weight: bold;
     text-decoration: none;
-    color:#245C4D;
+    color: #245C4D;
 }
 
 h6 {
@@ -229,68 +220,10 @@ article p {
     margin-bottom: 2rem;
     display: -webkit-box;
     overflow: hidden;
-    -webkit-line-clamp: 3;      /* Mostra só 3 linhas */
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
-}
-
-a {
-    color: black;
-}
-
-.button {
-    width: 260px;
-    height: 50px;
-    border: solid transparent;
-    background-color: #04619b;
-    color: var(--color-2);
-    border-radius: 30px;
-    letter-spacing: 2px;
-    font-size: 14px;
-    cursor: pointer;
-    border-width: 0 0 4px;
-    box-sizing: border-box;
-    font-family: din-round, sans-serif;
-    font-weight: 700;
-    letter-spacing: .8px;
-    text-transform: uppercase;
-    touch-action: manipulation;
-    transform: translateZ(0);
-    transition: filter .2s;
-}
-
-.button:after {
-    background-clip: padding-box;
-    background: radial-gradient(circle, rgba(5, 116, 187, 1) 0%, rgba(4, 97, 155, 1) 42%, rgba(11, 80, 122, 1) 100%);
-    border: solid transparent;
-    border-radius: 30px;
-    border-width: 0 0 3px;
-    bottom: -4px;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-}
-
-.button,
-.button:focus {
-    user-select: auto;
-}
-
-.button:hover:not(:disabled) {
-    filter: brightness(1.1);
-    -webkit-filter: brightness(1.1);
-}
-
-.button:disabled {
-    cursor: auto;
-}
-
-.button:active {
-    border-width: 4px 0 0;
-    background: none;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
 }
 
 @media (max-width: 1100px) {
@@ -322,117 +255,86 @@ a {
         flex-direction: column;
         align-items: center;
         padding: 10px;
-        height: 100%;
+        height: auto;
+        gap: 15px;
     }
 
     .pr-line {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 10px;
     }
 
     legend {
         text-align: center;
         width: 100%;
-    }
-
-    article {
-        flex-direction: column;
-        align-items: flex-start;
-        flex-wrap: wrap;
-    }
-
-    .article-text {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    h6 {
-        display: block;
-        text-align: right;
-        margin-top: 0;
-        margin-right: 10px;
-        display: flex;
-        order: 2;
-        flex-direction: column;
-        justify-content: center;
-        align-self: flex-end;
-    }
-
-    article img {
-        width: 40%;
-        order: 1;
-        align-self: center;
-        margin-right: 10px;
-    }
-
-    article p {
-        display: none;
+        margin-bottom: 5px;
     }
 
     fieldset {
         display: flex;
         flex-direction: column;
         align-items: center;
-        flex-wrap: wrap;
-        gap: 10px;
         width: 100%;
+        gap: 10px;
     }
 
-    .pr-filters {
-        width: 300px;
+    article {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    article img {
+        width: 80%;
+        max-width: 350px;
+        order: 1;
+        margin-right: 0;
+        margin-bottom: 20px;
+        align-self: center;
+    }
+
+    .article-text {
+        width: 100%;
+        order: 2;
+        margin-right: 0;
         margin-bottom: 10px;
     }
 
+    .pr-filters,
     #palavra-chave {
-        width: 300px;
+        width: 100%;
+        max-width: 300px;
     }
 
     .search-box {
-        flex-direction: row;
+        width: 100%;
         justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-        position: relative;
     }
 
     .search-box input {
         width: 100%;
         max-width: 300px;
-        padding-right: 40px;
     }
 
     .search-button {
-        position: absolute;
-        right: 10px;
-        margin-top: 5px;
-        top: 30%;
-        transform: translateY(-50%);
-        background: transparent;
-        border: none;
-        cursor: pointer;
+        right: 15px;
     }
 
     #aplicar {
-        justify-content: center;
-        margin-left: 0;
+        width: 100%;
+        max-width: 300px;
     }
 
-    .pr-search-item {
-        gap: 5px;
-        width: 50%;
-        padding: 5px;
-    }
-
-    .pr-nome {
-        width: 60%;
-    }
-
-    .pr-search-item label {
-        width: 80px;
-        text-align: left;
-        top: -5px;
+    h6 {
+        display: block;
+        width: 100%;
+        text-align: right;
+        margin-top: 10px;
+        margin-right: 0;
     }
 }
 

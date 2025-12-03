@@ -23,6 +23,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   background-color: #fff;
+  margin-bottom: 3%;
 }
 
 th, td {

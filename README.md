@@ -20,7 +20,9 @@
   <a href ="#tasks"> Tasks</a> |
 <a href ="#tecnologias">Tecnologias</a> |
   <a href ="#manual">Manual de Instalação</a>  | 
-  <a href ="#equipe"> Equipe</a> |      
+  <a href ="#equipe"> Equipe</a> |
+  <a href ="#usuario"> Manual do Usuário</a> |
+      <a href ="#user-stories"> User Stories</a>
 </p>
 
 > Status do Projeto: Início 15/09/2025   
@@ -29,7 +31,6 @@
 > 
 > [Vídeo do Projeto no YouTube](https://www.youtube.com/watch?v=bLmCPFcv2Is) 📽️
 >
-> [FIGMA]
 
 ##  Desafio <a id="desafio"></a>
 
@@ -96,6 +97,54 @@ As soluções esperadas incluem o desenvolvimento de um site moderno, responsivo
 | **RNF06** | Seguir a identidade visual definida com os integrantes do laboratório.     |
 
 
+##  User Stories <a id="user-stories"></a>
+
+### 👤📝 User Stories – Sistema AgriRS
+
+A tabela abaixo relaciona cada requisito funcional e não funcional com sua respectiva User Story para facilitar o rastreamento e desenvolvimento.
+
+### 📋 Tabela de User Stories
+
+| Requisito | User Story |
+|-----------|------------|
+| **RF01.1** | Como visitante, eu quero visualizar menus e botões de navegação, para acessar facilmente qualquer página. |
+| **RF01.2** | Como visitante, eu quero ver cards com destaques, para acessar rapidamente conteúdos importantes. |
+| **RF01.3** | Como visitante, eu quero encontrar links de contato e redes sociais no rodapé, para poder seguir ou entrar em contato. |
+| **RF01.4** | Como visitante, eu quero visualizar financiadores e colaboradores, para entender quem apoia o laboratório. |
+| **RF02.1** | Como visitante, eu quero acessar informações sobre o laboratório, para entender seu propósito e foco. |
+| **RF02.2** | Como visitante, eu quero ver descrições das áreas de atuação, para compreender os temas trabalhados. |
+| **RF03.1** | Como visitante, eu quero ver a lista de membros com foto e descrição, para conhecer a equipe do laboratório. |
+| **RF03.2** | Como visitante, eu quero visualizar os membros separados por categoria, para facilitar a navegação entre grupos. |
+| **RF03.3** | Como visitante, eu quero ver membros organizados alfabeticamente, para localizar pessoas rapidamente. |
+| **RF04.1** | Como candidato, eu quero visualizar as vagas e oportunidades, para saber se posso me candidatar. |
+| **RF04.2** | Como candidato, eu quero saber como me candidatar (documentos, requisitos, prazos), para realizar a inscrição corretamente. |
+| **RF05.1** | Como visitante, eu quero ver a lista de projetos com informações completas, para entender o que o laboratório desenvolve. |
+| **RF05.2** | Como visitante, eu quero acessar imagens e links adicionais dos projetos, para obter mais detalhes. |
+| **RF06.1** | Como visitante, eu quero acessar notícias com título, imagem, data e texto, para acompanhar atualizações. |
+| **RF06.2** | Como visitante, eu quero ver notícias organizadas cronologicamente, para identificar facilmente as mais recentes. |
+| **RF07.1** | Como visitante, eu quero ver publicações científicas com informações completas, para consultar trabalhos do grupo. |
+| **RF07.2** | Como visitante, eu quero pesquisar publicações por palavra-chave, para encontrar materiais específicos. |
+| **RF08.1** | Como visitante, eu quero enviar uma mensagem pelo formulário de contato, para tirar dúvidas ou solicitar informações. |
+| **RF08.2** | Como visitante, eu quero ver telefone, e-mail e endereço institucional, para acessar outros canais de contato. |
+| **RF08.3** | Como visitante, eu quero acessar links das redes sociais também na página de contato, para conectar-me facilmente ao laboratório. |
+| **RF08.4** | Como visitante, eu quero visualizar o mapa do laboratório dentro do INPE, para encontrá-lo fisicamente. |
+| **RNF01** | Como usuário de qualquer dispositivo, eu quero que o site seja responsivo, para navegar sem dificuldades. |
+| **RNF02** | Como membro do laboratório, eu quero atualizar conteúdos do site facilmente, para manter as informações atualizadas. |
+| **RNF03** | Como visitante, eu quero que o site carregue rapidamente, para ter uma navegação fluida. |
+| **RNF04** | Como visitante internacional, eu quero acessar versões em português e inglês, para entender o conteúdo no meu idioma. |
+| **RNF05** | Como visitante, eu quero acessar o site sem quedas ou instabilidades, para ter uma navegação confiável. |
+| **RNF06** | Como visitante, eu quero que o site siga a identidade visual do laboratório, para ter uma experiência consistente. |
+
+
+## 🔄 Modelo entidade relação para criação do Banco de Dados <a id="#"></a>
+<p align="center">
+  <img src="docs/entidade-relacao_AgriRSLAB.png" alt="entidade-relacao" width="100%" />
+</p>
+
+> Arquivo.xml para DB Design 4
+>
+> [Arquivo.xml](docs\entidade-relacao-AgriRSLab_NightHawks.xml) 
+------------
 
 ## 💡 Casos de Uso <a id="backlog"></a>
 
@@ -111,8 +160,8 @@ As soluções esperadas incluem o desenvolvimento de um site moderno, responsivo
 | Sprint | Ojetivos        | Documentação | Período| Status  | 
 |--------|-----------------|------|--------|---------- | 
 | 1      | HTML/Figma      | [Sprint 1 Docs](./docs/sprint1/readme.md)     |    15/09/25 - 03/10/25    |   ✔ Concluído    | 
-| 2      | Backend         |  [Sprint 2 Docs](./docs/sprint2/README.md)     |   13/10/25 - 31/10/25     |  ✔ Concluído         | 
-| 3      | Backend/Ajustes |  [Sprint 3 Docs](./docs/sprint3/README.md)    |        |           | 
+| 2      | Backend/Banco de Dados        |  [Sprint 2 Docs](./docs/sprint2/README.md)     |   13/10/25 - 31/10/25     |  ✔ Concluído         | 
+| 3      | Backend/Ajustes |  [Sprint 3 Docs](./docs/sprint3/README.md)    |     06/11/25 - 24/11/25   |   ✔ Concluído        | 
 
 
 
@@ -124,7 +173,7 @@ As soluções esperadas incluem o desenvolvimento de um site moderno, responsivo
 >
 > [Sprint 2 Tasks](./docs/sprint2/tasks.md)   
 > 
-> [Sprint 3 Tasks] 
+> [Sprint 3 Tasks](./docs/sprint3/tasks.md)   
 
 ---
 
@@ -141,7 +190,7 @@ As soluções esperadas incluem o desenvolvimento de um site moderno, responsivo
 * Código completo (HTML/CSS/Backend)
 * Vídeos de cada etapa de entrega
 * Manual da Aplicação
-* Documentação da ABP
+* Documentação da ABP e Manual do Usuário
   
 ---
 
@@ -178,52 +227,137 @@ As soluções esperadas incluem o desenvolvimento de um site moderno, responsivo
 
 ## 📖 Manual de Instalação <a id="manual"></a>
 
-### 🛠 Pré-requisitos
+## 🛠️ Guia de Instalação e Execução Local do Projeto
 
-- Windowns ([Download](https://go.microsoft.com/fwlink/?linkid=2171764))
+Este guia detalha os softwares necessários e o processo passo a passo para colocar o projeto *ABP-1* para rodar em sua máquina.
+
+### 1\. Pré-requisitos e Instalação de Softwares Essenciais
+
+Estes são os softwares básicos que devem ser instalados **antes** de iniciar o processo de configuração do projeto.
+
+| Software | Função Principal | Link para Download |
+| :--- | :--- | :--- |
+| **Git** | Sistema de controle de versão, essencial para **clonar** seu projeto do GitHub. | https://git-scm.com/install |
+| **Node.js** | Ambiente de tempo de execução (runtime) e gerenciador de pacotes (**npm**). Necessário para rodar o Back-end e gerenciar dependências do Front-end. | https://nodejs.org/en/download |
+| **Visual Studio Code** (ou IDE de sua preferência) | Editor de código recomendado para abrir, visualizar e editar os arquivos do projeto. | https://code.visualstudio.com/download |
+| **PostgreSQL** | Software de Banco de Dados. Seu back-end utiliza o **PostgreSQL** para armazenar dados. | https://www.postgresql.org/download |
+
+**Atenção:** Ao instalar o **PostgreSQL**, certifique-se de anotar a **senha** que você definir para o usuário principal (geralmente `postgres`), pois ela será necessária para o próximo passo.
+
+* * *
+
+### 2\. 🚀 Passo a Passo para Inicializar o Projeto
+
+Com os pré-requisitos instalados, siga a ordem abaixo para configurar e rodar o projeto.
+
+#### Passo A: Clonar o Repositório
+
+1.  Acesse seu repositório no GitHub.
+    
+2.  Clique no botão verde "**Code**" e copie a URL HTTPS.
+    
+3.  Abra seu **terminal** (ou Git Bash no Windows).
+    
+4.  Navegue até o diretório onde você quer salvar o projeto (ex: `cd ~/Documents/Projetos`).
+    
+5.  Execute o comando para clonar o projeto:
+    
+    ```bash
+    git clone https://github.com/NightHawksDevelopers/ABP-1.git
+    ```
+    
+6.  Entre no diretório do projeto clonado:
+    
+    ```bash
+    cd ABP-1
+    ```
+    
+
+* * *
+
+#### Passo B: Configurar e Rodar o Back-end
+
+O Back-end deve ser iniciado primeiro para que o Front-end possa se conectar a ele.
+
+1.  Acesse a pasta do seu back-end (o nome da pasta pode ser `backend`, `server`, etc., **verifique o nome correto no seu repositório**):
+    
+    ```bash
+    cd backend 
+    ```
+    
+2.  Instale todas as dependências do back-end (via `npm` ou `yarn`):
+    
+    ```bash
+    npm install 
+    # ou yarn install
+    ```
+    
+3. Criar o banco de dados  Pgadmin  de nome agrirslab.    
+
+&nbsp;
+
+1.  Configuração de Variáveis de Ambiente (.env):
+    
+    - Necessário  o arquivo de variáveis chamado **`.env`** na raiz da pasta do Back-end ou solicite o arquivo completo pelo link : https://drive.google.com/file/d/1ANMgHxlR_KjsYb5zz4K_CgzHcm18V5uJ/view?usp=sharing
+    - **Copie o conteúdo** do arquivo de exemplo de variáveis de ambiente do projeto (geralmente chamado `.env.example` ou `env.development`) para dentro do seu novo arquivo `.env`.
+    - **Edite** as variáveis de conexão com o PostgreSQL. Você precisará do **usuário** (geralmente `postgres`), **senha** (que você definiu na instalação) e o **nome do banco de dados** que você deseja criar.
+    
+    > *Exemplo de variáveis a serem preenchidas:* `DB_HOST`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`.
+    
+2.  Execute o comando  para ativar a criptografia ( acessando de dentro da pasta backend):
+    
+    `node src/db/criptografar-senhas.js`
+    
+    &nbsp;
+    
+3.  **Rodar o Servidor:** Inicie o servidor back-end:
+    
+    ```bash
+    npm run dev 
+    # ou npm start (use o comando correto definido no seu package.json)
+    ```
+    
+    O terminal deve indicar em qual porta o servidor está rodando (ex: `Servidor rodando em http://localhost:3000`). **Mantenha este terminal aberto.**
+    
+
+* * *
+
+#### Passo C: Configurar e Rodar o Front-end
+
+1.  Abra um **novo terminal** (mantendo o terminal do Back-end rodando).
+    
+2.  Acesse a pasta do seu front-end (o nome da pasta pode ser `frontend`, `client`, etc.):
+    
+    ```bash
+    cd ../pages
+    ```
+    
+3.  Instale todas as dependências do front-end:
+    
+    ```bash
+    npm install
+    # ou yarn install
+    ```
+    
+4.  **Rodar o Front-end:** Inicie a aplicação front-end:
+    
+    ```bash
+    npm run dev 
+    # ou npm start (use o comando correto definido no seu package.json)
+    ```
+    
+    O front-end geralmente abre automaticamente no seu navegador (ex: `http://localhost:5173`). Se não abrir, acesse o endereço indicado no terminal.
+    
+
+**Parabéns!** Seu site agora está rodando localmente!
+
+## 📘 Manual de Usuário e Catálogo de Funcionalidades  <a id="usuario"></a>
+
+O Manual de Usuário reúne instruções essenciais para navegar e utilizar o sistema, explicando páginas, recursos e principais ações de forma simples e objetiva para o usuário e administrador.
+
+> [PDF Manual do Usuário 📘](docs/manual_usuario.pdf)
 
 
-- Git ([Download](https://git-scm.com/downloads))
-
-
-- Node.js 16+ ([Download](https://nodejs.org/en/download))
-
----
-
-### 1. Clonar o Repositório Principal
---- **EM ANDAMENTO (Sujeito a alterações)** ---
-```bash
-git clone https://github.com/NightHawksDevelopers/ABP-1.git
-cd ABP-1
-```
-
----
-
-### 2. Configuração do Backend
-
-> ⚠️ Este projeto é focado no front-end. A parte de backend será implementada futuramente.
-
-
-```bash
-
-```
-
-
-**Saída Esperada:**
-<br>
-Servidor rodando em `http://localhost:3000`
-
----
-
-### 3. Configuração do Frontend 
-
-```bash
-
-```
-
-**Saída Esperada:**
-
-Frontend rodando em `http://localhost:5173`.
 
 ## 🎓 Equipe <a id="equipe"></a>
 
@@ -257,7 +391,7 @@ Frontend rodando em `http://localhost:5173`.
       <td>Guilherme Henrique</td>
       <td>Desenvolvedor</td>
       <td><a href="https://github.com/guioliv3"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a></td>
-      <td><a href="http://linkedin.com/in/jonas-alves"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a></td>
+      <td><a href="www.linkedin.com/in/guilherme-henrique-de-oliveira-97076535b"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a></td>
     </tr>
     <tr>
       <td>Lucas Cobra</td>

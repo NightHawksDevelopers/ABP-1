@@ -96,8 +96,8 @@
 }
 
 .mb-button {
-      width: 260px;
-      height: 50px;
+      width: 200px;
+      height: 40px;
       border: solid transparent;
       background-color:#04619b;
       color: var(--color-2);
@@ -109,11 +109,18 @@
       box-sizing: border-box;
       font-family: din-round, sans-serif;
       font-weight: 700;
-      letter-spacing: .8px;
       text-transform: uppercase;
       touch-action: manipulation;
       transform: translateZ(0);
       transition: filter .2s; 
+      padding-bottom: 5px;
+      padding-top: 5px;
+      
+      /* ESSENCIAIS */
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 }
 
 .mb-button:after {
@@ -220,7 +227,7 @@
 }
 
 .mb-bio {
-      font-size: 13px;
+      font-size: 10px;
 }
 
 a {
@@ -362,7 +369,7 @@ a {
       }
 
       .mb-bio p {
-            font-size: 12px;
+            font-size: 8px;
       }
 
       .mb-little p {
@@ -424,7 +431,7 @@ a {
       }
 
       .mb-bio p {
-            font-size: 23px;
+            font-size: 15px;
       }
 
       .mb-little p {
@@ -499,7 +506,7 @@ a {
       }
 
       .mb-bio p {
-            font-size: 14px;
+            font-size: 10px;
       }
 
       .mb-little p {

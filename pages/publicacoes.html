@@ -19,7 +19,7 @@
 <body>
     <header>
         <div class="content-header">
-            <div class="logo"></div>
+            <a href="home.html"><div class="logo"></div></a>
             <div class="options">
                 <div class="box">
                     <a href="home.html"><b>Home</b></a>
@@ -41,6 +41,8 @@
                         <a href="projetos.html">Projetos</a>
 
                         <a href="atuacao.html">Áreas de atuação</a>
+
+                        <a href="parceiros.html">Parceiros</a>
                     </div>
                 </div>
                 <hr>
@@ -72,7 +74,6 @@
                 </div>
             </div>
         </div>
-        </div>
         <label class="sw-switch">
             <input type="checkbox">
             <div class="sw-slider">
@@ -86,14 +87,17 @@
     <div class="responsive-menu">
         <div class="logo"></div>
         <div class="space"></div>
+        <!-- Checkbox invisível para controlar o menu -->
         <input type="checkbox" id="menu-toggle">
 
+        <!-- Ícone hambúrguer -->
         <label for="menu-toggle" class="menu-icon">
             <span></span>
             <span></span>
             <span></span>
         </label>
 
+        <!-- Menu Dropdown -->
         <nav class="menu">
 
             <ul>
@@ -118,6 +122,7 @@
                         <a href="membros.html">Membros</a>
                         <a href="projetos.html">Projetos</a>
                         <a href="atuacao.html">Áreas de atuação</a>
+                        <a href="parceiros.html">Parceiros</a>
                     </div>
                 </li>
 
@@ -140,6 +145,7 @@
             </ul>
         </nav>
     </div>
+
 
     <main>
         <h1 id="title">Feed</h1>
@@ -191,9 +197,9 @@
                                 id="pr-date" />
                         </div>
 
-                        <div class="pr-search-item">
+                        <div class="pr-search-item pub-autor">
                             <label for="nome">Autor:</label>
-                            <input type="text" name="nome" class="pr-filters pr-nome" value="Autor" id="pr-nome" />
+                            <input type="text" name="nome" class="pr-filters" value="Autor" id="pr-nome" />
                         </div>
 
                         <div class="pr-search-item">
